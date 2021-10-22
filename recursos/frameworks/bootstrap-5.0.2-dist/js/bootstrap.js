@@ -1764,6 +1764,8 @@
         this._triggerArray.forEach(element => {
           element.classList.remove(CLASS_NAME_COLLAPSED);
           element.setAttribute('aria-expanded', true);
+          document.getElementById("barra2").setAttribute('style','display: block;')
+          document.getElementById("barra1").setAttribute('style','display: none;')
         });
       }
 
@@ -1817,6 +1819,8 @@
           if (elem && !elem.classList.contains(CLASS_NAME_SHOW$8)) {
             trigger.classList.add(CLASS_NAME_COLLAPSED);
             trigger.setAttribute('aria-expanded', false);
+            document.getElementById("barra1").setAttribute('style','display: block;')
+            document.getElementById("barra2").setAttribute('style','display: none;')
           }
         }
       }
