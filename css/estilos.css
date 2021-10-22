@@ -48,11 +48,26 @@ footer{
 }
 lottie-player {
     margin: 0 auto;
-    height: 200px;
-  
+    width: 200px; 
 }
 .navbar-brand img{
     width: 20%;
+}
+.contacto{
+    margin: auto; 
+    background-color: #191B2A; 
+    border-radius: 10px; 
+    padding-bottom: -100px !important;
+}
+.main .animation{
+    padding-top: -50px;
+    height: 100px !important;
+}
+.portafolio{
+    border-bottom: solid 1px #fff;
+}
+.portafolio .container .row{
+    background-color: #191B2A; 
 }
 
 @media (max-width: 750px) {
