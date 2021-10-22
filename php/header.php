@@ -40,7 +40,7 @@
             Blog
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Comentarios</a></li>
+            <li><a class="dropdown-item" href="comentarios.php">Comentarios</a></li>
           </ul>
         </li>
       </ul>
