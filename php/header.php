@@ -7,7 +7,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light position-fixed" style="width: 100%; z-index: 99; background-color: #191B2A;">
   <div class="container-fluid">
-    <!--<a class="navbar-brand" href="#"><img clas="logo-navbar" src="recursos/imagenes/logo.svg" alt="Logo AB"></a>-->
+    <a class="navbar-brand" href="#"><img clas="logo-navbar" src="recursos/imagenes/logo.webp" alt="Logo AB"></a>
     <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <img id="barra1" src="recursos/imagenes/logo11.png" alt="Barra 1">
         <img id="barra2" src="recursos/imagenes/logo22.png" alt="Barra 2" style="display: none;">

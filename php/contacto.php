@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-9 text-white pt-5 pb-0" style="margin: auto; background-color: #191B2A; border-radius: 10px;">
+        <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-9 text-white pt-5 pb-0" style="margin: auto; background-color: #191B2A; border-radius: 10px; z-index: 10;">
             <div class="text-center">
                 <h2>Contáctanos</h2>
                 <h5>Ingresa la siguiente información y nuestro equipo te escribirá en breve</h5>

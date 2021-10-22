@@ -1,15 +1,34 @@
 /* video background */
 #background-video {
-    height: 85vh;
+    height: 90vh;
     width: 100%;
     object-fit: cover;
     position: relative;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 98;
+
 }
+
+
+.custom-shape-divider-bottom-1634938778 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1634938778 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 109px;
+}
+
+.custom-shape-divider-bottom-1634938778 .shape-fill {
+    fill:white;
+}
+
+
 
 #inputNombre, #inputTelefono, #inputEmail{
     background-color: #2C3144;
@@ -52,7 +71,31 @@ lottie-player {
   
 }
 .navbar-brand img{
+    width: 10%;
+    min-width: 30px;
+    margin: 0 15px;
+    float: left;
+}
+
+.navbar-brand{
     width: 20%;
+    min-width: 30px;
+    float: left;
+}
+
+.dropdown-menu{
+    background: #2C3144;
+}
+
+.dropdown-item{
+    color: white;
+}
+
+.logo{
+    margin: auto;
+    max-width: 80px;
+    min-width: 30px;
+    width: 10%;
 }
 
 @media (max-width: 750px) {
