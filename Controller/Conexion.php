@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
    $servidor = "localhost";
    $usuario = "root";
    $password = "";
@@ -13,6 +15,7 @@
        echo "La conexión ha fallado: " . $e->getMessage();
        $conn = null;
        }
-  
+       include('user.php');
+       $user = new User($conn);
    
 ?>
