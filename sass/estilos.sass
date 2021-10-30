@@ -16,15 +16,33 @@ body
 
 /* video background
 #background-video
-  height: 85vh
+  height: 98vh
   width: 100%
   object-fit: cover
   position: relative
-  left: 0
-  right: 0
-  top: 0
   bottom: 0
   z-index: 98
+
+.custom-shape-divider-bottom-1634938778 
+    position: absolute
+    bottom: 0
+    z-index: 98
+    left: 0
+    width: 100%
+    overflow: hidden
+    line-height: 0
+
+
+.custom-shape-divider-bottom-1634938778 svg 
+    position: relative
+    display: block
+    width: calc(137% + 1.3px)
+    height: 109px
+
+
+.custom-shape-divider-bottom-1634938778 .shape-fill 
+    fill : $azulOscuro
+
 
 /* Formulario de contacto
 
@@ -37,8 +55,29 @@ lottie-player
   margin: 0 auto
   width: 200px
 
-.navbar-brand img
+.navbar-brand
   width: 20%
+  min-width: 30px
+  float: left
+
+  img
+    width: 10%
+    min-width: 30px
+    margin: 0 15px
+    float: left
+  
+.dropdown-menu
+    background: #2C3144
+
+
+.dropdown-item
+    color: white
+
+.logo
+    margin: auto
+    max-width: 80px
+    min-width: 30px
+    width: 10%
 
 .contacto
   margin: auto
@@ -78,13 +117,9 @@ lottie-player
 .SectionPortafolio
   margin-bottom: 8px
 
-  .container .row
-    background-color: #191B2A
-
 .SwiperPortafolio
-  margin: 100px auto
-  width: 320px
-  height: 240px
+  margin: auto
+  width: 100%
 
 .slides
   display: flex
@@ -123,16 +158,21 @@ lottie-player
 
   &:nth-child(10n)
     background-color: rgb(54, 94, 77)
+  
+  img
+    width: 100%
 
 /* Fin del portafolio de servicios
 
 /* Como poner los medias quieres
 @media (max-width: 750px)
-  /*#background-video { display: none; }
-   *body {
-   *background: url("recursos/imagenes/imgFondo1.png") no-repeat;
-   *background-size: cover;
-   *}
+  /*#background-video  display: none 
+   *body 
+   *background: url("recursos/imagenes/imgFondo1.png") no-repeat
+   *background-size: cover
+   *
 
   .swiper-button-prev:after, .swiper-button-next:after
     font-size: 20px
+
+  

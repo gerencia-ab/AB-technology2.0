@@ -1,7 +1,44 @@
 $(document).ready(function(){
     /* Swiper para la visualización del portafolio */
-    var swiperPortafolio = new Swiper(document.getElementsByClassName('swiper')[0], {
+    var swiperPortafoli1 = new Swiper(document.getElementsByClassName('swiper')[0], {
         grabCursor: true,
+        loop: true,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        },
+    });
+    var swiperPortafolio2 = new Swiper(document.getElementsByClassName('swiper')[1], {
+        grabCursor: true,
+        loop: true,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        },
+    });
+    var swiperPortafolio3 = new Swiper(document.getElementsByClassName('swiper')[2], {
+        grabCursor: true,
+        loop: true,
         effect: "creative",
         creativeEffect: {
           prev: {
@@ -18,9 +55,9 @@ $(document).ready(function(){
         },
     });
     /* Swiper para el formulario de contacto */
-    const swiperContacto = new Swiper(document.getElementsByClassName('swiper')[1], {
+    const swiperContacto = new Swiper(document.getElementsByClassName('swiper')[3], {
         direction: 'horizontal',
-        loop: false,
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
             type: 'fraction',

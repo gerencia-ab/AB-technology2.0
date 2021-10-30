@@ -1,14 +1,11 @@
 <footer class="text-center" style="background-color: #191B2A;">
     <div class="container">
-        <div class="row">
-            <img src="recursos/imagenes.png" alt="Logo AB Technology Group">    
-        </div>
         <div class="row">                
                 <div class="col">
-                    Primera columna
+                    Primera Columna
                 </div>
                 <div class="col">
-                    Segunda columna
+                    <img src="recursos/imagenes/logo.webp" alt="Logo AB Technology Group" class="logo"> 
                 </div>
                 <div class="col">
                     <span><i class="fab fa-facebook"></i></span>
@@ -19,7 +16,7 @@
                 </div>
         </div>
         <div class="row">
-
+            <p>Todos los derechos reservados</p>
         </div>
     </div>
 </footer>

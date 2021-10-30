@@ -1,0 +1,110 @@
+/* video background */
+#background-video {
+    height: 90vh;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+
+}
+
+
+.custom-shape-divider-bottom-1634938778 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1634938778 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 109px;
+}
+
+.custom-shape-divider-bottom-1634938778 .shape-fill {
+    fill:white;
+}
+
+
+
+#inputNombre, #inputTelefono, #inputEmail{
+    background-color: #2C3144;
+    color: #FFF;
+    border: 0;
+}
+
+#inputNombre, #inputTelefono, #inputEmail, #textMensaje{
+    background-color: #2C3144;
+    color: #FFF;
+    border: 0;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+    font-size: 30px;
+    margin-top: -110px;
+}
+.swiper-button-next{
+    color: #FFF;
+    margin-right: -12px;
+}
+.swiper-button-prev{
+    color: #FFF;
+    margin-left: -12px;
+}
+.swiper-pagination{
+    text-align: left;
+    margin-left: 30px;
+    color: #FFFFFF;
+}
+footer{
+    margin-bottom: -10px;
+    width: 100%;
+    padding: 2% 1%;
+    color: #60757D;
+}
+lottie-player {
+    margin: 0 auto;
+    height: 200px;
+  
+}
+.navbar-brand img{
+    width: 10%;
+    min-width: 30px;
+    margin: 0 15px;
+    float: left;
+}
+
+.navbar-brand{
+    width: 20%;
+    min-width: 30px;
+    float: left;
+}
+
+.dropdown-menu{
+    background: #2C3144;
+}
+
+.dropdown-item{
+    color: white;
+}
+
+.logo{
+    margin: auto;
+    max-width: 80px;
+    min-width: 30px;
+    width: 10%;
+}
+
+@media (max-width: 750px) {
+    /*#background-video { display: none; }
+    body {
+    background: url("recursos/imagenes/imgFondo1.png") no-repeat;
+    background-size: cover;
+    }*/
+    .swiper-button-prev:after, .swiper-button-next:after{
+        font-size: 20px;
+    }
+}
