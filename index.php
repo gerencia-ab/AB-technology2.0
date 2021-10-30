@@ -17,8 +17,8 @@
         </div>
 
         <?php
-            include_once __DIR__.'/php/contacto.php';
             include_once __DIR__.'/php/portafolio.php';
+            include_once __DIR__.'/php/contacto.php';
         ?>
 
         <?php

@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* Elementos por defecto de la página */
+footer {
+  margin-bottom: -10px;
+  width: 100%;
+  padding: 2% 1%;
+  color: #60757D; }
+
+body {
+  background-color: #3e4765; }
+
+/* video background */
+#background-video {
+  height: 85vh;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 98; }
+
+/* Formulario de contacto */
+#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje {
+  background-color: #2C3144;
+  color: #FFFFFF;
+  border: 0; }
+
+lottie-player {
+  margin: 0 auto;
+  width: 200px; }
+
+.navbar-brand img {
+  width: 20%; }
+
+.contacto {
+  margin: auto;
+  background-color: #191B2A;
+  border-radius: 10px;
+  padding-bottom: -100px !important; }
+
+.main .animation {
+  padding-top: -50px;
+  height: 100px !important; }
+
+.swiper-button-prev:after {
+  font-size: 30px;
+  margin-top: -110px; }
+
+.swiper-button-next {
+  color: #FFF;
+  margin-right: -12px; }
+  .swiper-button-next:after {
+    font-size: 30px;
+    margin-top: -110px; }
+
+.swiper-button-prev {
+  color: #FFF;
+  margin-left: -12px; }
+
+.swiper-pagination {
+  text-align: left;
+  margin-left: 30px;
+  color: #FFFFFF; }
+
+/* Fin del formulario de contacto */
+/* Portafolio de servicios */
+.SectionPortafolio {
+  margin-bottom: 8px; }
+  .SectionPortafolio .container .row {
+    background-color: #191B2A; }
+
+.SwiperPortafolio {
+  margin: 100px auto;
+  width: 320px;
+  height: 240px; }
+
+.slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff; }
+  .slides:nth-child(1n) {
+    background-color: #ce1111; }
+  .slides:nth-child(2n) {
+    background-color: #008cff; }
+  .slides:nth-child(3n) {
+    background-color: #0ab86f; }
+  .slides:nth-child(4n) {
+    background-color: #d37a07; }
+  .slides:nth-child(5n) {
+    background-color: #76a30c; }
+  .slides:nth-child(6n) {
+    background-color: #b40a2f; }
+  .slides:nth-child(7n) {
+    background-color: #236313; }
+  .slides:nth-child(8n) {
+    background-color: #0044ff; }
+  .slides:nth-child(9n) {
+    background-color: #da0cda; }
+  .slides:nth-child(10n) {
+    background-color: #365e4d; }
+
+/* Fin del portafolio de servicios */
+/* Como poner los medias quieres */
+@media (max-width: 750px) {
+  /*#background-video { display: none; }
+   *body {
+   *background: url("recursos/imagenes/imgFondo1.png") no-repeat;
+   *background-size: cover;
+   *} */
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 20px; } }
+
+/*# sourceMappingURL=estilos.css.map */
