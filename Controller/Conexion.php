@@ -6,7 +6,7 @@ session_start();
    $password = "";
   
    try {
-         $conn= new PDO("mysql:host=$servidor;dbname=comentarios-AB", $usuario, $password);      
+         $conn= new PDO("mysql:host=$servidor;dbname=AB_db", $usuario, $password);      
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        }
   

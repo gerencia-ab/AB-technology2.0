@@ -25,9 +25,15 @@ if(!$user->is_logged_in()){ header('Location: login.php'); exit(); }
 	<div class="row">
 
 	    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-			
+			     
 				<h2>Member only page - Welcome <?php echo htmlspecialchars($_SESSION['username'], ENT_QUOTES); ?></h2>
 				<p><a href='logout.php'>Logout</a></p>
+                <?php if($user->rol($_SESSION['username'])=="Admin"){
+                    ?>
+                   <h2>Eres Admin</h2>
+                   <p><a href='listausuarios.php'>ver usuarios</a></p>
+                <?php
+                    }?>
 				<hr>
 
 		</div>

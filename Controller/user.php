@@ -47,6 +47,23 @@ class User extends Password{
 		}
 	}
 
+	public function rol($username)
+	{
+		try {
+			$stmt = $this->_db->prepare('SELECT username, rol FROM members WHERE username = :username AND active="Yes" ');
+			$stmt->execute(array('username' => $username));
+			$row = $stmt->fetch();
+			$rol = $row['rol'];
+			$stmt2 = $this->_db->prepare('SELECT id, name FROM roles WHERE id = :id' );
+			$stmt2->execute(array('id'=> $rol));
+			$row2 = $stmt2->fetch();
+			return  $row2['name'];
+
+		} catch(PDOException $e) {
+		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
+		}
+	}
+
 	public function logout(){
 		session_destroy();
 	}
