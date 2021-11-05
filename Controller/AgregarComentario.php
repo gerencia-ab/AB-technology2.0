@@ -8,7 +8,7 @@ $comment = isset($_POST['comment']) ? $_POST['comment'] : "";
 $commentSenderName = isset($_POST['name']) ? $_POST['name'] : "";
 $Telefono = isset($_POST['telefono']) ? $_POST['telefono'] : "";
 $Correo = isset($_POST['correo']) ? $_POST['correo'] : "";
-$Estado = false;
+$Estado = 0;
 if($commentId == "")
 {
     $commentId=0;
@@ -25,5 +25,5 @@ $statement->execute(array(
     'correo' => $Correo,
     'estado' => $Estado
 ));
-
+return $statement;
 ?>

@@ -32,6 +32,8 @@ if(!$user->is_logged_in()){ header('Location: login.php'); exit(); }
                     ?>
                    <h2>Eres Admin</h2>
                    <p><a href='listausuarios.php'>ver usuarios</a></p>
+                   <p><a href='listacomentarios.php'>ver comentarios por aprobar</a></p>
+
                 <?php
                     }?>
 				<hr>

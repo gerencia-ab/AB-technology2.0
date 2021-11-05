@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2021 a las 00:14:50
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.1
+-- Servidor: localhost
+-- Tiempo de generación: 05-11-2021 a las 22:20:11
+-- Versión del servidor: 10.4.21-MariaDB
+-- Versión de PHP: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ab_db`
+-- Base de datos: `AB_db`
 --
 
 -- --------------------------------------------------------
@@ -34,6 +33,8 @@ CREATE TABLE `comentario` (
   `comment` varchar(200) CHARACTER SET latin1 NOT NULL,
   `comment_sender_name` varchar(40) CHARACTER SET latin1 NOT NULL,
   `date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `telefono` varchar(500) NOT NULL,
+  `correo` varchar(500) NOT NULL,
   `estado` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabla Comentarios';
 
@@ -41,8 +42,12 @@ CREATE TABLE `comentario` (
 -- Volcado de datos para la tabla `comentario`
 --
 
-INSERT INTO `comentario` (`comentario_id`, `parent_comentario_id`, `comment`, `comment_sender_name`, `date`, `estado`) VALUES
-(1, 0, 'asdasdad', 'fsdadasdas', '2021-10-30 19:16:40', 1);
+INSERT INTO `comentario` (`comentario_id`, `parent_comentario_id`, `comment`, `comment_sender_name`, `date`, `telefono`, `correo`, `estado`) VALUES
+(1, 0, 'asdasdad', 'fsdadasdas', '2021-10-30 19:16:40', '', '', 1),
+(6, 0, '  sfdsfsdfs', 'dfsdf', '2021-11-05 20:53:41', '234234', 'fsdfsf', 1),
+(9, 0, 'dsadasdasd', 'dasdasd', '2021-11-05 21:17:13', '313131', 'dasda', 1),
+(10, 0, 'asdasda', 'dasdas', '2021-11-05 21:18:26', '31312312', 'dsadasd', 1),
+(11, 0, '  sdfsfs', 'fsdfsf', '2021-11-05 21:19:01', '4322342', 'fdfssdf', 1);
 
 -- --------------------------------------------------------
 
@@ -67,7 +72,7 @@ CREATE TABLE `members` (
 
 INSERT INTO `members` (`memberID`, `username`, `password`, `email`, `active`, `rol`, `resetToken`, `resetComplete`) VALUES
 (1, 'kevin', '$2y$10$QslbbRiSXV3ra7fKW/85auFDKNVBD24yUz76EaBVK.jw23NN12/By', 'kevin@gmail.com', 'yes', 1, NULL, 'No'),
-(2, 'kevin2', '$2y$10$KUPCkEMZ07twY2emiBbpi.xRTtCqJw1LFHHs1HXVjj1YaGEdTblUy', 'kevin2@gmail.com', 'yes', 2, NULL, 'No'),
+(2, 'kevin2', '$2y$10$KUPCkEMZ07twY2emiBbpi.xRTtCqJw1LFHHs1HXVjj1YaGEdTblUy', 'kevin2@gmail.com', 'yes', 1, NULL, 'No'),
 (3, 'hans', '$2y$10$3JZ/B/Xa7wdn47vMaO1kIenPl9irA5mZUgbif4pUXro4fA9xZilua', 'hans@gmail.com', 'yes', 1, NULL, 'No'),
 (4, 'mateo', '$2y$10$0joosT1Xsou.mt4UeEcrsuGI6gPqWLqG3r4Uqbd4Es76IXSyXrEZG', 'mateo@gmail.com', 'yes', 2, NULL, 'No');
 
@@ -121,7 +126,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `comentario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `comentario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `members`
