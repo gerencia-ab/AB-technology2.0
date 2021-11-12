@@ -1,13 +1,13 @@
-<?php require('Controller/Conexion.php'); 
+<?php require('../../Controller/Conexion.php'); 
 
 //if not logged in redirect to login page
 if(!$user->is_logged_in())
 { 
-    header('Location: login.php'); 
+    header('Location: ../auth/login.php'); 
     exit(); 
 }else if(!($user->rol($_SESSION['username'])=="Admin"))
 {
-    header('Location: memberpage.php'); 
+    header('Location: ../auth/memberpage.php'); 
     exit(); 
 }
 
@@ -18,14 +18,14 @@ if(!$user->is_logged_in())
 <html lang="en">
 <head>
     <?php
-        include_once __DIR__.'/php/scripts/scriptsCSS.php';
+        include_once '../../php/scripts/scriptsCSS.php';
     ?>
 </head>
    
 <body>
     <header class="bg-primary text-center">
         <?php
-            include_once __DIR__.'/php/header.php';
+            include_once '../../php/header.php';
         ?>
         <h1>Encabezado</h1>
     </header>
@@ -49,35 +49,14 @@ if(!$user->is_logged_in())
                                  </select>
                       <div>
                     <input type="button" class="btn-submit" id="submitButton"
-                           value="Registrar" />
+                           value="Registrar" onclick="registrarUsuario()" />
 				<div style="clear:both"></div>
             </form>
         </div>
     <?php
-        include_once __DIR__.'/php/footer.php';    
-        include __DIR__.'/php/scripts/scriptsJS.php'
+        include_once '../../php/footer.php';    
+        include '../../php/scripts/scriptsJS.php'
     ?>    
 </body>
 </html>
-<script >
-    $("#submitButton").click(function () {
-    $("#comment-message").css('display', 'none');
-    var str = $("#frm-comment").serialize();
-    console.log(str);
-    $.ajax({
-        url: "Controller/AgregarUsuario.php",
-        data: str,
-        type: 'post',
-        success: function (response)
-        {
-                console.log(response);
-                $("#comment-message").css('display', 'inline-block');
-                $("#username").val("");
-                $("#correo").val("");
-                $("#password").val("");
-                window.location.href = 'listausuarios.php';
-           
-        }
-    });
-});
-</script>
+<script src="../../js/funciones.js"></script>

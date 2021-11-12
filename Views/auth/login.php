@@ -2,10 +2,10 @@
 ini_set('display_errors', 1); 
 error_reporting(E_ALL);
 //Declaramos la conexion con el servidor de base de datos
-require_once('Controller/Conexion.php');
+require_once('../../Controller/Conexion.php');
 
 //Si no existe la sesion, redirigir al index
-if( $user->is_logged_in() ){ header('Location: index.php'); exit(); }
+if( $user->is_logged_in() ){ header('Location: ../../index.php'); exit(); }
 
 //Verifica el formulario
 if(isset($_POST['submit'])){
@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 
 		if($user->login($username,$password)){
 			$_SESSION['username'] = $username;
-			header('Location: memberpage.php');
+			header('Location: ../auth/memberpage.php');
 			exit;
 
 		} else {
@@ -46,14 +46,14 @@ $title = 'Login';
 <html lang="en">
 <head>
     <?php
-        include_once __DIR__.'/php/scripts/scriptsCSS.php';
+        include_once '../../php/scripts/scriptsCSS.php';
     ?>
 </head>
    
 <body>
     <header class="bg-primary text-center">
         <?php
-            include_once __DIR__.'/php/header.php';
+            include_once '../../php/header.php';
         ?>
         <h1>Encabezado</h1>
     </header>
@@ -122,8 +122,8 @@ $title = 'Login';
 
 </div>
 <?php
-        include_once __DIR__.'/php/footer.php';    
-        include __DIR__.'/php/scripts/scriptsJS.php'
+        include_once '../../php/footer.php';    
+        include '../../php/scripts/scriptsJS.php';
     ?>    
 </body>
 </html>

@@ -1,7 +1,7 @@
 <footer class="text-center" style="background-color: #191B2A;">
     <div class="container">
         <div class="row">
-            <img src="recursos/imagenes.png" alt="Logo AB Technology Group">    
+            <img src="http://localhost/AB-technology2.0/recursos/imagenes.png" alt="Logo AB Technology Group">    
         </div>
         <div class="row">                
                 <div class="col">
