@@ -4,50 +4,107 @@
             <div class="text-center text-white">
                 <h2>Nuestro trabajo</h2>
             </div> 
-            <div class="col-sm-12 col-md-4 col-lg-4 mt-2 mb-2" style="margin: auto;">
-                <div class="swiper SwiperPortafolio">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide slides"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"></div>
-                        <div class="swiper-slide slides"><img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1076&q=80"></div>
-                        <div class="swiper-slide slides"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80"></div>
-                        <div class="swiper-slide slides">Imagen proyecto 1</div>
-                        <div class="swiper-slide slides">Imagen proyecto 1</div>
-                        <div class="swiper-slide slides">Imagen proyecto 1</div>
-                        <div class="swiper-slide slides">Imagen proyecto 1</div>
-                        <div class="swiper-slide slides">Imagen proyecto 1</div>
-                        <div class="swiper-slide slides">Imagen proyecto 1</div>
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-2" style="margin: auto;">
+                <div class="text-center text-white">
+                    <h3>Bivalco</h3>
+                </div>
+                <div class="swiper SwiperPortafolio mt-4">
+                    <div class="swiper-wrapper swiperSize" style="height: 400px;">                        
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/bivalco1.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/bivalco2.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/bivalco3.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/bivalco4.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/bivalco5.png"></div>
+                        <div class="swiper-slide slides fondoLogos">
+                            <div class="row">
+                                <div class="col-5" style="margin: auto; text-align: center;">
+                                    <img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/logo-php.png" style="width: 50%">
+                                </div>
+                                <div class="col-5" style="margin: auto; text-align: center;">
+                                    <img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/logo-js.png" style="width: 35%">
+                                </div>
+                                <div class="col-4 mt-2" style="margin: auto; text-align: center">
+                                    <img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/logo-jQuery.png" style="width: 180%;">
+                                </div>
+                                <p style="font-size: 15px; text-align: justify; margin-top: 20px; padding: 0px 35px;">
+                                    BIVALCO S.A.S se crea para entregar a sus clientes una oferta de valor personalizada brindando una asesoría confiable en bienes raíces y seguros, 
+                                    con el objetivo de ofrecer la mejor opción en la Administración, Promoción y Venta de inmuebles.
+                                </p>
+                                <div class="swiper-slide slides fondoLogos">
+                                    <a class="btn btn-outline-primary" href="https://www.bivalco.com/" target="_blank" style="text-decoration: none; margin: auto;">Ir a página</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4 mt-2 mb-2" style="margin: auto;">
-                <div class="swiper SwiperPortafolio">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-2" style="margin: auto;">
+                <div class="text-center text-white">
+                    <h3>Palangre</h3>
+                </div>
+                <div class="swiper SwiperPortafolio mt-4" style="width: 292px; height: 600px;">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slides"><img src="https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1076&q=80"></div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
-                        <div class="swiper-slide slides">Imagen proyecto 2</div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/palangre1.jpeg" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/palangre2.jpeg" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/palangre3.jpeg" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/palangre4.jpeg" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/palangre5.jpeg" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides fondoLogos" style="height: 600px;">
+                            <div class="row">
+                                <div class="col-12" style="margin: auto; text-align: center;">
+                                    <img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/logo-java.png" style="width: 40%">
+                                </div>
+                                <div class="col-12 mt-5" style="margin: auto; text-align: center;">
+                                    <img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/logo-kotlin.png" style="width: 80%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slides fondoLogos" style="height: 600px;">
+                            <p style="font-size: 15px; text-align: justify; margin-top: 20px; padding: 0px 15px;">
+                                BIVALCO S.A.S se crea para entregar a sus clientes una oferta de valor personalizada brindando una asesoría confiable en bienes raíces y seguros, 
+                                con el objetivo de ofrecer la mejor opción en la Administración, Promoción y Venta de inmuebles (sobre planos, nuevo o usado), y en la adquisición 
+                                de seguros personales y empresariales.
+                            </p>
+                        </div>
+                        <div class="swiper-slide slides fondoLogos" style="height: 600px;">
+                            <a class="btn btn-outline-primary" href="https://www.bivalco.com/" target="_blank" style="text-decoration: none; margin: auto;">Descargar APP</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-4 col-lg-4 mt-2 mb-2" style="margin: auto;">
-                <div class="swiper SwiperPortafolio">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide slides"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80"></div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
-                        <div class="swiper-slide slides">Imagen proyecto 3</div>
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-2" style="margin: auto;">
+                <div class="text-center text-white">
+                    <h3>C&R INMOBILIARIA</h3>
+                </div>
+                <div class="swiper mt-4">
+                    <div class="swiper-wrapper swiperSize" style="height: 400px;">
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/cyr1.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/cyr2.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/cyr3.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/cyr4.png"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/cyr5.png"></div>
+                        <div class="swiper-slide slides fondoLogos">
+                            <div class="row">
+                                <div class="col-5" style="margin: auto; text-align: center;">
+                                    <img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/logo-php.png" style="width: 50%">
+                                </div>
+                                <div class="col-5" style="margin: auto; text-align: center;">
+                                    <img class="rounded" src="http://localhost/AB-technology/recursos/imagenes/logo-bootstrap.svg" style="width: 40%">
+                                </div>
+                                <div class="col-4 mt-2" style="margin: auto; text-align: center">
+                                    <img class="rounded-3" src="http://localhost/AB-technology/recursos/imagenes/logo-js.png" style="width: 50%">
+                                </div>
+                                <p style="font-size: 15px; text-align: justify; margin-top: 20px; padding: 0px 35px;">
+                                    BIVALCO S.A.S se crea para entregar a sus clientes una oferta de valor personalizada brindando una asesoría confiable en bienes raíces y seguros, 
+                                    con el objetivo de ofrecer la mejor opción en la Administración, Promoción y Venta de inmuebles.
+                                </p>
+                                <div class="swiper-slide slides fondoLogos">
+                                    <a class="btn btn-outline-primary" href="https://cyrinmobiliarialtda.com/" target="_blank" style="text-decoration: none; margin: auto;">Ir a página</a>
+                                </div>
+                            </div>
+                        </div>                       
                     </div>
                 </div>
             </div>

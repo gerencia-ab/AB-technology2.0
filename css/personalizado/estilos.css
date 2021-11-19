@@ -27,6 +27,15 @@ body {
   overflow: hidden;
   line-height: 0; }
 
+.fondoLogos {
+  background-color: #191B2A;
+  padding: 10px;
+  border-radius: 10px; }
+
+.swiperSize img {
+  object-fit: cover;
+  height: 100%; }
+
 .custom-shape-divider-bottom-1634938778 svg {
   position: relative;
   display: block;
@@ -61,6 +70,10 @@ lottie-player {
 
 .dropdown-item {
   color: white; }
+
+.creditos {
+  font-size: 12px;
+  color: #000; }
 
 .logo {
   margin: auto;
@@ -114,26 +127,8 @@ lottie-player {
   font-size: 22px;
   font-weight: bold;
   color: #fff; }
-  .slides:nth-child(1n) {
-    background-color: #ce1111; }
-  .slides:nth-child(2n) {
-    background-color: #008cff; }
-  .slides:nth-child(3n) {
-    background-color: #0ab86f; }
-  .slides:nth-child(4n) {
-    background-color: #d37a07; }
-  .slides:nth-child(5n) {
-    background-color: #76a30c; }
-  .slides:nth-child(6n) {
-    background-color: #b40a2f; }
-  .slides:nth-child(7n) {
-    background-color: #236313; }
-  .slides:nth-child(8n) {
-    background-color: #0044ff; }
-  .slides:nth-child(9n) {
-    background-color: #da0cda; }
-  .slides:nth-child(10n) {
-    background-color: #365e4d; }
+  .slides > a {
+    background-color: #191B2A; }
   .slides img {
     width: 100%; }
 

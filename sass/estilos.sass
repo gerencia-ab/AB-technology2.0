@@ -3,6 +3,7 @@ $blanco : #FFFFFF
 $negro : #000
 $gris : #F0F0F0
 $azulOscuro : #3e4765
+$azulOscuro2 : #191B2A
 
 /* Elementos por defecto de la página */
 footer
@@ -32,6 +33,14 @@ body
     overflow: hidden
     line-height: 0
 
+.fondoLogos
+    background-color: $azulOscuro2
+    padding: 10px
+    border-radius: 10px
+
+.swiperSize img
+    object-fit: cover 
+    height: 100%
 
 .custom-shape-divider-bottom-1634938778 svg 
     position: relative
@@ -72,6 +81,10 @@ lottie-player
 
 .dropdown-item
     color: white
+
+.creditos
+    font-size: 12px
+    color: $negro
 
 .logo
     margin: auto
@@ -129,35 +142,8 @@ lottie-player
   font-weight: bold
   color: #fff
 
-  &:nth-child(1n)
-    background-color: rgb(206, 17, 17)
-
-  &:nth-child(2n)
-    background-color: rgb(0, 140, 255)
-
-  &:nth-child(3n)
-    background-color: rgb(10, 184, 111)
-
-  &:nth-child(4n)
-    background-color: rgb(211, 122, 7)
-
-  &:nth-child(5n)
-    background-color: rgb(118, 163, 12)
-
-  &:nth-child(6n)
-    background-color: rgb(180, 10, 47)
-
-  &:nth-child(7n)
-    background-color: rgb(35, 99, 19)
-
-  &:nth-child(8n)
-    background-color: rgb(0, 68, 255)
-
-  &:nth-child(9n)
-    background-color: rgb(218, 12, 218)
-
-  &:nth-child(10n)
-    background-color: rgb(54, 94, 77)
+  & > a
+    background-color: $azulOscuro2
   
   img
     width: 100%
