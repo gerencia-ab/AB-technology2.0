@@ -22,10 +22,11 @@
                            type="text" name="name" id="name" placeholder="Nombres" />
                       </div>
                       <input class="input-field"
-                           type="text" name="telefono" id="telefono" placeholder="Telefono" />
+                           name="telefono" type="number" id="telefono" placeholder="Telefono" />
                       </div>
                       <input class="input-field"
-                           type="email" name="correo" id="correo" placeholder="Correo" />
+                           type="email" name="correo" id="correo" placeholder="Correo" onblur="validacionAsinc()"/>
+                           <p id="valemail"></p>
                       </div>
                 <div class="input-row">
                     <textarea class="input-field" type="text" name="comment"

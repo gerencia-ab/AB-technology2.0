@@ -33,20 +33,10 @@ class ComentariosController {
     }
 
     function eliminarComentario($conn){
-        if(!$user->is_logged_in())
-        { 
-            header('Location: ../Views/auth/login.php'); 
-            exit(); 
-        }else if(!($user->rol($_SESSION['username'])=="Admin"))
-        {
-            header('Location: ../Views/auth/memberpage.php'); 
-            exit(); 
-        }else if(!isset($_GET["id"])) exit();
-        $id = $_GET["id"];
+        $id = $_POST["id"];
         
         $sentencia = $conn->prepare("DELETE FROM comentario WHERE comentario_id = ?;");
         $resultado = $sentencia->execute([$id]);
-        return header('Location: ../Views/comentarios/listacomentarios.php'); 
     }
 
     function listarComentarios($conn){
@@ -72,28 +62,17 @@ class ComentariosController {
         echo json_encode($record_set);
     }
     function aprobarComentario($conn){
-        if(!$user->is_logged_in())
-        { 
-            header('Location: ../Views/auth/login.php'); 
-            exit(); 
-        }else if(!($user->rol($_SESSION['username'])=="Admin"))
-        {
-            header('Location: ../Views/auth/memberpage.php'); 
-            exit(); 
-        }else if(!isset($_GET["id"])) exit();
-        $id = $_GET["id"];
+        
+        $id = $_POST["id"];
         $estado = 1;
-
-
         $sentencia = $conn->prepare("UPDATE comentario SET estado = ? WHERE comentario_id = ?;");
         $resultado = $sentencia->execute([$estado, $id]);
-        return header('Location: ../Views/comentarios/listacomentarios.php'); 
+        
     }
 
 }
-if(isset($_POST['funcion']) || isset($_GET['funcionget']) ){
+if(isset($_POST['funcion']) ){
     $funcion = $_POST['funcion'];
-    $funcionget = $_GET["funcionget"];
     $comentario = new ComentariosController();
     switch ($funcion) {
         case 'agregarComentario':

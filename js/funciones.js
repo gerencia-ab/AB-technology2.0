@@ -143,8 +143,8 @@ function listComments(pag) {
                                     <td>" + data[i]['date'] + "<td>\
                                     <td>" + data[i]['correo'] + "<td>\
                                     <td>" + data[i]['telefono'] + "<td>\
-                                    <td><a href='../../Controller/ComentariosController.php?id=" + id + "'" + "><button type='button' class='btn btn-warning'>Aprobar</button></a><td>\
-                                    <td><a href='../../Controller/ComentariosController.php?id=" + id + "'" + "><button type='button' class='btn btn-warning'>Eliminar</button></a><td>";
+                                    <td><a onClick='aprobarcomment(" + id + ")'><button type='button' class='btn btn-warning'>Aprobar</button></a><td>\
+                                    <td><a onClick='eliminarcomment(" + id + ")'><button type='button' class='btn btn-warning'>Eliminar</button></a><td>";
                                     
 
                         var item = $("<tr>").html(comments);
@@ -159,7 +159,20 @@ function listComments(pag) {
             }
             });
 }
-
+function isValidEmail(mail) { 
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail); 
+  }
+  function validacionAsinc()
+  {
+    var email = document.getElementById('correo').value;
+    var valido = isValidEmail(email);
+    if(valido===false)
+    {
+        document.getElementById("valemail").innerHTML = "Correo invalido";
+    }else{
+        document.getElementById("valemail").innerHTML = "";
+    }
+  }
 function agregarComentario(){
     $("#comment-message").css('display', 'none');
     var tel = document.getElementById('telefono').value;
@@ -167,7 +180,8 @@ function agregarComentario(){
     var comentario = document.getElementById('telefono').value;
     var valoresAceptados = /^[0-9]+$/;
     var email = document.getElementById('correo').value;
-       if (!tel.match(valoresAceptados) || email == ""|| tel =="" || nombre =="" || comentario == ""){
+    var valido = isValidEmail(email);
+       if (!tel.match(valoresAceptados) || valido==false || tel =="" || nombre =="" || comentario == ""){
 
         $("#comment-message").css('display', 'inline-block');
         $("#name").val("");
@@ -302,4 +316,30 @@ function listReplies(commentId, data, list) {
             listReplies(data[i].comentario_id, data, reply_list);
         }
     }
+}
+
+function aprobarcomment(id)
+{
+    $.ajax({
+        url: "../../Controller/ComentariosController.php",
+        data: {'id':id, 'funcion': 'aprobarComentario'},
+        type: 'post',
+        success: function (response)
+        {
+            location.reload();
+        }
+        });
+}
+
+function eliminarcomment(id)
+{
+    $.ajax({
+        url: "../../Controller/ComentariosController.php",
+        data:  {'id':id, 'funcion':'eliminarComentario'},
+        type: 'post',
+        success: function (response)
+        {
+            location.reload();
+        }
+    });
 }
