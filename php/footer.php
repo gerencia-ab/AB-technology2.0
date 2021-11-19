@@ -17,13 +17,13 @@
         </div>
       </div>      
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 </div>
 
-<footer class="text-center" style="background-color: #191B2A;">
+<footer class="text-center mt-5" style="background-color: #191B2A;">
     <div class="container">
         <div class="row">                
                 <div class="col">
@@ -32,7 +32,7 @@
                     </button>
                 </div>
                 <div class="col">
-                    <img src="recursos/imagenes/logo.webp" alt="Logo AB Technology Group" class="logo"> 
+                    <img class="logo" src="http://localhost/AB-technology/recursos/imagenes/logo.webp" alt="Logo AB Technology Group"> 
                 </div>
                 <div class="col">
                     <span><i class="fab fa-facebook"></i></span>
