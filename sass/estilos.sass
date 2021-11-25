@@ -23,6 +23,7 @@ body
   position: relative
   bottom: 0
   z-index: 98
+  filter: brightness(50%)
 
 #frm-comment
     background-color: $azulOscuro2
@@ -43,6 +44,36 @@ body
     width: 100%
     overflow: hidden
     line-height: 0
+
+.cover-video
+    position: relative
+    display: inline-block
+    text-align: center
+    width: 100%
+
+.cover-titulo
+    position: absolute
+    top: 10px
+    left: 10px
+    z-index: 98
+    position: absolute
+    top: 25%
+    right: 11%
+    left: 11%
+    font-family: 'Montserrat', sans-serif
+    color: #FFFFFF
+    font-size: 68px
+    text-shadow: 2px 2px 30px black
+
+.flecha
+    top: 10px
+    left: 10px
+    z-index: 98
+    position: absolute
+    top: 75%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 10vh
 
 .fondoLogos
     background-color: $azulOscuro2
@@ -171,5 +202,29 @@ lottie-player
 
   .swiper-button-prev:after, .swiper-button-next:after
     font-size: 20px
+
+@media (max-width: 1100px)
+  .cover-titulo
+    top: 18%
+    right: 11%
+    left: 11%
+    font-size: 48px
+
+
+@media (max-width: 670px)
+  .cover-titulo
+    top: 15%
+    right: 12%
+    left: 12%
+    font-size: 40px
+
+@media (max-width: 670px)
+  .cover-titulo
+    top: 15%
+    right: 12%
+    left: 12%
+    font-size: 32px
+
+
 
   

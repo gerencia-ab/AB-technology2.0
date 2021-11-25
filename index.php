@@ -10,11 +10,18 @@
             include_once __DIR__.'/php/header.php';
         ?>
 
-    <div class="bg-secondary text-center">
+    <div class="bg-secondary text-center cover-video">
         
         <video id="background-video" autoplay loop muted poster="recursos/imagenes/imgFondo1.png">
             <source src="recursos/videos/video1.mp4" type="video/mp4">
+            
         </video>
+
+        
+
+        <h1 class="cover-titulo"> Somos una empresa que planifica, construye y gestiona soluciones de software</h1>
+
+        <img src="recursos/imagenes/flecha_abajo.svg" class="flecha"/>
         
             <div class="custom-shape-divider-bottom-1634938778">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

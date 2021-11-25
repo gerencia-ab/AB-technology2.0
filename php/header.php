@@ -36,12 +36,9 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #FFF">
+          <a class="nav-link " href="http://localhost/AB-technology/Views/comentarios/comentarios.php" id="navbarDropdown" role="button"  aria-expanded="false" style="color: #FFF">
             Blog
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/comentarios/comentarios.php">Comentarios</a></li>
-          </ul>
         </li>
       </ul>
       <form class="d-flex">
