@@ -13,7 +13,24 @@
             ?>
             <h1>Encabezado</h1>
         </header>
-        <div class="container mt-5">
+
+        <?php
+            include_once '../../php/blog.php';
+        ?>
+
+        
+        <br>        
+        <div class="container listaComentarios">
+            <h3 class="fw-bold" style="color: #FFFFFF; text-align: center;">Comentarios:</h3>
+            <br>
+            <div class="row">
+                <div id="output">
+
+                </div>
+            </div>            
+        </div>
+        <br>
+        <div class="container blog-comentar mt-5">
             <div class="row">
                 <form id="frm-comment">
                     <input type="hidden" name="comentario_id" id="commentId">
@@ -60,15 +77,7 @@
             </div>
 
         </div>
-        <br>        
-        <div class="container listaComentarios">
-            <div class="row">
-                <div id="output">
-
-                </div>
-            </div>            
-        </div>
-        <br>
+    
         <?php
             include_once '../../php/footer.php';    
             include '../../php/scripts/scriptsJS.php'

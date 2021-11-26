@@ -23,7 +23,7 @@
   </div>
 </div>
 
-<footer class="text-center mt-5" style="background-color: #191B2A;">
+<footer class="text-center mt-5 footer" style="background-color: #191B2A;">
     <div class="container">
         <div class="row">                
                 <div class="col">
