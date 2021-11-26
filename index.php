@@ -33,9 +33,19 @@
     </div>           
         <?php
             include_once __DIR__.'/php/portafolio.php';
+        ?>
+        <div class="container mt-3">
+            <div style="background-color: #191B2A; width: 100%; height: 20px; border-radius: 10px;">
+
+            </div>
+        </div>
+        
+        <?php
+            include_once __DIR__.'/php/servicios.php';
+        ?>
+        <?php
             include_once __DIR__.'/php/contacto.php';
         ?>
-
         <?php
             include_once __DIR__.'/php/footer.php';    
             include __DIR__.'/php/scripts/scriptsJS.php'

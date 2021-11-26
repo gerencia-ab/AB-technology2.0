@@ -1,10 +1,3 @@
-<?php
-
-
-
-
-?>
-
 <nav class="navbar navbar-expand-lg navbar-light position-fixed" style="width: 100%; z-index: 99; background-color: #191B2A;">
   <div class="container-fluid">
     <a class="navbar-brand" href="http://localhost/AB-technology/"><img clas="logo-navbar" src="http://localhost/AB-technology/recursos/imagenes/logo.webp" alt="Logo AB"></a>
@@ -20,8 +13,8 @@
             Inicio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Nuestro trabajo</a></li>
-            <li><a class="dropdown-item" href="#">Servicios</a></li>
+            <li><a class="dropdown-item" href="#portafolio">Nuestro trabajo</a></li>
+            <li><a class="dropdown-item" href="#servicios">Servicios</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -32,7 +25,7 @@
             <li><a class="dropdown-item" href="#">Quienes somos</a></li>
             <li><a class="dropdown-item" href="#">Encuentranos</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Contacto</a></li>
+            <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -41,7 +34,7 @@
           </a>
         </li>
       </ul>
-      <form class="d-flex">
+      <form class="d-flex" style="visibility: hidden;">
         <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search" style="border: 0; background-color: #2C3144; color: #FFF">
         <button class="btn btn-outline-primary" type="submit">Buscar</button>
       </form>

@@ -1,9 +1,9 @@
-<section class="p-2">
+<section class="p-2" id="contacto">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-10 col-lg-8 col-xl-9 text-white pt-5 contacto">
                 <div class="text-center">
-                    <h2>Contáctanos</h2>
+                    <h2 class="mb-3" style="margin: auto;">Contáctanos</h2>
                     <h5>Ingresa la siguiente información y nuestro equipo te escribirá en breve</h5>
                 </div>
                 <form>

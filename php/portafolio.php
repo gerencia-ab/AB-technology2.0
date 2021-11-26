@@ -1,8 +1,8 @@
-<section class="SectionPortafolio">
+<section class="SectionPortafolio" id="portafolio">
     <div class="container">
         <div class="row pt-5 mt-6 ps-0 pe-0">
             <div class="text-center text-white">
-                <h2 class="fw-bold">Nuestro trabajo</h2>
+                <h2 class="fw-bold" style="font-size: 50px; font-family: 'Montserrat', sans-serif; margin: auto;">Nuestro trabajo</h2>
             </div> 
             <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mb-2" style="margin: auto;">
                 <div class="text-center text-white">
