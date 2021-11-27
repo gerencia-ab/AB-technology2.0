@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalCreditos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -27,19 +27,21 @@
     <div class="container">
         <div class="row">                
                 <div class="col">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="mt-5" type="button" data-bs-toggle="modal" data-bs-target="#modalCreditos">
                         Ver Créditos
-                    </button>
+                    </a>
                 </div>
                 <div class="col">
                     <img class="logo" src="http://localhost/AB-technology/recursos/imagenes/logo.webp" alt="Logo AB Technology Group"> 
                 </div>
                 <div class="col">
-                    <span><i class="fab fa-facebook"></i></span>
-                    <span><i class="fab fa-whatsapp"></i></span>
-                    <span><i class="fab fa-instagram"></i></span>
-                    <span><i class="fab fa-linkedin"></i></span>
-                    <span><i class="fab fa-tiktok"></i></span>
+                  <div class="mt-5">
+                    <a href="https://www.facebook.com/Sistemas-AB-299096900718144/" target="_blank" style="color: #60757D;"><span class="m-2"><i class="fab fa-facebook fa-2x"></i></span></a>
+                    <a href="http://bit.ly/3anoqf2" target="_blank" style="color: #60757D;"><span class="m-2"><i class="fab fa-whatsapp fa-2x"></i></span></a>
+                    <a href="https://instagram.com/sistemas.ab?utm_medium=copy_link" target="_blank" style="color: #60757D;"><span class="m-2"><i class="fab fa-instagram fa-2x"></i></span></a>
+                    <a href="https://www.linkedin.com/company/53098917/admin/" target="_blank" style="color: #60757D;"><span class="m-2"><i class="fab fa-linkedin fa-2x"></i></span></a>
+                    <a href="" target="_blank" style="color: #60757D;"><span class="m-2"><i class="fab fa-tiktok fa-2x"></i></span></a>
+                  </div>
                 </div>
         </div>
         <div class="row">
