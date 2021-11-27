@@ -27,36 +27,42 @@ if(!$user->is_logged_in())
         <?php
             include_once '../../php/header.php';
         ?>
-        <h1>Encabezado</h1>
+        <div style="height: 150px;"></div>
     </header>
-    <div class="comment-form-container">
-    <form id="frm-comment">
-                <div class="input-row">
-                    <input class="input-field"
-                           type="text" name="username" id="username" placeholder="Username" />
-                      </div>
-                      <input class="input-field"
-                           type="password" name="password" id="password" placeholder="Password" />
-                      </div>
-                      <input class="input-field"
-                           type="email" name="correo" id="correo" placeholder="Correo" />
-                      </div>
-                      <div class="form-group">
-                            <label for="rol">Rol </label>
-                                 <select name="rol" class="form-control" id="rol">
-                                     <option value="1">Admin</option>
-                                     <option value="2">Personal</option>
-                                 </select>
-                      <div>
-                    <input type="button" class="btn-submit" id="submitButton"
-                           value="Registrar" onclick="registrarUsuario()" />
-				<div style="clear:both"></div>
-            </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-11 col-sm-10 col-md-8 col-lg-6 edicionUsuario" style="margin: auto;">
+                <form id="frm-comment">
+                <h3 class="fw-bold mb-5" style="color: #FFFFFF; text-align: center;">Registrar Usuario:</h3>
+                        
+                    <input id="loginUsername" type="text" name="username" id="username" placeholder="Username" class="form-control mb-3" />
+                        
+                    <input id="loginPass" type="password" name="password" id="password" placeholder="Password" class="form-control mb-3" />
+                            
+                    <input type="email" name="correo" id="correo" placeholder="Correo" class="form-control mb-3" />
+                            
+                    <label for="rol" style="ml-3">Rol: </label>
+
+                    <select name="rol" class="form-control" id="rol" style="margin:20px; width: 50%;">
+                        <option value="1">Admin</option>
+                        <option value="2">Personal</option>
+                    </select>
+                            
+                            <input type="button" class="btn btn-outline-primary" id="submitButton" value="Registrar" onclick="registrarUsuario()" style="margin:auto;"/>
+
+                
+                </form>
+            </div>
         </div>
-    <?php
-        include_once '../../php/footer.php';    
-        include '../../php/scripts/scriptsJS.php'
-    ?>    
+        
+    </div>
+    <div class="auxFooter">
+        <?php
+            include_once '../../php/footer.php';    
+            include '../../php/scripts/scriptsJS.php'
+        ?>    
+    </div>
+    
 </body>
 </html>
 <script src="../../js/funciones.js"></script>

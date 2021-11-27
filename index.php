@@ -35,7 +35,7 @@
             include_once __DIR__.'/php/portafolio.php';
         ?>
         <div class="container mt-3">
-            <div style="background-color: #191B2A; width: 100%; height: 20px; border-radius: 10px;">
+            <div style="background-color: #191B2A; width: 100%; height: 15px; border-radius: 10px; margin-top: 50px;">
 
             </div>
         </div>
