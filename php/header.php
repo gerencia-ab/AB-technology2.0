@@ -13,8 +13,8 @@
             Inicio
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#portafolio">Nuestro trabajo</a></li>
-            <li><a class="dropdown-item" href="#servicios">Servicios</a></li>
+            <li><a class="dropdown-item" href="http://localhost/AB-technology/#portafolio">Nuestro trabajo</a></li>
+            <li><a class="dropdown-item" href="http://localhost/AB-technology/#servicios">Servicios</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -25,7 +25,7 @@
             <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/nosotros.php">Quienes somos</a></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/encuentranos/">Encuentranos</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+            <li><a class="dropdown-item" href="http://localhost/AB-technology/#contacto">Contacto</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">

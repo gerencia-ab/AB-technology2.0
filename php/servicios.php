@@ -9,36 +9,36 @@
                  <!-- Gallery -->
                  <div class="row mt-5">
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-                        <div>
+                        <div class="contenedorServicios">
                             <img src="recursos/imagenes/web.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
-                            <p class="titulosServicios">Página Web</p>
+                            <p class="centrado">Página Web</p>
                         </div>
-                        <div>
+                        <div class="contenedorServicios">
                             <img src="recursos/imagenes/appWeb.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
-                            <p class="titulosServicios">Aplicaciones Web</p>
+                            <p class="centrado">Aplicaciones Web</p>
                         </div>
                         
                     </div>
 
                     <div class="col-lg-4 mb-4 mb-lg-0">
-                        <div>
+                        <div class="contenedorServicios">
                             <img src="recursos/imagenes/android.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
-                            <p class="titulosServicios">APPs Android</p>     
+                            <p class="centrado">APPs Android</p>     
                         </div>
-                        <div>
+                        <div class="contenedorServicios">
                             <img src="recursos/imagenes/medida.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
-                            <p class="titulosServicios">Aplicaciones a tu medida</p>
+                            <p class="centrado">Aplicaciones a tu medida</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 mb-4 mb-lg-0">
-                        <div>
+                        <div class="contenedorServicios">
                             <img src="recursos/imagenes/tienda.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
-                            <p class="titulosServicios">Tiendas online</p>
+                            <p class="centrado">Tiendas online</p>
                         </div>
-                        <div>
+                        <div class="contenedorServicios">
                             <img src="recursos/imagenes/iOS.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
-                            <p class="titulosServicios">APPs</p>  
+                            <p class="centrado">APPs</p>  
                         </div>
                     </div>
                 </div>

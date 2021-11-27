@@ -31,8 +31,11 @@
         </div>
         <br>
         <div class="container blog-comentar mt-5">
+            
             <div class="row">
                 <form id="frm-comment">
+                <h3 class="fw-bold" style="color: #FFFFFF; text-align: center;">Comentar</h3>
+                <br>
                     <input type="hidden" name="comentario_id" id="commentId">
 
                     <div class="mb-3">

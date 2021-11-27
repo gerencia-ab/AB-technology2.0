@@ -1,3 +1,4 @@
+<h2 class="blog-titulo" style="color: #FFFFFF; margin-top: 50px;">Blog</h2>
 <article class="container mt-5 blog-contenedor">
     
     <header>
