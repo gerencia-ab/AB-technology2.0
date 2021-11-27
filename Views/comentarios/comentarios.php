@@ -58,21 +58,6 @@
                         <input type="button" class="btn btn-outline-primary" id="submitButton" value="Publicar Ahora" onclick="agregarComentario()" style="margin: auto;">
                     </div>
                     <div style="clear:both"></div>
-
-
-                        <!--<input class="input-field" type="text" name="name" id="name" placeholder="Nombres"/>
-                        </div>
-                        <input class="input-field" name="telefono" type="number" id="telefono" placeholder="Telefono"/>
-                        </div>
-                        <input class="input-field" type="email" name="correo" id="correo" placeholder="Correo" onblur="validacionAsinc()"/>
-                            <p id="valemail"></p>
-                        </div>
-                        <div class="input-row">
-                            <textarea class="input-field" type="text" name="comment"id="comment" placeholder="Agregar comentario"></textarea>
-                        </div>
-                        <div>
-                            <input type="button" class="btn-submit" id="submitButton" value="Publicar Ahora" onclick="agregarComentario()"/>
-                        <div style="clear:both"></div>-->
                 </form>
             </div>
 

@@ -27,9 +27,7 @@
     <div class="container">
         <div class="row">                
                 <div class="col">
-                    <a class="mt-5" type="button" data-bs-toggle="modal" data-bs-target="#modalCreditos">
-                        Ver Créditos
-                    </a>
+                    
                 </div>
                 <div class="col">
                     <img class="logo" src="http://localhost/AB-technology/recursos/imagenes/logo.webp" alt="Logo AB Technology Group"> 
@@ -46,6 +44,9 @@
         </div>
         <div class="row">
             <p>Todos los derechos reservados</p>
+            <a type="button" data-bs-toggle="modal" data-bs-target="#modalCreditos" style="font-size: 12px; text-decoration: none; color: #60757D;">
+              Ver Créditos
+            </a>
         </div>
     </div>
 </footer>

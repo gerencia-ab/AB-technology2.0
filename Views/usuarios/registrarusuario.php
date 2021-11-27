@@ -29,30 +29,32 @@ if(!$user->is_logged_in())
         ?>
         <h1>Encabezado</h1>
     </header>
-    <div class="comment-form-container">
-    <form id="frm-comment">
+    <div class="container">
+        <div class="row">
+            <form id="frm-comment">
                 <div class="input-row">
-                    <input class="input-field"
-                           type="text" name="username" id="username" placeholder="Username" />
-                      </div>
-                      <input class="input-field"
-                           type="password" name="password" id="password" placeholder="Password" />
-                      </div>
-                      <input class="input-field"
-                           type="email" name="correo" id="correo" placeholder="Correo" />
-                      </div>
-                      <div class="form-group">
-                            <label for="rol">Rol </label>
-                                 <select name="rol" class="form-control" id="rol">
-                                     <option value="1">Admin</option>
-                                     <option value="2">Personal</option>
-                                 </select>
-                      <div>
-                    <input type="button" class="btn-submit" id="submitButton"
-                           value="Registrar" onclick="registrarUsuario()" />
-				<div style="clear:both"></div>
+                    <input class="input-field" type="text" name="username" id="username" placeholder="Username" />
+                </div>
+                <div class="input-row">
+                    <input class="input-field" type="password" name="password" id="password" placeholder="Password" />
+                </div>
+                <div class="input-row">
+                    <input class="input-field" type="email" name="correo" id="correo" placeholder="Correo" />
+                </div>
+                <div class="form-group">
+                    <label for="rol">Rol </label>
+                    <select name="rol" class="form-control" id="rol">
+                        <option value="1">Admin</option>
+                        <option value="2">Personal</option>
+                    </select>
+                </div>
+                <div class="input-row">
+                    <input type="button" class="btn-submit" id="submitButton" value="Registrar" onclick="registrarUsuario()" />
+                </div>
+                <div style="clear:both"></div>
             </form>
         </div>
+    </div>
     <?php
         include_once '../../php/footer.php';    
         include '../../php/scripts/scriptsJS.php'

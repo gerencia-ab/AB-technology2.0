@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Lato|Lora')
 
 $dark: #252C32
@@ -22,10 +21,14 @@ $serif: 'Lora', serif
 
 /* Elementos por defecto de la página */
 footer
-  margin-bottom: -10px
   width: 100%
   padding: 2% 1%
   color: #60757D
+
+.auxFooter
+  position: absolute
+  bottom: 0
+  width: 100%
 
 body
   background-color: $azulOscuro
@@ -40,84 +43,103 @@ body
   z-index: 98
   filter: brightness(50%)
 
-#frm-comment
-    background-color: $azulOscuro2
-    padding: 50px 50px 30px 50px
-    border-radius: 10px
-    color: $blanco
+.verCredencial
+  float: right
+  margin-right: 10px 
+  color: $azulOscuro2
+  font-size: 20px
+  font-weight: bold
+
+.usuario, .comentario, .edicionUsuario
+  background-color: $azulOscuro2  
+  padding: 20px 30px
+  border-radius: 5px
+
+.panelAdministrativo
+  margin: auto
+  background-color: $azulOscuro2
+  color: $gris
+  padding: 20px 30px
+  border-radius: 10px
+
+#frm-comment, #formLogin
+  background-color: $azulOscuro2
+  padding: 50px 50px 30px 50px
+  border-radius: 10px
+  color: $blanco
   
 .listaComentarios
-    background-color: $azulOscuro2
-    padding: 50px 50px 30px 50px
-    border-radius: 15px
+  background-color: $azulOscuro2
+  padding: 50px 50px 30px 50px
+  border-radius: 15px
 
 .custom-shape-divider-bottom-1634938778 
-    position: absolute
-    bottom: 0
-    z-index: 98
-    left: 0
-    width: 100%
-    overflow: hidden
-    line-height: 0
+  position: absolute
+  bottom: 0
+  z-index: 98
+  left: 0
+  width: 100%
+  overflow: hidden
+  line-height: 0
 
 .cover-video
-    position: relative
-    display: inline-block
-    text-align: center
-    width: 100%
+  position: relative
+  display: inline-block
+  text-align: center
+  width: 100%
 
 .cover-titulo
-    margin: auto
-    position: absolute
-    top: 10px
-    left: 10px
-    z-index: 98
-    position: absolute
-    top: 25%
-    right: 11%
-    left: 11%
-    font-family: 'Montserrat', sans-serif
-    color: #FFFFFF
-    font-size: 68px
-    text-shadow: 2px 2px 30px black
+  margin: auto
+  position: absolute
+  top: 10px
+  left: 10px
+  z-index: 98
+  position: absolute
+  top: 25%
+  right: 11%
+  left: 11%
+  font-family: 'Montserrat', sans-serif
+  color: #FFFFFF
+  font-size: 68px
+  text-shadow: 2px 2px 30px black
 
 .titulosServicios
-    margin: -8% auto auto auto
-    position: absolute 
-    font-size: 25px 
-    font-weight: bold  
-    padding: 5px 8px 
-    border: solid 1px #CCC 
-    font-family: 'Montserrat', sans-serif
+  margin: -8% auto auto auto
+  position: absolute 
+  font-size: 25px 
+  font-weight: bold  
+  padding: 5px 8px 
+  border: solid 1px #CCC 
+  font-family: 'Montserrat', sans-serif
 
 .flecha
-    top: 10px
-    left: 10px
-    z-index: 98
-    position: absolute
-    top: 75%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 10vh
+  top: 10px
+  left: 10px
+  z-index: 98
+  position: absolute
+  top: 75%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 10vh
 
 .fondoLogos
-    background-color: $azulOscuro2
-    padding: 10px
-    border-radius: 10px
+  background-color: $azulOscuro2
+  padding: 10px
+  border-radius: 10px
 
 .swiperSize img
-    object-fit: cover 
-    height: 100%
+  object-fit: cover 
+  height: 100%
 
 .custom-shape-divider-bottom-1634938778 svg 
-    position: relative
-    display: block
-    width: calc(137% + 1.3px)
-    height: 109px
+  position: relative
+  display: block
+  width: calc(137% + 1.3px)
+  height: 109px
 
 
 .custom-shape-divider-bottom-1634938778 .shape-fill 
-    fill : $azulOscuro
+  fill : $azulOscuro
 
 //Blog
 .blog-imagen
@@ -187,8 +209,8 @@ body
 
 /* Formulario de contacto
 
-#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment
-  background-color: #2C3144
+#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment, #username, #password
+  background-color: #2C3144 !important
   color: $blanco
   border: 0
 

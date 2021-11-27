@@ -51,7 +51,6 @@ function listUsuarios(pag) {
         data: '&funcion=' + data,
         type: 'post',
         success: function (data) {
-                console.log(data)
                 var data = JSON.parse(data);
 
                 var comments = "";
@@ -62,12 +61,13 @@ function listUsuarios(pag) {
                 var thead = "\
                               <thead>\
                                 <tr>\
-                                 <th>usuario</th>\
-                                 <th>email</th>\
-                                 <th>estado</th>\
+                                 <th>Usuario</th>\
+                                 <th>Correo</th>\
+                                 <th>Estado</th>\
+                                 <th>Acción</th>\
                                 </tr>\
                              </thead>"
-                var list = $("<table class='table contenido-tabla'>").html(thead);
+                var list = $("<table class='table table-hover contenido-tabla text-center text-white-50'>").html(thead);
                 var item = $("<tr>").html(comments);
 
                 var long = pag;
@@ -79,23 +79,30 @@ function listUsuarios(pag) {
                 }
                 for (var i = 0; (i < long); i++)
                 {   
-                        var id=data[i]['memberID'];
-                        comments = "\
-                                    <td>" + data[i]['username'] +"</td>\
-                                    <td>" + data[i]['email'] + "</td>\
-                                    <td>" + data[i]['active'] + "<td>\
-                                    <td><a href='editarusuario.php?id=" + id + "'" + "><button type='button' class='btn btn-warning'>Editar</button></a><td>";
-                                    
-
-                        var item = $("<tr>").html(comments);
-                        list.append(item);
-                    
+                var id=data[i]['memberID']
+                let estado
+                if (data[i]['active']=='yes') {
+                    estado = 'Activo'
+                } else {
+                    estado = 'Inactivo'
+                }
+                comments = "\
+                            <td>" + data[i]['username'] +"</td>\
+                            <td>" + data[i]['email'] + "</td>\
+                            <td>" + estado + "</td>\
+                            <td><a class='btn btn-outline-warning m-1'  href='editarusuario.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a><td>";
+                var item = $("<tr>").html(comments);
+                list.append(item);
                 }
                 cont = cont + 5;
-                var mas ="\<a class='btn-reply' onClick='listUsuario(" + cont + ")'>Mas usuarios</a>";
-                var item = $("<tr>").html(mas);
+                let botonesInferiores = `
+                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning" href='registrarusuario.php'>registrar usuario</a>
+                    <a class='btn btn-outline-primary btn-reply' onClick='listUsuario(" + cont + ")'>Mas usuarios</a>
+                `;
+                
+                $("#botonesInferiores").html(botonesInferiores)
                 list.append(item);
-                $("#output").html(list);
+                $("#listaDeUsuarios").html(list);
             }
         });
 }
@@ -117,14 +124,14 @@ function listComments(pag) {
                 var thead = "\
                               <thead>\
                                 <tr>\
-                                 <th>nombre</th>\
-                                 <th>comentario</th>\
-                                 <th>fecha</th>\
-                                 <th>correo</th>\
-                                 <th>telefono</th>\
+                                 <th>Nombre</th>\
+                                 <th>Comentario</th>\
+                                 <th>Fecha</th>\
+                                 <th>Correo</th>\
+                                 <th>Telefono</th>\
                                 </tr>\
                              </thead>"
-                var list = $("<table class='table contenido-tabla'>").html(thead);
+                var list = $("<table class='table contenido-tabla text-center text-white-50'>").html(thead);
                 var item = $("<tr>").html(comments);
 
                 var long = pag;
@@ -136,26 +143,24 @@ function listComments(pag) {
                 }
                 for (var i = 0; (i < long); i++)
                 {   
-                        var id=data[i]['comentario_id'];
-                        comments = "\
-                                    <td>" + data[i]['comment_sender_name'] +"</td>\
-                                    <td>" + data[i]['comment'] + "</td>\
-                                    <td>" + data[i]['date'] + "<td>\
-                                    <td>" + data[i]['correo'] + "<td>\
-                                    <td>" + data[i]['telefono'] + "<td>\
-                                    <td><a onClick='aprobarcomment(" + id + ")'><button type='button' class='btn btn-warning'>Aprobar</button></a><td>\
-                                    <td><a onClick='eliminarcomment(" + id + ")'><button type='button' class='btn btn-warning'>Eliminar</button></a><td>";
-                                    
-
-                        var item = $("<tr>").html(comments);
-                        list.append(item);
+                    var id=data[i]['comentario_id'];
+                    comments = "\
+                                <td>" + data[i]['comment_sender_name'] +"</td>\
+                                <td>" + data[i]['comment'] + "</td>\
+                                <td>" + data[i]['date'] + "</td>\
+                                <td>" + data[i]['correo'] + "</td>\
+                                <td>" + data[i]['telefono'] + "</td>\
+                                <td><a class='btn btn-outline-warning' onClick='aprobarcomment(" + id + ")'>Aprobar</a>\
+                                <a class='btn btn-outline-danger' onClick='eliminarcomment(" + id + ")'>Eliminar</a><td>";
+                    var item = $("<tr>").html(comments);
+                    list.append(item);
                     
                 }
                 cont = cont + 5;
-                var mas ="\<a class='btn-reply' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
+                var mas ="\<a class='btn btn-outline-primary btn-reply' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
                 var item = $("<tr>").html(mas);
                 list.append(item);
-                $("#output").html(list);
+                $("#listaDeComentarios").html(list);
             }
             });
 }
@@ -204,16 +209,17 @@ function agregarComentario(){
         type: 'post',
         success: function (response)
         {
-                console.log(response);
-                $("#comment-message").css('display', 'inline-block');
-                $("#name").val("");
-                $("#telefono").val("");
-                $("#correo").val("");
-                $("#comment").val("");
-                $("#commentId").val("");
-                $("#comment").val("");
-                $("#commentId").val("");
-                listComment(5);
+            console.log(response);
+            $("#comment-message").css('display', 'inline-block');
+            $("#name").val("");
+            $("#telefono").val("");
+            $("#correo").val("");
+            $("#comment").val("");
+            $("#commentId").val("");
+            $("#comment").val("");
+            $("#commentId").val("");
+            listComment(5);
+            toastr.success("Se ha enviado tu comentario")
            
         }
     });
@@ -267,7 +273,7 @@ function listComment(pag) {
                                 </div>\
                                 <div class='comment-text' style='color: #FFF;'>" + data[i]['comment'] + "</div>\
                                 <div>\
-                                    <a class='btn-reply' onClick='postReply(" + commentId + ")'>Responder</a>\
+                                    <a class='btn btn-outline-success btn-reply' onClick='postReply(" + commentId + ")'>Responder</a>\
                                 </div>\
                             </div>";
 
@@ -279,10 +285,10 @@ function listComment(pag) {
                     }
                 }
                 cont = cont + 5;
-                mas ="\<a class='btn-reply' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
+                mas ="\<a class='btn btn-outline-primary btn-reply' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
                 var item = $("<li>").html(mas);
                 list.append(item);
-                $("#output").html(list);
+                $("#listaDeComentarios").html(list);
     }});
 }
 

@@ -1,9 +1,7 @@
-<?php require('../../Controller/Conexion.php');
-
-//logout
-$user->logout(); 
-
-//logged in return to index page
-header('Location: ../../index.php');
-exit;
+<?php 
+    require('../../Controller/Conexion.php');
+    // Cerrar sesión
+    $user->logout(); 
+    header('Location: login.php');
+    exit;
 ?>

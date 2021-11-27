@@ -59,75 +59,64 @@ $title = 'Login';
     </header>
 <div class="container mt-5 p-2">
 
-	<div class="row" style="width: 50%; margin: auto;">
-		<form role="form" method="post" action="" autocomplete="off">
-			<div class="text-center">
-				<h2 class="text-white">Iniciar sesion</h2>
-			</div>
-			<hr>
-
-			<?php
-				if(isset($error)){
-					foreach($error as $error){
-						echo '<p class="bg-danger">'.$error.'</p>';
-					}
-				}
-				if(isset($_GET['action'])){
-
-					//check the action
-					switch ($_GET['action']) {
-						case 'active':
-							echo "<h2 class='bg-success'>Su cuenta ya está activa, ahora puede iniciar sesión.</h2>";
-							break;
-						case 'reset':
-							echo "<h2 class='bg-success'>Por favor revise su bandeja de entrada para un enlace de restablecimiento.</h2>";
-							break;
-						case 'resetAccount':
-							echo "<h2 class='bg-success'>Contraseña cambiada, ahora puede iniciar sesión.</h2>";
-							break;
-					}
-
-				}
-			?>
-			<div class="mb-3">
-				<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Usuario" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
-			</div>
-
-			<div class="mb-3">
-				<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="3">
-			</div>
-			
-			<div class="mb-3">
-				<a href='reset.php'>Recuperar contraseña?</a>
-			</div>
-
-			<hr>
-			<div class="text-center">
-				<input type="submit" name="submit" value="Iniciar Sesion" class="btn btn-primary btn-block" tabindex="5">
-			</div>
-
-			<!--<div class="form-group">
-				<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Usuario" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">
-			</div>
-
-			<div class="form-group">
-				<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="3">
-			</div>
-			
-			<div class="row">
-				<div class="col-xs-9 col-sm-9 col-md-9">
-						<a href='reset.php'>Recuperar contraseña?</a>
+	<div class="row mt-5">
+		<div class="col-11 col-sm-10 col-md-8 col-lg-6" style="margin: auto;">
+			<form class="mt-4" method="post" action="" autocomplete="off" id="formLogin">
+				<div class="text-center">
+					<h2 class="text-white">Iniciar sesion</h2>
 				</div>
-			</div>-->
-			
-			
-		</form>
+				<hr>
+
+				<?php
+					if(isset($error)){
+						foreach($error as $error){
+							echo '<p class="bg-danger">'.$error.'</p>';
+						}
+					}
+					if(isset($_GET['action'])){
+
+						//check the action
+						switch ($_GET['action']) {
+							case 'active':
+								echo "<h2 class='bg-success'>Su cuenta ya está activa, ahora puede iniciar sesión.</h2>";
+								break;
+							case 'reset':
+								echo "<h2 class='bg-success'>Por favor revise su bandeja de entrada para un enlace de restablecimiento.</h2>";
+								break;
+							case 'resetAccount':
+								echo "<h2 class='bg-success'>Contraseña cambiada, ahora puede iniciar sesión.</h2>";
+								break;
+						}
+
+					}
+				?>
+				<div class="mb-3">
+					<input type="text" name="username" id="username" class="form-control input-lg" placeholder="Usuario" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>">
+				</div>
+
+				<div class="mb-3">
+					<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Contraseña" style="margin-bottom: -32px;">
+					<a onclick="verCredencial()" style="cursor: pointer;"><span class="verCredencial"><i class="fas fa-eye ms-1"></i></span></a>
+				</div>
+				
+				<div class="mb-3" style="display: none;">
+					<a href='http://localhost/AB-technology/Views/auth/reset.php'>Recuperar contraseña?</a>
+				</div>
+
+				<hr class="mt-5">
+				<div class="text-center">
+					<input type="submit" name="submit" value="Iniciar Sesion" class="btn btn-primary btn-block" >
+				</div>
+			</form>
+		</div>
 	</div>
 </div>
-<?php
-        include_once '../../php/footer.php';    
-        include '../../php/scripts/scriptsJS.php';
-    ?>    
+	<div class="auxFooter">
+		<?php
+			include_once '../../php/footer.php';    
+			include '../../php/scripts/scriptsJS.php';
+		?>
+	</div>    
 </body>
 </html>
 

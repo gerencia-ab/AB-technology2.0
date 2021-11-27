@@ -2,10 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Lora");
 /* Elementos por defecto de la página */
 footer {
-  margin-bottom: -10px;
   width: 100%;
   padding: 2% 1%;
   color: #60757D; }
+
+.auxFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 body {
   background-color: #3e4765; }
@@ -20,7 +24,26 @@ body {
   z-index: 98;
   filter: brightness(50%); }
 
-#frm-comment {
+.verCredencial {
+  float: right;
+  margin-right: 10px;
+  color: #191B2A;
+  font-size: 20px;
+  font-weight: bold; }
+
+.usuario, .comentario, .edicionUsuario {
+  background-color: #191B2A;
+  padding: 20px 30px;
+  border-radius: 5px; }
+
+.panelAdministrativo {
+  margin: auto;
+  background-color: #191B2A;
+  color: #F0F0F0;
+  padding: 20px 30px;
+  border-radius: 10px; }
+
+#frm-comment, #formLogin {
   background-color: #191B2A;
   padding: 50px 50px 30px 50px;
   border-radius: 10px;
@@ -155,8 +178,8 @@ body {
   margin: 15px 0 15px 0; }
 
 /* Formulario de contacto */
-#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment {
-  background-color: #2C3144;
+#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment, #username, #password {
+  background-color: #2C3144 !important;
   color: #FFFFFF;
   border: 0; }
 

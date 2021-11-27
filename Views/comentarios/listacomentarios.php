@@ -26,19 +26,24 @@ if(!$user->is_logged_in())
         <?php
             include_once '../../php/header.php';
         ?>
-        <h1>Encabezado</h1>
+        <div style="height: 150px;"></div>
     </header>
-    <div>
-  
-	<div style="clear:both"></div>
-    <div class="comment-form-container">
+    <div class="container">
+            <div class="row">
+                <div class="comentario">
+                    <div class="comment-form-container"></div>
+                    <div id="listaDeComentarios">
 
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="output"></div>
-    <?php
-        include_once '../../php/footer.php';    
-        include '../../php/scripts/scriptsJS.php'
-    ?>    
+    <div class="auxFooter">
+        <?php
+            include_once '../../php/footer.php';    
+            include '../../php/scripts/scriptsJS.php'
+        ?>  
+    </div> 
 </body>
 </html>
 <script src="../../js/funciones.js" ></script>
