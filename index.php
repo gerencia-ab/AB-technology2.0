@@ -12,7 +12,7 @@
 
     <div class="bg-secondary text-center cover-video">
         
-        <video id="background-video" autoplay loop muted poster="recursos/imagenes/imgFondo1.png">
+        <video id="background-video" autoplay loop muted poster="recursos/imagenes/imgFondo1.webp">
             <source src="recursos/videos/video1.mp4" type="video/mp4">
             
         </video>

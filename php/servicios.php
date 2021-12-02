@@ -10,11 +10,11 @@
                  <div class="row mt-5">
                     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                         <div class="contenedorServicios">
-                            <img src="recursos/imagenes/web.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
+                            <img src="recursos/imagenes/web.webp" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
                             <p class="centrado">Página Web</p>
                         </div>
                         <div class="contenedorServicios">
-                            <img src="recursos/imagenes/appWeb.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
+                            <img src="recursos/imagenes/appWeb.webp" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
                             <p class="centrado">Aplicaciones Web</p>
                         </div>
                         
@@ -22,22 +22,22 @@
 
                     <div class="col-lg-4 mb-4 mb-lg-0">
                         <div class="contenedorServicios">
-                            <img src="recursos/imagenes/android.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
+                            <img src="recursos/imagenes/android.webp" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
                             <p class="centrado">APPs Android</p>     
                         </div>
                         <div class="contenedorServicios">
-                            <img src="recursos/imagenes/medida.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
+                            <img src="recursos/imagenes/medida.webp" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
                             <p class="centrado">Aplicaciones a tu medida</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 mb-4 mb-lg-0">
                         <div class="contenedorServicios">
-                            <img src="recursos/imagenes/tienda.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
+                            <img src="recursos/imagenes/tienda.webp" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
                             <p class="centrado">Tiendas online</p>
                         </div>
                         <div class="contenedorServicios">
-                            <img src="recursos/imagenes/iOS.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
+                            <img src="recursos/imagenes/iOS.webp" class="w-100 shadow-1-strong rounded mb-4" alt="" style="filter: brightness(30%);">
                             <p class="centrado">APPs</p>  
                         </div>
                     </div>

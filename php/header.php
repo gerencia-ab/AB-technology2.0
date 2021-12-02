@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="http://localhost/AB-technology/"><img clas="logo-navbar" src="http://localhost/AB-technology/recursos/imagenes/logo.webp" alt="Logo AB"></a>
     <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <img id="barra1" src="http://localhost/AB-technology/recursos/imagenes/logo11.png" alt="Barra 1">
-        <img id="barra2" src="http://localhost/AB-technology/recursos/imagenes/logo22.png" alt="Barra 2" style="display: none;">
+        <img id="barra1" src="http://localhost/AB-technology/recursos/imagenes/logo11.webp" alt="Barra 1">
+        <img id="barra2" src="http://localhost/AB-technology/recursos/imagenes/logo22.webp" alt="Barra 2" style="display: none;">
         <!--<span class="navbar-toggler-icon"></span>-->
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">

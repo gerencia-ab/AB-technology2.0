@@ -2,7 +2,7 @@
 <article class="container mt-5 blog-contenedor">
     
     <header>
-        <img src="../../recursos/imagenes/blog/blog_01_01.jpg" class="blog-imagen"/>
+        <img src="../../recursos/imagenes/blog/blog_01_01.webp" class="blog-imagen"/>
         <h1 class="blog-titulo">La WEB 3.0 en Colombia</h1>
         <div class="container">
             
