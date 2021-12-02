@@ -17,30 +17,41 @@
         <div class="row" >
             <div style="margin-top: 100px;"></div>
             <h2 class="blog-titulo" style="color: #FFFFFF;">Nuestro Equipo</h2>
-            <div class="col xs sm md lg quienes-somos">
+            <div class="col xs sm md lg quienes-somos mt-5" style="max-width: 800px; margin: auto;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
                 <h2 class="blog-titulo" style="margin-bottom: 25px">JOSE JAVIER CASTRO MEDINA</h2>
-                <p style="text-align: justify;">
-                    Instagram: @javiercastrom1	
-                </p>
-                <p style="text-align: justify;">
-                    Correo: jcastro@ab-sistemas.com
-                </p>
-                <p style="text-align: justify;">
+                <img src="../recursos/imagenes/javier.webp" width="300px" height="300px" style="object-fit: cover; border-radius: 50%; margin: auto;" />
+                <p class="mt-5" style="text-align: center; font-size: 32px;">
                     Cofundador de AB TECHNOLOGY GROUP
                 </p>
-                <p style="text-align: justify;">
+                <p style="text-align: center;">
                     Area de Marketing digital
                 </p>
+                <div class="mt-3" style="border: 2px solid white; padding: 25px; display: flex; flex-direction: column; justify-content: center; max-width: 50%; min-width: 250px; border-radius: 15px; margin: auto;">
+                    <img src="../recursos/imagenes/logo_instagram.webp" width="30px" style="margin:auto;"/>
+                    <p class="mt-4" style="text-align: center;">
+                        @javiercastrom1	
+                    </p>
+                    
+                    <span class="material-icons" style="color: #FFF;margin: auto; font-size: 36px;">email</span>
+                    <p class="mt-4" style="text-align: center;">
+                        jcastro@ab-sistemas.com
+                    </p>
+                </div>
                 
-                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_kmabq1m3.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop autoplay></lottie-player>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-javier">
+                
+                
+                
+                <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#modal-javier" style="max-width: 350px; margin: auto;">
                     Ver Perfil
                 </button>
+            </div>
+                
             </div>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="modal-javier" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>

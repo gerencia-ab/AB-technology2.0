@@ -307,5 +307,14 @@ lottie-player {
     right: 12%;
     left: 12%;
     font-size: 32px; } }
+@media (max-height: 440px) {
+  .cover-titulo {
+    top: 20%;
+    right: 12%;
+    left: 12%;
+    font-size: 30px; }
+
+  .flecha {
+    top: 68%; } }
 
 /*# sourceMappingURL=estilos.css.map */
