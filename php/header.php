@@ -24,6 +24,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/nosotros.php">Quienes somos</a></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/encuentranos/">Encuentranos</a></li>
+            <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/equipo.php">Equipo</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology/#contacto">Contacto</a></li>
           </ul>
