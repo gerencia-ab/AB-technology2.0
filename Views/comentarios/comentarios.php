@@ -15,7 +15,7 @@
         </header>
 
         <?php
-            include_once '../../php/blog.php';
+            include_once '../blogprueba.php';
         ?>
 
         

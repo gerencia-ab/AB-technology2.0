@@ -36,6 +36,9 @@
                             <a class="btn btn-outline-success" href='../comentarios/listacomentarios.php'>ver comentarios por aprobar</a>
                         </div>
                         <div class="mb-3 text-center">
+                            <a class="btn btn-outline-success" href='../blogs/listablogs.php'>ver blogs publicados</a>
+                        </div>
+                        <div class="mb-3 text-center">
                             <a class="btn btn-outline-danger" href='../auth/logout.php' style="cursor: pointer;">Cerrar sesión</a>
                         </div>
                     <?php } ?>
