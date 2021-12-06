@@ -7,15 +7,15 @@ include "Conexion.php";
     { 
         header('Location: ../auth/login.php'); 
         exit(); 
-    }else if(!($user->rol($_SESSION['username'])=="Admin"))
-    {
-        header('Location: ../auth/memberpage.php'); 
-        exit(); 
     }
 class BlogsController {
 
-    public function subirArchivos($conn){
-            
+    public function subirArchivos($conn, $user){
+        if(!($user->permisoregistrar($_SESSION['username'])==2))
+        {
+            header('Location: ../auth/memberpage.php'); 
+            exit(); 
+        }
         try{
             $titulo = isset($_POST['titulo']) ? $_POST['titulo'] : "";
             $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] : "";
@@ -68,7 +68,12 @@ class BlogsController {
             echo 'error: '.$e->getMessage();
         }
     }
-    function eliminarBlog($conn){
+    function eliminarBlog($conn, $user){
+        if(!($user->permisoeliminar($_SESSION['username'])==4))
+        {   
+        header('Location: ../auth/memberpage.php'); 
+        exit(); 
+        }
         $id = $_POST["id"];
         $path = "/opt/lampp/htdocs";
         $stmt_select = $conn->prepare('SELECT imagen FROM imagen_blog WHERE blog_id =:uid');
@@ -87,7 +92,12 @@ class BlogsController {
         return $resultado;
     }
 
-    function listarBlogs($conn){
+    function listarBlogs($conn, $user){
+        if(!($user->permisoleer($_SESSION['username'])==1))
+        {
+            header('Location: ../auth/memberpage.php'); 
+            exit(); 
+        }
         $sql= "SELECT blogs.* FROM blogs";
         $statement = $conn->prepare($sql);
         $statement->execute();
@@ -98,7 +108,12 @@ class BlogsController {
 
         echo json_encode($record_set);
     }
-    function listarImagenes($conn){
+    function listarImagenes($conn, $user){
+        if(!($user->permisoleer($_SESSION['username'])==1))
+        {
+            header('Location: ../auth/memberpage.php'); 
+            exit(); 
+        }
         $sql= "SELECT imagen_blog.* FROM imagen_blog";
         $statement = $conn->prepare($sql);
         $statement->execute();
@@ -116,16 +131,16 @@ class BlogsController {
         $blog = new BlogsController();
         switch ($funcion) {
             case 'subirArchivos':
-                $blog->subirArchivos($conn);
+                $blog->subirArchivos($conn, $user);
                 break;
             case 'listarBlogs':
-                $blog->listarBlogs($conn);
+                $blog->listarBlogs($conn, $user);
                 break;
             case 'listarImagenes':
-                $blog->listarImagenes($conn);
+                $blog->listarImagenes($conn, $user);
                 break;
             case 'eliminarBlog':
-                $blog->eliminarBlog($conn);
+                $blog->eliminarBlog($conn, $user);
                 break;
             default:
                 # code...

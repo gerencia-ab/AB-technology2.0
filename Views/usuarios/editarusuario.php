@@ -4,7 +4,7 @@
     { 
         header('Location: ../auth/login.php'); 
         exit(); 
-    }else if(!($user->rol($_SESSION['username'])=="Admin"))
+    }else if(!($user->permisomodificar($_SESSION['username'])==3))
     {
         header('Location: ../auth/memberpage.php'); 
         exit(); 

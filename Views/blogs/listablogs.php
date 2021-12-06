@@ -5,7 +5,7 @@
     { 
         header('Location: ../auth/login.php'); 
         exit(); 
-    }else if(!($user->rol($_SESSION['username'])=="Admin"))
+    }else if(!($user->permiso($_SESSION['username'])==1))
     {
         header('Location: ../auth/memberpage.php'); 
         exit(); 

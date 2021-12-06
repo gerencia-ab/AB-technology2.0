@@ -77,6 +77,91 @@ class User extends Password{
 		}
 	}
 
+	public function permisoleer($username)
+	{
+		try {
+			$stmt = $this->_db->prepare('SELECT username, rol FROM members WHERE username = :username AND active="Yes" ');
+			$stmt->execute(array('username' => $username));
+			$row = $stmt->fetch();
+			$rol = $row['rol'];
+			$stmt2 = $this->_db->prepare('SELECT id, name FROM roles WHERE id = :id' );
+			$stmt2->execute(array('id'=> $rol));
+			$row2 = $stmt2->fetch();
+			$id = $row2['id'];
+			$stmt3 = $this->_db->prepare('SELECT id, id_rol, id_permiso FROM permiso_rol WHERE id_rol = :id AND id_permiso = :id_permiso' );
+			$stmt3->execute(array('id'=> $id, 'id_permiso' => 1));
+			$row3 = $stmt3->fetch();
+			$permiso = $row3['id_permiso'];
+			return $permiso;
+
+		} catch(PDOException $e) {
+		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
+		}
+	}
+	public function permisoregistrar($username)
+	{
+		try {
+			$stmt = $this->_db->prepare('SELECT username, rol FROM members WHERE username = :username AND active="Yes" ');
+			$stmt->execute(array('username' => $username));
+			$row = $stmt->fetch();
+			$rol = $row['rol'];
+			$stmt2 = $this->_db->prepare('SELECT id, name FROM roles WHERE id = :id' );
+			$stmt2->execute(array('id'=> $rol));
+			$row2 = $stmt2->fetch();
+			$id = $row2['id'];
+			$stmt3 = $this->_db->prepare('SELECT id, id_rol, id_permiso FROM permiso_rol WHERE id_rol = :id AND id_permiso = :id_permiso' );
+			$stmt3->execute(array('id'=> $id, 'id_permiso' => 2));
+			$row3 = $stmt3->fetch();
+			$permiso = $row3['id_permiso'];
+			return $permiso;
+
+		} catch(PDOException $e) {
+		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
+		}
+	}
+	public function permisomodificar($username)
+	{
+		try {
+			$stmt = $this->_db->prepare('SELECT username, rol FROM members WHERE username = :username AND active="Yes" ');
+			$stmt->execute(array('username' => $username));
+			$row = $stmt->fetch();
+			$rol = $row['rol'];
+			$stmt2 = $this->_db->prepare('SELECT id, name FROM roles WHERE id = :id' );
+			$stmt2->execute(array('id'=> $rol));
+			$row2 = $stmt2->fetch();
+			$id = $row2['id'];
+			$stmt3 = $this->_db->prepare('SELECT id, id_rol, id_permiso FROM permiso_rol WHERE id_rol = :id AND id_permiso = :id_permiso' );
+			$stmt3->execute(array('id'=> $id, 'id_permiso' => 3));
+			$row3 = $stmt3->fetch();
+			$permiso = $row3['id_permiso'];
+			return $permiso;
+
+		} catch(PDOException $e) {
+		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
+		}
+	}
+	public function permisoeliminar($username)
+	{
+		try {
+			$stmt = $this->_db->prepare('SELECT username, rol FROM members WHERE username = :username AND active="Yes" ');
+			$stmt->execute(array('username' => $username));
+			$row = $stmt->fetch();
+			$rol = $row['rol'];
+			$stmt2 = $this->_db->prepare('SELECT id, name FROM roles WHERE id = :id' );
+			$stmt2->execute(array('id'=> $rol));
+			$row2 = $stmt2->fetch();
+			$id = $row2['id'];
+			$stmt3 = $this->_db->prepare('SELECT id, id_rol, id_permiso FROM permiso_rol WHERE id_rol = :id AND id_permiso = :id_permiso' );
+			$stmt3->execute(array('id'=> $id, 'id_permiso' => 4));
+			$row3 = $stmt3->fetch();
+			$permiso = $row3['id_permiso'];
+			return $permiso;
+
+		} catch(PDOException $e) {
+		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
+		}
+	}
+
 	public function logout(){
 		session_destroy();
 	}

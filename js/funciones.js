@@ -1,7 +1,8 @@
+//USUARIOS
 function registrarUsuario(){
     $("#comment-message").css('display', 'none');
     var str = $("#frm-comment").serialize();
-    console.log(str);
+    //console.log(str);
     var form_data = new FormData();
     form_data.append('funcion','agregarUsuario')
     form_data.append('nombres',document.getElementById("nombres").value)
@@ -24,7 +25,7 @@ function registrarUsuario(){
         processData: false,
         success: function (response)
         {
-            console.log(response);
+            //console.log(response);
             $("#comment-message").css('display', 'inline-block');
             $("#username").val("");
             $("#nombres").val("");
@@ -41,7 +42,7 @@ function registrarUsuario(){
 function actualizarUsuario(){
     $("#comment-message").css('display', 'none');
     var str = $("#frm-comment").serialize();
-    console.log(str);
+    //console.log(str);
     var data = 'actualizarUsuario';
     $.ajax({
         url: "../../Controller/UsuariosController.php",
@@ -49,7 +50,7 @@ function actualizarUsuario(){
         type: 'post',
         success: function (response)
         {
-                console.log(response);
+                //console.log(response);
                 $("#comment-message").css('display', 'inline-block');
                 $("#username").val("");
                 $("#correo").val("");
@@ -64,7 +65,7 @@ function actualizarUsuario(){
 function actualizarPerfil(){
     $("#comment-message").css('display', 'none');
     var str = $("#frm-comment").serialize();
-    console.log(str);
+    //console.log(str);
     var data = 'actualizarPerfil';
     $.ajax({
         url: "../../Controller/UsuariosController.php",
@@ -72,7 +73,7 @@ function actualizarPerfil(){
         type: 'post',
         success: function (response)
         {
-                console.log(response);
+                //console.log(response);
                 $("#comment-message").css('display', 'inline-block');
                 $("#username").val("");
                 $("#correo").val("");
@@ -86,7 +87,7 @@ function actualizarPerfil(){
 
 function listUsuarios(pag) {
     var data = 'listarUsuario';
-    console.log("entra en listarUsuario")
+    //console.log("entra en listarUsuario")
     $.ajax({
         url: "../../Controller/UsuariosController.php",
         data: '&funcion=' + data,
@@ -169,6 +170,7 @@ function eliminarusuario(id)
         }
     });
 }
+//COMENTARIOS
 function listComments(pag) {
     var data = 'listarComentarios';
     $.ajax({
@@ -176,7 +178,7 @@ function listComments(pag) {
         data: '&funcion=' + data,
         type: 'post',
         success: function (data) {
-                console.log(data)
+                //console.log(data)
                 var data = JSON.parse(data);
 
                 var comments = "";
@@ -264,15 +266,15 @@ function agregarComentario(){
         
       
     var str = $("#frm-comment").serialize();
-    console.log(str);
+    //console.log(str);
     var data = 'agregarComentario';
     $.ajax({
-        url: "../../Controller/ComentariosController.php",
+        url: "../../Controller/ComentariosUserController.php",
         data: str + '&funcion=' + data,
         type: 'post',
         success: function (response)
         {
-            console.log(response);
+            //console.log(response);
             $("#comment-message").css('display', 'inline-block');
             $("#name").val("");
             $("#telefono").val("");
@@ -413,6 +415,7 @@ function eliminarcomment(id)
     });
 }
 
+//BLOGS
 function listblogimagen(pag)
 {
     var blogs;
@@ -528,8 +531,9 @@ function subirImagenes() {
         contentType: false,
         processData: false,
         success: function (response) {
-        console.log(response)
+        //console.log(response)
         imagenes = response
+        window.location.href = 'listablogs.php';
 }});
 }
 function listblogusuario(pag)
@@ -538,7 +542,7 @@ function listblogusuario(pag)
     var imagenes;
     var data = 'listarBlogs';
     $.ajax({
-        url: "../../Controller/BlogsController.php",
+        url: "../../Controller/BlogsUserController.php",
         data: '&funcion=' + data,
         type: 'post',
         async: false,
@@ -548,7 +552,7 @@ function listblogusuario(pag)
             });
     var data2 = 'listarImagenes';
     $.ajax({
-        url: "../../Controller/BlogsController.php",
+        url: "../../Controller/BlogsUserController.php",
         data: '&funcion=' + data2,
         type: 'post',
         async: false,
@@ -606,4 +610,121 @@ function listBlogsusuarios(pag, blogs, imagenes) {
         $("#output").html(list);
         
             
+}
+
+//ROLES
+function listRoles(pag) {
+    var data = 'listarRoles';
+    $.ajax({
+        url: "../../Controller/RolesController.php",
+        data: '&funcion=' + data,
+        type: 'post',
+        success: function (data) {
+                var data = JSON.parse(data);
+
+                var comments = "";
+                var item = "";
+                var parent = -1;
+
+                
+                var thead = "\
+                              <thead>\
+                                <tr>\
+                                 <th>id</th>\
+                                 <th>Rol</th>\
+                                </tr>\
+                             </thead>"
+                var list = $("<table class='table table-hover contenido-tabla text-center text-white-50'>").html(thead);
+                var item = $("<tr>").html(comments);
+
+                var long = pag;
+                var cont = pag;
+                if(long > data.length)
+                {
+                    long = data.length;
+
+                }
+                for (var i = 0; (i < long); i++)
+                {   
+                var id=data[i]['id']
+                comments = "\
+                            <td>" + data[i]['id'] +"</td>\
+                            <td>" + data[i]['name'] + "</td>\
+                            <td><a class='btn btn-outline-warning m-1'  href='editarrol.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a><td>";
+                var item = $("<tr>").html(comments);
+                list.append(item);
+                }
+                cont = cont + 5;
+                let botonesInferiores = `
+                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning" href='registrarrol.php'>registrar rol</a>
+                    <a class='btn btn-outline-primary btn-reply' onClick='listRoles("` + cont + `")'>Mas roles</a>
+                `;
+                
+                $("#botonesInferiores").html(botonesInferiores)
+                list.append(item);
+                $("#listaDeUsuarios").html(list);
+            }
+        });
+}
+
+function registrarRol() {
+
+    var form_data = new FormData()
+    form_data.append('funcion','agregarRol')
+    form_data.append('rol',document.getElementById("rol").value)
+    var fld = document.getElementById('permisos');
+    var values = [];
+    for (var i = 0; i < fld.options.length; i++) {
+      if (fld.options[i].selected) {
+        values.push(fld.options[i].value);
+        //console.log(values)
+      }
+    }
+    form_data.append("permisos[]", values)
+    for (var value of form_data.values()) {
+        //console.log(value);
+     }
+    
+    $.ajax({
+        url: "../../Controller/RolesController.php", 
+        type: 'post',
+        async: false,
+        data: form_data,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+        //console.log(response)
+        imagenes = response
+        window.location.href = 'listaderoles.php';
+}});
+}
+function actualizarRol() {
+
+    var form_data = new FormData()
+    form_data.append('funcion','actualizarRol')
+    form_data.append('id',document.getElementById("id").value)
+    form_data.append('rol',document.getElementById("rol").value)
+    var fld = document.getElementById('permisos');
+    var values = [];
+    for (var i = 0; i < fld.options.length; i++) {
+      if (fld.options[i].selected) {
+        values.push(fld.options[i].value);
+        //console.log(values)
+      }
+    }
+    form_data.append("permisos[]", values)
+
+    
+    $.ajax({
+        url: "../../Controller/RolesController.php", 
+        type: 'post',
+        async: false,
+        data: form_data,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+        //console.log(response)
+        imagenes = response
+        window.location.href = 'listaderoles.php';
+}});
 }

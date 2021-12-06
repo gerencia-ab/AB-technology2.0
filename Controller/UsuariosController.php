@@ -7,14 +7,15 @@ include "Conexion.php";
     { 
         header('Location: ../auth/login.php'); 
         exit(); 
-    }else if(!($user->rol($_SESSION['username'])=="Admin"))
+    }
+class UsuariosController {
+
+function agregarUsuario($conn, $user){
+    if(!($user->permisoregistrar($_SESSION['username'])==2))
     {
         header('Location: ../auth/memberpage.php'); 
         exit(); 
     }
-class UsuariosController {
-
-function agregarUsuario($conn){
     try{
        
         $path = "/opt/lampp/htdocs/AB-technology/recursos/imagenes/";
@@ -76,7 +77,12 @@ function agregarUsuario($conn){
     
 }
 
-function eliminarUsuario($conn){
+function eliminarUsuario($conn, $user){
+    if(!($user->permisoeliminar($_SESSION['username'])==4))
+    {
+        header('Location: ../auth/memberpage.php'); 
+        exit(); 
+    }
     $id = $_POST["id"];
     $path = "/opt/lampp/htdocs";
     $stmt_select = $conn->prepare('SELECT imagen FROM members WHERE memberID =:uid');
@@ -87,7 +93,12 @@ function eliminarUsuario($conn){
     $resultado = $sentencia->execute([$id]);
 }
 
-function actualizarUsuario($conn){
+function actualizarUsuario($conn, $user){
+    if(!($user->permisomodificar($_SESSION['username'])==3))
+    {
+        header('Location: ../auth/memberpage.php'); 
+        exit(); 
+    }
     $id = $_POST["id"];
     $username = isset($_POST['username']) ? $_POST['username'] : "";
     $email = isset($_POST['correo']) ? $_POST['correo'] : "";
@@ -112,7 +123,12 @@ function actualizarPerfil($conn, $id){
     return $resultado;
 }
 
-function listarUsuario($conn){
+function listarUsuario($conn, $user){
+    if(!($user->permisoleer($_SESSION['username'])==1))
+    {
+        header('Location: ../auth/memberpage.php'); 
+        exit(); 
+    }
     $sql= "SELECT members.* FROM members";
     $statement = $conn->prepare($sql);
     $statement->execute();
@@ -130,19 +146,19 @@ if(isset($_POST['funcion'])){
     $id = $user->id($_SESSION['username']);
     switch ($funcion) {
         case 'agregarUsuario':
-            $usuarios->agregarUsuario($conn);
+            $usuarios->agregarUsuario($conn, $user);
             break;
         case 'actualizarUsuario':
-            $usuarios->actualizarUsuario($conn);
+            $usuarios->actualizarUsuario($conn, $user);
             break;
         case 'actualizarPerfil':
             $usuarios->actualizarPerfil($conn, $id);
             break;
         case 'listarUsuario':
-            $usuarios->listarUsuario($conn);
+            $usuarios->listarUsuario($conn, $user);
             break;
         case 'eliminarUsuario':
-            $usuarios->eliminarUsuario($conn);
+            $usuarios->eliminarUsuario($conn, $user);
             break;
         default:
             # code...

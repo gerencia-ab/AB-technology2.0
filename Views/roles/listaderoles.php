@@ -53,6 +53,6 @@ if(!$user->is_logged_in())
 <script src="../../js/funciones.js" ></script>
 <script>
     $(document).ready(function () {
-        listUsuarios(5);
+        listRoles(5);
     });
 </script>

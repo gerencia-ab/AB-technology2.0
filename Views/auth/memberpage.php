@@ -22,18 +22,19 @@
                     <div class="text-center">
                         <h2>Bienvenido al panel administrativo <?php echo htmlspecialchars($_SESSION['username'], ENT_QUOTES); ?></h2>
                     </div>                    
-                    <?php if($user->rol($_SESSION['username'])=="Admin"){ ?>
+                    <?php if($user->permisoleer($_SESSION['username'])==1){ ?>
                         <div class="mb-3 text-center">
                             <span class="material-icons mt-2">admin_panel_settings</span>    
                             <p>
-                                Administrador
+                                Panel Administrador
                             </p>
                         </div>
-                        <div class="mb-3 text-center">
-                            <a class="btn btn-outline-warning" href='../usuarios/editarperfil.php' style="cursor: pointer;">Editar mi perfil</a>
-                        </div>
+                        
                         <div class="mb-3 text-center">
                             <a class="btn btn-outline-warning" href='../usuarios/listausuarios.php' style="cursor: pointer;">ver usuarios</a>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <a class="btn btn-outline-warning" href='../roles/listaderoles.php' style="cursor: pointer;">ver roles</a>
                         </div>
                         <div class="mb-3 text-center">
                             <a class="btn btn-outline-success" href='../comentarios/listacomentarios.php'>ver comentarios por aprobar</a>
@@ -41,10 +42,14 @@
                         <div class="mb-3 text-center">
                             <a class="btn btn-outline-success" href='../blogs/listablogs.php'>ver blogs publicados</a>
                         </div>
+                        
+                    <?php } ?>
+                        <div class="mb-3 text-center">
+                            <a class="btn btn-outline-warning" href='../usuarios/editarperfil.php' style="cursor: pointer;">Editar mi perfil</a>
+                        </div>
                         <div class="mb-3 text-center">
                             <a class="btn btn-outline-danger" href='../auth/logout.php' style="cursor: pointer;">Cerrar sesión</a>
                         </div>
-                    <?php } ?>
                 </div>
             </div>
         </div>
