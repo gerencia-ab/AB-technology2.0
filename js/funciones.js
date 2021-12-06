@@ -204,7 +204,7 @@ function agregarComentario(){
     console.log(str);
     var data = 'agregarComentario';
     $.ajax({
-        url: "../../Controller/ComentariosController.php",
+        url: "../../Controller/ComentariosUserController.php",
         data: str + '&funcion=' + data,
         type: 'post',
         success: function (response)
@@ -234,7 +234,7 @@ function postReply(commentId) {
 function listComment(pag) {
     var data = 'listarDeComentarios';
     $.ajax({
-        url: "../../Controller/ComentariosController.php",
+        url: "../../Controller/ComentariosUserController.php",
         data: '&funcion=' + data,
         type: 'post',
         success: function (data) {

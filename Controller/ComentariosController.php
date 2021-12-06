@@ -3,7 +3,15 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 require_once ("Conexion.php");
-
+if(!$user->is_logged_in())
+    { 
+        header('Location: ../auth/login.php'); 
+        exit(); 
+    }else if(!($user->rol($_SESSION['username'])=="Admin"))
+    {
+        header('Location: ../auth/memberpage.php'); 
+        exit(); 
+    }
 class ComentariosController {
 
     function agregarComentario($conn){

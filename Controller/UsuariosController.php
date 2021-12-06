@@ -3,7 +3,15 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 include "Conexion.php";
-
+if(!$user->is_logged_in())
+    { 
+        header('Location: ../auth/login.php'); 
+        exit(); 
+    }else if(!($user->rol($_SESSION['username'])=="Admin"))
+    {
+        header('Location: ../auth/memberpage.php'); 
+        exit(); 
+    }
 class UsuariosController {
 
 function agregarUsuario($conn){
@@ -52,16 +60,16 @@ function listarUsuario($conn){
 }
 if(isset($_POST['funcion'])){
     $funcion = $_POST['funcion'];
-    $user = new UsuariosController();
+    $usuarios = new UsuariosController();
     switch ($funcion) {
         case 'agregarUsuario':
-            $user->agregarUsuario($conn);
+            $usuarios->agregarUsuario($conn);
             break;
         case 'actualizarUsuario':
-            $user->actualizarUsuario($conn);
+            $usuarios->actualizarUsuario($conn);
             break;
         case 'listarUsuario':
-            $user->listarUsuario($conn);
+            $usuarios->listarUsuario($conn);
             break;
         default:
             # code...
