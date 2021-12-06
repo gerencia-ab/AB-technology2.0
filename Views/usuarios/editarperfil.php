@@ -4,12 +4,8 @@
     { 
         header('Location: ../auth/login.php'); 
         exit(); 
-    }else if(!($user->rol($_SESSION['username'])=="Admin"))
-    {
-        header('Location: ../auth/memberpage.php'); 
-        exit(); 
-    }else if(!isset($_GET["id"])) exit();
-    $id = $_GET["id"];
+    }
+    $id = $user->id($_SESSION['username']);
     $sentencia = $conn->prepare("SELECT * FROM members WHERE memberID = ?;");
     $sentencia->execute([$id]);
     $persona = $sentencia->fetch(PDO::FETCH_OBJ);
@@ -53,15 +49,8 @@
                         <div class="mb-3">
                             <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Telefono" value="<?php echo $persona->telefono ?>"/>
                         </div>
-                        <div class="mb-3 form-group">
-                            <label for="rol">Rol </label>
-                            <select name="rol" class="form-control" id="rol">
-                                <option value="1">Admin</option>
-                                <option value="2">Personal</option>
-                            </select>
-                        </div>
                         <div class="mb-3 text-center">
-                            <input type="button" class="btn btn-outline-primary" id="submitButton2" value="Actualizar" onclick="actualizarUsuario()">
+                            <input type="button" class="btn btn-outline-primary" id="submitButton2" value="Actualizar" onclick="actualizarPerfil()">
                         </div>
                     </form>
                 </div>

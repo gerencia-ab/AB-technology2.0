@@ -29,14 +29,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-11 col-sm-10 col-md-8 col-lg-6 edicionUsuario" style="margin: auto;">
-                    <form id="frm-comment">
+                    <form id="frm-comment" enctype="multipart/form-data" method="POST">
                     <h3 class="fw-bold mb-5" style="color: #FFFFFF; text-align: center;">Registrar Usuario:</h3>
                             
-                        <input id="loginUsername" type="text" name="username" id="username" placeholder="Username" class="form-control mb-3" />
+                        <input id="nombres" type="text" name="nombres" id="nombres" placeholder="Nombres" class="form-control mb-3" />
+
+                        <input id="apellidos" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" class="form-control mb-3" />
+
+                        <input id="telefono" type="text" name="telefono" id="telefono" placeholder="Telefono" class="form-control mb-3" />
+
+                        <input type="text" name="username" id="username" placeholder="Username" class="form-control mb-3" />
                             
-                        <input id="loginPass" type="password" name="password" id="password" placeholder="Password" class="form-control mb-3" />
+                        <input type="password" name="password" id="password" placeholder="Password" class="form-control mb-3" />
                                 
                         <input type="email" name="correo" id="correo" placeholder="Correo" class="form-control mb-3" />
+
+                        <div class="form-group">
+                            <input type="file" id="file" name="file[]" required>
+                        </div>
                                 
                         <label for="rol" style="ml-3">Rol: </label>
 

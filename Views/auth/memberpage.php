@@ -30,6 +30,9 @@
                             </p>
                         </div>
                         <div class="mb-3 text-center">
+                            <a class="btn btn-outline-warning" href='../usuarios/editarperfil.php' style="cursor: pointer;">Editar mi perfil</a>
+                        </div>
+                        <div class="mb-3 text-center">
                             <a class="btn btn-outline-warning" href='../usuarios/listausuarios.php' style="cursor: pointer;">ver usuarios</a>
                         </div>
                         <div class="mb-3 text-center">

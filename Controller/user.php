@@ -63,6 +63,19 @@ class User extends Password{
 		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
 		}
 	}
+	public function id($username)
+	{
+		try {
+			$stmt = $this->_db->prepare('SELECT username, memberID FROM members WHERE username = :username AND active="Yes" ');
+			$stmt->execute(array('username' => $username));
+			$row = $stmt->fetch();
+			$id = $row['memberID'];
+			return  $id;
+
+		} catch(PDOException $e) {
+		    echo '<p class="bg-danger">'.$e->getMessage().'</p>';
+		}
+	}
 
 	public function logout(){
 		session_destroy();

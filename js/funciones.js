@@ -2,16 +2,34 @@ function registrarUsuario(){
     $("#comment-message").css('display', 'none');
     var str = $("#frm-comment").serialize();
     console.log(str);
+    var form_data = new FormData();
+    form_data.append('funcion','agregarUsuario')
+    form_data.append('nombres',document.getElementById("nombres").value)
+    form_data.append('apellidos',document.getElementById("apellidos").value)
+    form_data.append('rol',document.getElementById("rol").value)
+    form_data.append('username',document.getElementById("username").value)
+    form_data.append('correo',document.getElementById("correo").value)
+    form_data.append('telefono',document.getElementById("telefono").value)
+    form_data.append('password',document.getElementById("password").value)
+    var totalfiles = document.getElementById("file").files.length;
+    for (var index = 0; index < totalfiles; index++) {
+        form_data.append("files[]", document.getElementById('file').files[index]);
+    }
     var data = 'agregarUsuario';
     $.ajax({
         url: "../../Controller/UsuariosController.php",
-        data: str + '&funcion=' + data,
+        data: form_data,
         type: 'post',
+        contentType: false,
+        processData: false,
         success: function (response)
         {
             console.log(response);
             $("#comment-message").css('display', 'inline-block');
             $("#username").val("");
+            $("#nombres").val("");
+            $("#apellidos").val("");
+            $("#telefono").val("");
             $("#correo").val("");
             $("#password").val("");
             window.location.href = 'listausuarios.php';
@@ -43,6 +61,29 @@ function actualizarUsuario(){
 
 }
 
+function actualizarPerfil(){
+    $("#comment-message").css('display', 'none');
+    var str = $("#frm-comment").serialize();
+    console.log(str);
+    var data = 'actualizarPerfil';
+    $.ajax({
+        url: "../../Controller/UsuariosController.php",
+        data: str + '&funcion=' + data,
+        type: 'post',
+        success: function (response)
+        {
+                console.log(response);
+                $("#comment-message").css('display', 'inline-block');
+                $("#username").val("");
+                $("#correo").val("");
+                $("#password").val("");
+                window.location.href = '../auth/memberpage.php';
+           
+        }
+    });
+
+}
+
 function listUsuarios(pag) {
     var data = 'listarUsuario';
     console.log("entra en listarUsuario")
@@ -59,14 +100,18 @@ function listUsuarios(pag) {
 
                 
                 var thead = "\
-                              <thead>\
+                                <thead>\
                                 <tr>\
-                                 <th>Usuario</th>\
-                                 <th>Correo</th>\
-                                 <th>Estado</th>\
-                                 <th>Acción</th>\
+                                    <th>Foto</th>\
+                                    <th>Nombres</th>\
+                                    <th>Apellidos</th>\
+                                    <th>Telefono</th>\
+                                    <th>Usuario</th>\
+                                    <th>Correo</th>\
+                                    <th>Estado</th>\
+                                    <th>Acción</th>\
                                 </tr>\
-                             </thead>"
+                                </thead>"
                 var list = $("<table class='table table-hover contenido-tabla text-center text-white-50'>").html(thead);
                 var item = $("<tr>").html(comments);
 
@@ -87,10 +132,15 @@ function listUsuarios(pag) {
                     estado = 'Inactivo'
                 }
                 comments = "\
+                            <td><img src='" + data[i]['imagen'] +"' width=100px height=100px></td>\
+                            <td>" + data[i]['nombres'] +"</td>\
+                            <td>" + data[i]['apellidos'] +"</td>\
+                            <td>" + data[i]['telefono'] +"</td>\
                             <td>" + data[i]['username'] +"</td>\
                             <td>" + data[i]['email'] + "</td>\
                             <td>" + estado + "</td>\
-                            <td><a class='btn btn-outline-warning m-1'  href='editarusuario.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a><td>";
+                            <td><a class='btn btn-outline-warning m-1'  href='editarusuario.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a>\
+                            <a class='btn btn-outline-danger' onClick='eliminarusuario(" + id + ")'>Eliminar</a><td>";
                 var item = $("<tr>").html(comments);
                 list.append(item);
                 }
@@ -105,6 +155,19 @@ function listUsuarios(pag) {
                 $("#listaDeUsuarios").html(list);
             }
         });
+}
+
+function eliminarusuario(id)
+{
+    $.ajax({
+        url: "../../Controller/UsuariosController.php",
+        data:  {'id':id, 'funcion':'eliminarUsuario'},
+        type: 'post',
+        success: function (response)
+        {
+            location.reload();
+        }
+    });
 }
 function listComments(pag) {
     var data = 'listarComentarios';
@@ -234,7 +297,7 @@ function postReply(commentId) {
 function listComment(pag) {
     var data = 'listarDeComentarios';
     $.ajax({
-        url: "../../Controller/ComentariosController.php",
+        url: "../../Controller/ComentariosUserController.php",
         data: '&funcion=' + data,
         type: 'post',
         success: function (data) {
