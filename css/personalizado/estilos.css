@@ -7,7 +7,7 @@ footer {
   color: #60757D; }
 
 .auxFooter {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%; }
 

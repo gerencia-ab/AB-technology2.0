@@ -10,6 +10,13 @@
         header('Location: ../auth/memberpage.php'); 
         exit(); 
     }
+    $sql= "SELECT roles.* FROM roles";
+    $statement = $conn->prepare($sql);
+    $statement->execute();
+    $record_set = array();
+    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+        array_push($record_set, $row);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +58,14 @@
                         <label for="rol" style="ml-3">Rol: </label>
 
                         <select name="rol" class="form-control" id="rol" style="margin:20px; width: 50%;">
-                            <option value="1">Admin</option>
-                            <option value="2">Personal</option>
+                        <?php 
+                         foreach ($record_set as $rol) {
+                             # code...
+                        ?>
+                            <option value="<?php echo $rol['id']; ?>"><?php echo $rol['name']; ?></option>
+                            <?php 
+                            }
+                        ?>
                         </select>
                         <input type="button" class="btn btn-outline-primary" id="submitButton" value="Registrar" onclick="registrarUsuario()" style="margin:auto;"/>
                     </form>

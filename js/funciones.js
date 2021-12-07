@@ -728,3 +728,169 @@ function actualizarRol() {
         window.location.href = 'listaderoles.php';
 }});
 }
+
+//EQUIPO
+function registrarEquipo(){
+    $("#comment-message").css('display', 'none');
+    var str = $("#frm-comment").serialize();
+    //console.log(str);
+    var form_data = new FormData();
+    form_data.append('funcion','agregarEquipo')
+    form_data.append('nombre',document.getElementById("nombre").value)
+    form_data.append('cargo',document.getElementById("cargo").value)
+    form_data.append('funcione',document.getElementById("funcione").value)
+    form_data.append('resumen',document.getElementById("resumen").value)
+    form_data.append('correo',document.getElementById("correo").value)
+    form_data.append('biografia',document.getElementById("biografia").value)
+    form_data.append('instagram',document.getElementById("instagram").value)
+    form_data.append('facebook',document.getElementById("facebook").value)
+    form_data.append('tiktok',document.getElementById("tiktok").value)
+    form_data.append('linkedin',document.getElementById("linkedin").value)
+    var totalfiles = document.getElementById("file").files.length;
+    for (var index = 0; index < totalfiles; index++) {
+        form_data.append("files[]", document.getElementById('file').files[index]);
+    }
+    for (var value of form_data.values()) {
+        console.log(value);
+     }
+    $.ajax({
+        url: "../../Controller/EquipoController.php",
+        data: form_data,
+        type: 'post',
+        contentType: false,
+        processData: false,
+        success: function (response)
+        {
+
+            window.location.href = 'listaequipo.php';
+           
+        }
+    });
+}
+
+function listarEquipo(pag) {
+    var data = 'listarEquipo';
+    //console.log("entra en listarUsuario")
+    $.ajax({
+        url: "../../Controller/EquipoController.php",
+        data: '&funcion=' + data,
+        type: 'post',
+        success: function (data) {
+                var data = JSON.parse(data);
+
+                var comments = "";
+                var item = "";
+                var parent = -1;
+
+                
+                var thead = "\
+                                <thead>\
+                                <tr>\
+                                    <th>Foto</th>\
+                                    <th>Nombre</th>\
+                                    <th>Cargo</th>\
+                                    <th>Funcion</th>\
+                                    <th>Resumen</th>\
+                                    <th>Biografia</th>\
+                                    <th>Correo</th>\
+                                    <th>Instagram</th>\
+                                    <th>Facebook</th>\
+                                    <th>Tiktok</th>\
+                                    <th>Linkedin</th>\
+                                    <th>Acción</th>\
+                                </tr>\
+                                </thead>"
+                var list = $("<table class='table table-hover contenido-tabla text-center text-white-50'>").html(thead);
+                var item = $("<tr>").html(comments);
+
+                var long = pag;
+                var cont = pag;
+                if(long > data.length)
+                {
+                    long = data.length;
+
+                }
+                for (var i = 0; (i < long); i++)
+                {   
+                var id=data[i]['id']
+                comments = "\
+                            <td><img src='" + data[i]['imagen'] +"' width=100px height=100px></td>\
+                            <td>" + data[i]['nombre'] +"</td>\
+                            <td>" + data[i]['cargo'] +"</td>\
+                            <td>" + data[i]['funcion'] +"</td>\
+                            <td style='height: 200px important!; overflow-y: scroll;' >" + data[i]['resumen'] +"</td>\
+                            <td style='height: 200px important!; overflow-y: scroll;' >" + data[i]['biografia'] + "</td>\
+                            <td>" + data[i]['correo'] + "</td>\
+                            <td>" + data[i]['instagram'] + "</td>\
+                            <td>" + data[i]['facebook'] + "</td>\
+                            <td>" + data[i]['tiktok'] + "</td>\
+                            <td>" + data[i]['linkedin'] + "</td>\
+                            <td><a class='btn btn-outline-warning m-1'  href='editarequipo.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a>\
+                            <a class='btn btn-outline-danger' onClick='eliminarequipo(" + id + ")'>Eliminar</a><td>";
+                var item = $("<tr>").html(comments);
+                list.append(item);
+                }
+                cont = cont + 5;
+                let botonesInferiores = `
+                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning" href='registrarequipo.php'>registrar perfil de equipo</a>
+                    <a class='btn btn-outline-primary btn-reply' onClick='listarEquipo("` + cont + `")'>Mas Perfiles de equipo</a>
+                `;
+                
+                $("#botonesInferiores").html(botonesInferiores)
+                list.append(item);
+                $("#listaDeUsuarios").html(list);
+            }
+        });
+}
+
+function eliminarequipo(id)
+{
+    $.ajax({
+        url: "../../Controller/EquipoController.php", 
+        data:  {'id':id, 'funcion':'eliminarEquipo'},
+        type: 'post',
+        success: function (response)
+        {
+            //console.log(response)
+            location.reload();
+        }
+    });
+}
+
+function actualizarEquipo(){
+    $("#comment-message").css('display', 'none');
+    var str = $("#frm-comment").serialize();
+    //console.log(str);
+    var form_data = new FormData();
+    form_data.append('funcion','actualizarEquipo')
+    form_data.append('nombre',document.getElementById("nombre").value)
+    form_data.append('cargo',document.getElementById("cargo").value)
+    form_data.append('funcione',document.getElementById("funcione").value)
+    form_data.append('resumen',document.getElementById("resumen").value)
+    form_data.append('correo',document.getElementById("correo").value)
+    form_data.append('biografia',document.getElementById("biografia").value)
+    form_data.append('instagram',document.getElementById("instagram").value)
+    form_data.append('facebook',document.getElementById("facebook").value)
+    form_data.append('tiktok',document.getElementById("tiktok").value)
+    form_data.append('linkedin',document.getElementById("linkedin").value)
+    var totalfiles = document.getElementById("file").files.length;
+
+    for (var index = 0; index < totalfiles; index++) {
+        form_data.append("files[]", document.getElementById('file').files[index]);
+    }
+    
+
+    $.ajax({
+        url: "../../Controller/EquipoController.php",
+        data: form_data,
+        type: 'post',
+        contentType: false,
+        processData: false,
+        success: function (response)
+        {
+
+            window.location.href = 'listaequipo.php';
+           
+        }
+    });
+}
