@@ -33,6 +33,8 @@
             <div class="row">
                 <div class="col-11 col-sm-10 col-md-8 col-lg-6 edicionUsuario" style="margin: auto;">
                     <form id="frm-comment">
+                    <input type="hidden" name="id" id="id" value="<?php echo $persona->id; ?>">
+
                     <input value="<?php echo $persona->nombre ?>" id="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre Completo" class="form-control mb-3" />
 
                     <input value="<?php echo $persona->cargo ?>" id="cargo" type="text" name="cargo" id="cargo" placeholder="Cargo dentro de la empresa" class="form-control mb-3" />

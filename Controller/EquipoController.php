@@ -30,7 +30,7 @@ function agregarEquipo($conn, $user){
                 //$name = basename($_FILES["pictures"]["name"][$key]);
                 $filename = basename($_FILES['files']['name'][$index]);
                 $ext = strtolower(pathinfo($_FILES['files']['name'][$index], PATHINFO_EXTENSION));
-                $valid_ext = array("png","jpeg","jpg");
+                $valid_ext = array("png","jpeg","jpg","webp");
                 if(in_array($ext, $valid_ext)){
                     $path = $upload_location.$filename;
                     $path2 = $path2.$filename;
@@ -116,59 +116,101 @@ function actualizarEquipo($conn, $user){
         header('Location: ../auth/memberpage.php'); 
         exit(); 
     }
-    $path = "/opt/lampp/htdocs/AB-technology/recursos/imagenes/";
-       
+    $id = $_POST["id"];
+    if($_POST['imagen'] == "sitiene")
+    {
+        $path = "/opt/lampp/htdocs";
+        $stmt_select = $conn->prepare('SELECT imagen FROM equipo WHERE id =:uid');
+        $stmt_select->execute(array(':uid'=>$id));
+        $imgRow=$stmt_select->fetch(PDO::FETCH_ASSOC);
+        unlink($path.$imgRow['imagen']);
+        $path = "/opt/lampp/htdocs/AB-technology/recursos/imagenes/";
         
-    $countfiles = count($_FILES['files']['name']);
-    $upload_location = "/opt/lampp/htdocs/AB-technology/recursos/imagenes/";
-    $path2 = "/AB-technology/recursos/imagenes/";
-    $files_arr = array();
-    for($index = 0;$index < $countfiles;$index++){
-        if(isset($_FILES['files']['name'][$index]) && $_FILES['files']['name'][$index] != ''){
-            //$name = basename($_FILES["pictures"]["name"][$key]);
-            $filename = basename($_FILES['files']['name'][$index]);
-            $ext = strtolower(pathinfo($_FILES['files']['name'][$index], PATHINFO_EXTENSION));
-            $valid_ext = array("png","jpeg","jpg");
-            if(in_array($ext, $valid_ext)){
-                $path = $upload_location.$filename;
-                $path2 = $path2.$filename;
-                if(move_uploaded_file($_FILES['files']['tmp_name'][$index],$path)){
-                    
-                    $files_arr[] = $path;
-                    
+
+        $countfiles = isset($_FILES['files']['name']);
+        $upload_location = "/opt/lampp/htdocs/AB-technology/recursos/imagenes/";
+        $path2 = "/AB-technology/recursos/imagenes/";
+        $files_arr = array();
+        for($index = 0;$index < $countfiles;$index++){
+            if(isset($_FILES['files']['name'][$index]) && $_FILES['files']['name'][$index] != ''){
+                //$name = basename($_FILES["pictures"]["name"][$key]);
+                $filename = basename($_FILES['files']['name'][$index]);
+                $ext = strtolower(pathinfo($_FILES['files']['name'][$index], PATHINFO_EXTENSION));
+                $valid_ext = array("png","jpeg","jpg","webp");
+                if(in_array($ext, $valid_ext)){
+                    $path = $upload_location.$filename;
+                    $path2 = $path2.$filename;
+                    if(move_uploaded_file($_FILES['files']['tmp_name'][$index],$path)){
+
+                        $files_arr[] = $path;
+
+                    }
                 }
             }
         }
+        
+        $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+        $cargo = isset($_POST['cargo']) ? $_POST['cargo'] : "";
+        $funcione = isset($_POST['funcione']) ? $_POST['funcione'] : "";
+        $resumen = isset($_POST['resumen']) ? $_POST['resumen'] : "";
+        $correo = isset($_POST['correo']) ? $_POST['correo'] : "";
+        $biografia = isset($_POST['biografia']) ? $_POST['biografia'] : "";
+        $instagram = isset($_POST['instagram']) ? $_POST['instagram'] : "";
+        $facebook = isset($_POST['facebook']) ? $_POST['facebook'] : "";
+        $tiktok = isset($_POST['tiktok']) ? $_POST['tiktok'] : "";
+        $linkedin = isset($_POST['linkedin']) ? $_POST['linkedin'] : "";
+        if($instagram == "")
+        {
+            $instagram = "notiene";
+        }
+        if($linkedin == "")
+        {
+            $linkedin = "notiene";
+        }
+        if($facebook == "")
+        {
+            $facebook = "notiene";
+        }
+        if($tiktok== "")
+        {
+            $tiktok = "notiene";
+        }
+        $sentencia = $conn->prepare("UPDATE equipo SET nombre = ?, cargo = ?, funcion = ?, resumen = ?, biografia = ?, correo = ?, instagram = ?, facebook = ?, tiktok = ?, linkedin = ?, imagen = ? WHERE id = ?;");
+        $resultado = $sentencia->execute([$nombre, $cargo, $funcione, $resumen, $biografia, $correo, $instagram, $facebook, $tiktok, $linkedin, $path2, $id]);
+        return $resultado;
+    }else{
+        
+        $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+        $cargo = isset($_POST['cargo']) ? $_POST['cargo'] : "";
+        $funcione = isset($_POST['funcione']) ? $_POST['funcione'] : "";
+        $resumen = isset($_POST['resumen']) ? $_POST['resumen'] : "";
+        $correo = isset($_POST['correo']) ? $_POST['correo'] : "";
+        $biografia = isset($_POST['biografia']) ? $_POST['biografia'] : "";
+        $instagram = isset($_POST['instagram']) ? $_POST['instagram'] : "";
+        $facebook = isset($_POST['facebook']) ? $_POST['facebook'] : "";
+        $tiktok = isset($_POST['tiktok']) ? $_POST['tiktok'] : "";
+        $linkedin = isset($_POST['linkedin']) ? $_POST['linkedin'] : "";
+        if($instagram == "")
+        {
+            $instagram = "notiene";
+        }
+        if($linkedin == "")
+        {
+            $linkedin = "notiene";
+        }
+        if($facebook == "")
+        {
+            $facebook = "notiene";
+        }
+        if($tiktok== "")
+        {
+            $tiktok = "notiene";
+        }
+        $sentencia = $conn->prepare("UPDATE equipo SET nombre = ?, cargo = ?, funcion = ?, resumen = ?, biografia = ?, correo = ?, instagram = ?, facebook = ?, tiktok = ?, linkedin = ? WHERE id = ?;");
+        $resultado = $sentencia->execute([$nombre, $cargo, $funcione, $resumen, $biografia, $correo, $instagram, $facebook, $tiktok, $linkedin, $id]);
+        return $resultado;
     }
-    $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
-    $cargo = isset($_POST['cargo']) ? $_POST['cargo'] : "";
-    $funcione = isset($_POST['funcione']) ? $_POST['funcione'] : "";
-    $resumen = isset($_POST['resumen']) ? $_POST['resumen'] : "";
-    $correo = isset($_POST['correo']) ? $_POST['correo'] : "";
-    $biografia = isset($_POST['biografia']) ? $_POST['biografia'] : "";
-    $instagram = isset($_POST['instagram']) ? $_POST['instagram'] : "";
-    $facebook = isset($_POST['facebook']) ? $_POST['facebook'] : "";
-    $tiktok = isset($_POST['tiktok']) ? $_POST['tiktok'] : "";
-    $linkedin = isset($_POST['linkedin']) ? $_POST['linkedin'] : "";
-    if($instagram == "")
-    {
-        $instagram = "notiene";
-    }
-    if($linkedin == "")
-    {
-        $linkedin = "notiene";
-    }
-    if($facebook == "")
-    {
-        $facebook = "notiene";
-    }
-    if($tiktok== "")
-    {
-        $tiktok = "notiene";
-    }
-    $sentencia = $conn->prepare("UPDATE equipo SET nombre = ?, cargo = ?, funcion = ?, resumen = ?, biografia = ?, correo = ?, instagram = ?, facebook = ?, tiktok = ?, linkedin = ?, imagen = ? WHERE id = ?;");
-    $resultado = $sentencia->execute([$nombre, $cargo, $funcione, $resumen, $biografia, $correo, $instagram, $facebook, $tiktok, $linkedin, $path2, $id]);
-    return $resultado;
+    
 }
 
 function listarEquipo($conn, $user){

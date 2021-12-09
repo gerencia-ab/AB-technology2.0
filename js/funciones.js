@@ -863,6 +863,7 @@ function actualizarEquipo(){
     //console.log(str);
     var form_data = new FormData();
     form_data.append('funcion','actualizarEquipo')
+    form_data.append('id',document.getElementById("id").value)
     form_data.append('nombre',document.getElementById("nombre").value)
     form_data.append('cargo',document.getElementById("cargo").value)
     form_data.append('funcione',document.getElementById("funcione").value)
@@ -874,10 +875,17 @@ function actualizarEquipo(){
     form_data.append('tiktok',document.getElementById("tiktok").value)
     form_data.append('linkedin',document.getElementById("linkedin").value)
     var totalfiles = document.getElementById("file").files.length;
-
-    for (var index = 0; index < totalfiles; index++) {
-        form_data.append("files[]", document.getElementById('file').files[index]);
+    if(totalfiles == 0)
+    {
+        form_data.append("imagen", "notiene");
+    }else{
+        form_data.append("imagen", "sitiene");
+        for (var index = 0; index < totalfiles; index++) {
+            
+            form_data.append("files[]", document.getElementById('file').files[index]);
+        }
     }
+    
     
 
     $.ajax({
@@ -888,7 +896,7 @@ function actualizarEquipo(){
         processData: false,
         success: function (response)
         {
-
+            //console.log(response)
             window.location.href = 'listaequipo.php';
            
         }

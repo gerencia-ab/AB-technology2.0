@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light position-fixed" style="width: 100%; z-index: 99; background-color: #191B2A;">
   <div class="container-fluid">
     <a class="navbar-brand" href="http://localhost/AB-technology/"><img clas="logo-navbar" src="http://localhost/AB-technology/recursos/imagenes/logo.webp" alt="Logo AB"></a>
@@ -24,7 +25,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/nosotros.php">Quienes somos</a></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/encuentranos/">Encuentranos</a></li>
-            <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/equipo.php">Equipo</a></li>
+            <li><a class="dropdown-item" href="http://localhost/AB-technology/Views/nuestroequipo.php">Nuestro Equipo</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology/#contacto">Contacto</a></li>
           </ul>

@@ -37,6 +37,9 @@
                             <a class="btn btn-outline-warning" href='../roles/listaderoles.php' style="cursor: pointer;">ver roles</a>
                         </div>
                         <div class="mb-3 text-center">
+                            <a class="btn btn-outline-warning" href='../equipo/listaequipo.php' style="cursor: pointer;">ver equipo</a>
+                        </div>
+                        <div class="mb-3 text-center">
                             <a class="btn btn-outline-success" href='../comentarios/listacomentarios.php'>ver comentarios por aprobar</a>
                         </div>
                         <div class="mb-3 text-center">
