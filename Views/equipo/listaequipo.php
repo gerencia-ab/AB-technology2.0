@@ -41,12 +41,12 @@ if(!$user->is_logged_in())
                 </div>                
             </div>
         </div>
-        <div class="auxFooter">
+        
             <?php
                 include_once '../../php/footer.php';    
                 include '../../php/scripts/scriptsJS.php'
             ?>  
-        </div>  
+        
     </body>
 </html>
 

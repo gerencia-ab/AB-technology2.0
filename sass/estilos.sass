@@ -26,12 +26,13 @@ footer
   color: #60757D
 
 .auxFooter
-  position: absolute
+  position: relative
   bottom: 0
   width: 100%
 
 body
   background-color: $azulOscuro
+  min-height: 1000px
 
 /* video background
 #background-video
@@ -43,6 +44,10 @@ body
   z-index: 98
   filter: brightness(50%)
 
+
+.accordion-button::after
+  display: none
+
 .verCredencial
   float: right
   margin-right: 10px 
@@ -53,7 +58,7 @@ body
 .usuario, .comentario, .edicionUsuario
   background-color: $azulOscuro2  
   padding: 20px 30px
-  border-radius: 5px
+  border-radius: 10px
 
 .panelAdministrativo
   margin: auto
@@ -210,7 +215,7 @@ body
 
 /* Formulario de contacto
 
-#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment, #loginEmail, #loginUsername, #loginPass, #rol
+#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment, #loginEmail, #loginUsername, #loginPass, #rol, #username, #apellidos, #telefono
   background-color: #2C3144
   color: $blanco
   border: 0

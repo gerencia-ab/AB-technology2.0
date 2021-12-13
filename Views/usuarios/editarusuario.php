@@ -43,23 +43,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-11 col-sm-10 col-md-8 col-lg-6 edicionUsuario" style="margin: auto;">
+                <h2></h2>
                     <form id="frm-comment">
+
+                    
                         <div class="mb-3">
                             <input type="hidden" name="id" value="<?php echo $persona->memberID; ?>">
                             <input class="form-control" type="text" name="username" id="username" placeholder="Username" value="<?php echo $persona->username ?>" />
                         </div>
+                    
+
+                        
+
                         <div class="mb-3">
                             <input class="form-control" type="email" name="correo" id="correo" placeholder="Correo" value="<?php echo $persona->email ?>"/>
                         </div>
+
                         <div class="mb-3">
                             <input class="form-control" type="text" name="nombres" id="nombres" placeholder="Nombres" value="<?php echo $persona->nombres ?>"/>
                         </div>
+
                         <div class="mb-3">
                             <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" value="<?php echo $persona->apellidos ?>"/>
                         </div>
+
                         <div class="mb-3">
                             <input class="form-control" type="text" name="telefono" id="telefono" placeholder="Telefono" value="<?php echo $persona->telefono ?>"/>
                         </div>
+
                         <div class="mb-3 form-group">
                             <label for="rol">Rol </label>
                             <select name="rol" class="form-control" id="rol" style="margin:20px; width: 50%;">
@@ -72,9 +83,12 @@
                                 ?>
                         </select>
                         </div>
+
                         <div class="mb-3 text-center">
                             <input type="button" class="btn btn-outline-primary" id="submitButton2" value="Actualizar" onclick="actualizarUsuario()">
                         </div>
+
+
                     </form>
                 </div>
             </div>

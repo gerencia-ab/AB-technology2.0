@@ -5,7 +5,7 @@
     { 
         header('Location: ../auth/login.php'); 
         exit(); 
-    }else if(!($user->permiso($_SESSION['username'])==1))
+    }else if(!($user->permisoleer($_SESSION['username'])==1))
     {
         header('Location: ../auth/memberpage.php'); 
         exit(); 

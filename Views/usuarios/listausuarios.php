@@ -30,7 +30,8 @@ if(!$user->is_logged_in())
         </header>
         <div class="container">
             <div class="row">
-                <div class="usuario">                    
+                <div class="usuario">
+                <h2 class="mt-4 mb-4" style="color: white; text-align: center;">Usuarios</h2>                    
                     <!--<div class="comment-form-container"></div>-->
                     <div id="listaDeUsuarios">
 

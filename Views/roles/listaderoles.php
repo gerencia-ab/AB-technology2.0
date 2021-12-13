@@ -30,7 +30,9 @@ if(!$user->is_logged_in())
         </header>
         <div class="container">
             <div class="row">
-                <div class="usuario">                    
+                
+                <div class="usuario">
+                <h2 class="mt-4 mb-5" style="color: white; text-align: center;">Lista de Roles:</h2>                    
                     <!--<div class="comment-form-container"></div>-->
                     <div id="listaDeUsuarios">
 
@@ -41,12 +43,12 @@ if(!$user->is_logged_in())
                 </div>                
             </div>
         </div>
-        <div class="auxFooter">
+        
             <?php
                 include_once '../../php/footer.php';    
                 include '../../php/scripts/scriptsJS.php'
             ?>  
-        </div>  
+        
     </body>
 </html>
 

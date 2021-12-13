@@ -133,22 +133,22 @@ function listUsuarios(pag) {
                     estado = 'Inactivo'
                 }
                 comments = "\
-                            <td><img src='" + data[i]['imagen'] +"' width=100px height=100px></td>\
+                            <td><img src='" + data[i]['imagen'] +"' width=100px height=100px ></td>\
                             <td>" + data[i]['nombres'] +"</td>\
                             <td>" + data[i]['apellidos'] +"</td>\
                             <td>" + data[i]['telefono'] +"</td>\
                             <td>" + data[i]['username'] +"</td>\
                             <td>" + data[i]['email'] + "</td>\
                             <td>" + estado + "</td>\
-                            <td><a class='btn btn-outline-warning m-1'  href='editarusuario.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a>\
-                            <a class='btn btn-outline-danger' onClick='eliminarusuario(" + id + ")'>Eliminar</a><td>";
+                            <td><a class='btn btn-outline-warning m-3'  href='editarusuario.php?id=" + id + "'" + " style='width: 70%; margin: auto;'>Editar</a>\
+                            <a class='btn btn-outline-danger' onClick='eliminarusuario(" + id + ")' style='width: 70%; margin: auto;'>Eliminar</a><td>";
                 var item = $("<tr>").html(comments);
                 list.append(item);
                 }
                 cont = cont + 5;
                 let botonesInferiores = `
-                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning" href='registrarusuario.php'>registrar usuario</a>
-                    <a class='btn btn-outline-primary btn-reply' onClick='listUsuarios("` + cont + `")'>Mas usuarios</a>
+                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning m-2" href='registrarusuario.php'>Registrar usuario</a>
+                    <a class='btn btn-outline-primary btn-reply m-2' onClick='listUsuarios("` + cont + `")'>Más usuarios</a>
                 `;
                 
                 $("#botonesInferiores").html(botonesInferiores)
@@ -215,14 +215,14 @@ function listComments(pag) {
                                 <td>" + data[i]['date'] + "</td>\
                                 <td>" + data[i]['correo'] + "</td>\
                                 <td>" + data[i]['telefono'] + "</td>\
-                                <td><a class='btn btn-outline-warning' onClick='aprobarcomment(" + id + ")'>Aprobar</a>\
-                                <a class='btn btn-outline-danger' onClick='eliminarcomment(" + id + ")'>Eliminar</a><td>";
+                                <td><a class='btn btn-outline-warning m-3' onClick='aprobarcomment(" + id + ")'>Aprobar</a>\
+                                <a class='btn btn-outline-danger m-3' onClick='eliminarcomment(" + id + ")'>Eliminar</a><td>";
                     var item = $("<tr>").html(comments);
                     list.append(item);
                     
                 }
                 cont = cont + 5;
-                var mas ="\<a class='btn btn-outline-primary btn-reply' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
+                var mas ="\<a class='btn btn-outline-primary btn-reply m-4' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
                 var item = $("<tr>").html(mas);
                 list.append(item);
                 $("#listaDeComentarios").html(list);
@@ -584,7 +584,7 @@ function listBlogsusuarios(pag, blogs, imagenes) {
             var ind = i+1;
             var id=blogs[i]['id']
             var blog = `<h1>Blog No ` + ind  +`</h1>`
-            var titulo = `<h1>` + blogs[i]['titulo'] +`</h1>`;
+            var titulo = `<h1 class="blog-titulo">` + blogs[i]['titulo'] +`</h1>`;
             var des= blogs[i]['descripcion'].replace(/\r?\n/g, '<br />');
             var descripcion = `<p>` + des +`</p>`;
             
@@ -594,7 +594,7 @@ function listBlogsusuarios(pag, blogs, imagenes) {
                 if(imagenes[j]['blog_id'] === id)
                 {
                   
-                    image += `<img src='` + imagenes[j]['imagen'] +`' width=100px height=100px>`
+                    image += `<img src='` + imagenes[j]['imagen'] +`' class="blog-imagen">`
     
                 }
             }  
@@ -650,14 +650,14 @@ function listRoles(pag) {
                 comments = "\
                             <td>" + data[i]['id'] +"</td>\
                             <td>" + data[i]['name'] + "</td>\
-                            <td><a class='btn btn-outline-warning m-1'  href='editarrol.php?id=" + id + "'" + " style='width: 80%; margin: auto;'>Editar</a><td>";
+                            <td><a class='btn btn-outline-warning m-1'  href='editarrol.php?id=" + id + "'" + " style='width: 50%; margin: auto;'>Editar</a><td>";
                 var item = $("<tr>").html(comments);
                 list.append(item);
                 }
                 cont = cont + 5;
                 let botonesInferiores = `
-                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning" href='registrarrol.php'>registrar rol</a>
-                    <a class='btn btn-outline-primary btn-reply' onClick='listRoles("` + cont + `")'>Mas roles</a>
+                    <a id="botonRegistrarUsuario" class="btn btn-outline-warning m-2" href='registrarrol.php'>Registrar rol</a>
+                    <a class='btn btn-outline-primary btn-reply m-2' onClick='listRoles("` + cont + `")'>Más roles</a>
                 `;
                 
                 $("#botonesInferiores").html(botonesInferiores)

@@ -12,7 +12,8 @@ footer {
   width: 100%; }
 
 body {
-  background-color: #3e4765; }
+  background-color: #3e4765;
+  min-height: 1000px; }
 
 /* video background */
 #background-video {
@@ -24,6 +25,9 @@ body {
   z-index: 98;
   filter: brightness(50%); }
 
+.accordion-button::after {
+  display: none; }
+
 .verCredencial {
   float: right;
   margin-right: 10px;
@@ -34,7 +38,7 @@ body {
 .usuario, .comentario, .edicionUsuario {
   background-color: #191B2A;
   padding: 20px 30px;
-  border-radius: 5px; }
+  border-radius: 10px; }
 
 .panelAdministrativo {
   margin: auto;
@@ -179,7 +183,7 @@ body {
   margin: 15px 0 15px 0; }
 
 /* Formulario de contacto */
-#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment, #loginEmail, #loginUsername, #loginPass, #rol {
+#inputNombre, #inputTelefono, #inputEmail, #inputNombre, #inputTelefono, #inputEmail, #textMensaje, #commentId, #name, #telefono, #correo, #comment, #loginEmail, #loginUsername, #loginPass, #rol, #username, #apellidos, #telefono {
   background-color: #2C3144;
   color: #FFFFFF;
   border: 0; }
