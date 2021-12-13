@@ -222,7 +222,7 @@ function listComments(pag) {
                     
                 }
                 cont = cont + 5;
-                var mas ="\<a class='btn btn-outline-primary btn-reply m-4' onClick='listComment(" + cont + ")'>Mas comentarios</a>";
+                var mas ="\<a class='btn btn-outline-primary btn-reply m-4' onClick='listComments(" + cont + ")'>Mas comentarios</a>";
                 var item = $("<tr>").html(mas);
                 list.append(item);
                 $("#listaDeComentarios").html(list);
@@ -550,21 +550,13 @@ function listblogusuario(pag)
                 blogs = JSON.parse(data);
             }
             });
-    var data2 = 'listarImagenes';
-    $.ajax({
-        url: "../../Controller/BlogsUserController.php",
-        data: '&funcion=' + data2,
-        type: 'post',
-        async: false,
-        success: function (data) {
-                imagenes = JSON.parse(data);
-            }
-            });
+            console.log(blogs)
+    
 
-    this.listBlogsusuarios(pag, blogs, imagenes);
+    this.listBlogsusuarios(pag, blogs);
 }
-function listBlogsusuarios(pag, blogs, imagenes) {
-
+function listBlogsusuarios(pag, blogs) {
+   
     var comments = "";
     var item = "";
     var parent = -1;
@@ -581,30 +573,19 @@ function listBlogsusuarios(pag, blogs, imagenes) {
         }
         for (var i = 0; (i < long); i++)
         {   
-            var ind = i+1;
-            var id=blogs[i]['id']
-            var blog = `<h1>Blog No ` + ind  +`</h1>`
-            var titulo = `<h1 class="blog-titulo">` + blogs[i]['titulo'] +`</h1>`;
-            var des= blogs[i]['descripcion'].replace(/\r?\n/g, '<br />');
-            var descripcion = `<p>` + des +`</p>`;
+            var id=blogs[i]['id'];
+            var titulo=blogs[i]['titulo'];
+            var div = `<div class="mb-3 text-center">`;
+            var atitulo = `<a class="btn btn-outline-success" href="http://localhost/AB-technology/Views/blog.php?titulo=` + titulo +  `">` + titulo + `</a>`;
+            var cerrardiv = `</div>`;
+
             
-            var image = "";
-            for (var j = 0; (j < imagenes.length); j++)
-            {
-                if(imagenes[j]['blog_id'] === id)
-                {
-                  
-                    image += `<img src='` + imagenes[j]['imagen'] +`' class="blog-imagen">`
-    
-                }
-            }  
-            
-            comments = blog + titulo + image + descripcion ;
+            comments = div + atitulo + cerrardiv;
             list.append(comments);
                     
         }
         cont = cont + 5;
-        var mas =`<a class='btn-reply' onClick='listblogusuarios(` + cont + `)'>Mas blogs</a>`;
+        var mas =`<a class='btn-reply' onClick='listblogusuario(` + cont + `)'>Mas blogs</a>`;
         var item = $("<p>").html(mas);
         list.append(item);
         $("#output").html(list);

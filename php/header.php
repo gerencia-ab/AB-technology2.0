@@ -31,8 +31,13 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
+          <a class="nav-link " href="http://localhost/AB-technology/Views/blogs/listadeblogs.php" id="navbarDropdown" role="button"  aria-expanded="false" style="color: #FFF">
+            Blogs
+          </a>
+          </li>
+          <li class="nav-item dropdown">
           <a class="nav-link " href="http://localhost/AB-technology/Views/comentarios/comentarios.php" id="navbarDropdown" role="button"  aria-expanded="false" style="color: #FFF">
-            Blog
+            Comentarios
           </a>
         </li>
       </ul>

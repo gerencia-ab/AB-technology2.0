@@ -14,10 +14,6 @@
             <h1>Encabezado</h1>
         </header>
 
-        <?php
-            include_once '../blogprueba.php';
-        ?>
-
         
         <br>        
         <div class="container listaComentarios">
