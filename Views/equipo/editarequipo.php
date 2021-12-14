@@ -87,7 +87,7 @@
                         <input type="file" id="file" name="file[]" required>
                     </div>
                         <div class="mb-3 text-center">
-                            <input type="button" class="btn btn-outline-primary" id="submitButton2" value="Actualizar" onclick="actualizarEquipo()">
+                            <input type="button" class="btn btn-outline-primary mt-5" id="submitButton2" value="Actualizar" onclick="actualizarEquipo()">
                         </div>
                     </form>
                 </div>

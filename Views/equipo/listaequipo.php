@@ -32,7 +32,7 @@ if(!$user->is_logged_in())
             <div class="row">
                 <div class="usuario">                    
                     <!--<div class="comment-form-container"></div>-->
-                    <div id="listaDeUsuarios">
+                    <div id="listaEquipo">
 
                     </div>
                     <div id="botonesInferiores">
@@ -41,11 +41,14 @@ if(!$user->is_logged_in())
                 </div>                
             </div>
         </div>
+        <section id="listaModales">
+
+        </section>
         
-            <?php
-                include_once '../../php/footer.php';    
-                include '../../php/scripts/scriptsJS.php'
-            ?>  
+        <?php
+            include_once '../../php/footer.php';    
+            include '../../php/scripts/scriptsJS.php'
+        ?>  
         
     </body>
 </html>
