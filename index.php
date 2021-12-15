@@ -13,13 +13,13 @@
     <div class="bg-secondary text-center cover-video">
         
         <video id="background-video" autoplay loop muted poster="recursos/imagenes/imgFondo1.webp">
-            <source src="recursos/videos/video1.mp4" type="video/mp4">
+            <source src="recursos/videos/video.mp4" type="video/mp4">
             
         </video>
 
         
 
-        <h1 class="cover-titulo"> Somos una empresa que planifica, construye y gestiona soluciones de software</h1>
+        <!-- <h1 class="cover-titulo"> Somos una empresa que planifica, construye y gestiona soluciones de software</h1> -->
 
         <img src="recursos/imagenes/flecha_abajo.svg" class="flecha"/>
         

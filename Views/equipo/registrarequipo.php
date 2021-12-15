@@ -81,11 +81,11 @@
 
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-4">
                             <input type="file" id="file" name="file[]" required>
                         </div>
           
-                        <input type="button" class="btn btn-outline-primary" id="submitButton" value="Registrar" onclick="registrarEquipo()" style="margin:auto;"/>
+                        <input type="button" class="btn btn-outline-primary mt-4" id="submitButton" value="Registrar" onclick="registrarEquipo()" style="margin:auto;"/>
                     </form>
                 </div>
             </div>

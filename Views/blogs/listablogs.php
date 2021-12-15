@@ -26,19 +26,19 @@
         ?>
         <div style="height: 150px;"></div>
     </header>
-    <div>
-     <a href='registrarblogs.php'>registrar blog</a>
-	<div style="clear:both"></div>
-    <div class="comment-form-container">
-
+    <div class="container usuario" style="color:#FFFFFF; text-align: center;">
+        
+        <div id="output"></div>
+        <a href='registrarblogs.php' class="btn btn-outline-primary">Registrar blog</a>
     </div>
-    <div id="output"></div>
+
     <div class="auxFooter">
         <?php
             include_once '../../php/footer.php';    
             include '../../php/scripts/scriptsJS.php'
         ?>  
     </div> 
+    
 </body>
     
 </html>

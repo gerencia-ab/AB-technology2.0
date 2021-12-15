@@ -40,7 +40,7 @@
         <div class="container mt-5">
             <div class="row mt-5">
                 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 mt-5 panelAdministrativo">
-                    <div class="text-center">
+                    <div class="text-center mb-5 mt-4">
                         <h2>Nuestro equipo AB-TECHNOLOGY GROUP</h2>
                     </div> 
                     <div class="text-center">
@@ -50,7 +50,7 @@
                         foreach ($cofundadores as $equipo) {
                     ?>                  
                         <div class="mb-3 text-center">
-                            <a class="btn btn-outline-success" href="http://localhost/AB-technology/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
+                            <a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
                         </div>
                     <?php
                     }?>
@@ -61,7 +61,7 @@
                         foreach ($marketing as $equipo) {
                     ?>                  
                         <div class="mb-3 text-center">
-                            <a class="btn btn-outline-success" href="http://localhost/AB-technology/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
+                            <a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
                         </div>
                     <?php
                     }?>
@@ -72,7 +72,7 @@
                         foreach ($desarrolladores as $equipo) {
                     ?>                  
                         <div class="mb-3 text-center">
-                            <a class="btn btn-outline-success" href="http://localhost/AB-technology/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
+                            <a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
                         </div>
                     <?php
                     }?>

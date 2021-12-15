@@ -110,7 +110,7 @@ function listUsuarios(pag) {
                                     <th>Acción</th>\
                                 </tr>\
                                 </thead>"
-            var list = $("<table class='table table-hover text-center text-white-50'>").html(thead);
+            var list = $("<table class='table-responsive text-center text-white-50'>").html(thead);
             var item = $("<tr>").html(comments);
 
             var long = pag;
@@ -189,7 +189,7 @@ function listComments(pag) {
                                  <th>Telefono</th>\
                                 </tr>\
                              </thead>"
-            var list = $("<table class='table text-center text-white-50'>").html(thead);
+            var list = $("<table class='table-responsive text-center text-white-50'>").html(thead);
             var item = $("<tr>").html(comments);
 
             var long = pag;
@@ -436,7 +436,7 @@ function listBlogs(pag, blogs, imagenes) {
                 <th>imagen</th>\
             </tr>\
         </thead>"
-    var list = $("<table class='table contenido-tabla'>").html(thead);
+    var list = $("<table class='table-responsive'>").html(thead);
     var item = $("<tr>").html(comments);
 
     var long = pag;
@@ -458,7 +458,7 @@ function listBlogs(pag, blogs, imagenes) {
             }
         }
         td3 += `</td>`;
-        var td4 = `<td><a onClick='eliminarBlog(` + id + `)'><button type='button' class='btn btn-warning'>Eliminar</button></a><td>`;
+        var td4 = `<td><a onClick='eliminarBlog(` + id + `)'><button type='button' class='btn btn-outline-warning m-5'>Eliminar</button></a><td>`;
         comments = td1 + td2 + td3 + td4;
 
         var item = $("<tr>").html(comments);
@@ -466,7 +466,7 @@ function listBlogs(pag, blogs, imagenes) {
 
     }
     cont = cont + 5;
-    var mas = `<a class='btn-reply' onClick='listblogimagen(` + cont + `)'>Mas blogs</a>`;
+    var mas = `<a class='btn btn-outline-primary mt-4' onClick='listblogimagen(` + cont + `)'>Más</a>`;
     var item = $("<tr>").html(mas);
     list.append(item);
     $("#output").html(list);
@@ -547,7 +547,7 @@ function listBlogsusuarios(pag, blogs) {
         var id = blogs[i]['id'];
         var titulo = blogs[i]['titulo'];
         var div = `<div class="mb-3 text-center">`;
-        var atitulo = `<a class="btn btn-outline-success" href="http://localhost/AB-technology/Views/blog.php?titulo=` + titulo + `">` + titulo + `</a>`;
+        var atitulo = `<a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/blog.php?titulo=` + titulo + `">` + titulo + `</a>`;
         var cerrardiv = `</div>`;
 
 

@@ -18,7 +18,7 @@
         </header>
         <div class="container mt-5">
             <div class="row mt-5">
-                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 mt-5 panelAdministrativo">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 mt-5 mb-5 panelAdministrativo">
                     <div class="text-center">
                         <h2 class="mt-4">Bienvenido al panel administrativo</h2>
                         <div class="mt-4 text-center" style="border: 2px solid white; padding: 10px;font-weight: bold; border-radius: 10px; width:60%; margin: auto;">

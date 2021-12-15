@@ -45,10 +45,13 @@ if(!$user->is_logged_in())
 
         </section>
         
-        <?php
-            include_once '../../php/footer.php';    
-            include '../../php/scripts/scriptsJS.php'
-        ?>  
+        <div class="auxFooter">
+            <?php
+                include_once '../../php/footer.php';    
+                include '../../php/scripts/scriptsJS.php'
+            ?>  
+        </div>
+        
         
     </body>
 </html>
