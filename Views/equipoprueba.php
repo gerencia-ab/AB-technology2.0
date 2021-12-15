@@ -42,7 +42,7 @@ error_reporting(E_ALL);
                 <p style="text-align: center;" id="funcion">
                     <?php echo $persona->funcion; ?>
                 </p>
-                <div class="mt-3" style="border: 2px solid white; padding: 25px; display: flex; flex-direction: column; justify-content: center; max-width: 50%; min-width: 600px; border-radius: 15px; margin: auto;">
+                <div class="mt-3" style="border: 2px solid white; padding: 25px; display: flex; flex-direction: column; justify-content: center; width: 90%; border-radius: 15px; margin: auto;">
                     <p class="mt-4" style="text-align: justify;" id="resumen">
                         <?php echo nl2br($persona->resumen); ?>
                     </p>
