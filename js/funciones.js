@@ -547,7 +547,7 @@ function listBlogsusuarios(pag, blogs) {
         var id = blogs[i]['id'];
         var titulo = blogs[i]['titulo'];
         var div = `<div class="mb-3 text-center">`;
-        var atitulo = `<a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/blog.php?titulo=` + titulo + `">` + titulo + `</a>`;
+        var atitulo = `<a class="btn btn-outline-success" href="http://localhost/AB-technology2.0/Views/blog.php?titulo=` + titulo + `">` + titulo + `</a>`;
         var cerrardiv = `</div>`;
 
 

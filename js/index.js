@@ -1,6 +1,6 @@
 $(document).ready(function(){
     /* Swiper para la visualización del portafolio */
-    var swiperPortafoli1 = new Swiper(document.getElementsByClassName('swiper')[0], {
+    var swiperPortafoli1 = new Swiper(document.getElementById('swiperPortafolio'), {
         grabCursor: true,
         loop: true,
         effect: "creative",
@@ -18,7 +18,7 @@ $(document).ready(function(){
           },
         },
     });
-    var swiperPortafolio2 = new Swiper(document.getElementsByClassName('swiper')[1], {
+    var swiperPortafolio2 = new Swiper(document.getElementById('swiperPortafolio2'), {
         grabCursor: true,
         loop: true,
         effect: "creative",
@@ -36,7 +36,7 @@ $(document).ready(function(){
           },
         },
     });
-    var swiperPortafolio3 = new Swiper(document.getElementsByClassName('swiper')[2], {
+    var swiperPortafolio3 = new Swiper(document.getElementById('swiperPortafolio3'), {
         grabCursor: true,
         loop: true,
         effect: "creative",
@@ -54,8 +54,10 @@ $(document).ready(function(){
           },
         },
     });
+
+    
     /* Swiper para el formulario de contacto */
-    const swiperContacto = new Swiper(document.getElementsByClassName('swiper')[3], {
+    const swiperContacto = new Swiper(document.getElementById('swiperContacto'), {
         direction: 'horizontal',
         loop: true,
         pagination: {
@@ -78,7 +80,23 @@ $(document).ready(function(){
             crossFade: true
         },
     });
+
+    const swiperRequerimientos = new Swiper(document.getElementById('formularioRequerimientos'), {
+      pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+      },
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+  });
 });
+
+
+
+
+
 
 var verCredencial = () => {
   let password = document.getElementById("password")

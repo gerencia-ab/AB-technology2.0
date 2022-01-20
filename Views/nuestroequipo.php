@@ -50,7 +50,7 @@
                         foreach ($cofundadores as $equipo) {
                     ?>                  
                         <div class="mb-3 text-center">
-                            <a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
+                            <a class="btn btn-outline-success" href="http://localhost/AB-technology2.0/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
                         </div>
                     <?php
                     }?>
@@ -61,7 +61,7 @@
                         foreach ($marketing as $equipo) {
                     ?>                  
                         <div class="mb-3 text-center">
-                            <a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
+                            <a class="btn btn-outline-success" href="http://localhost/AB-technology2.0/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
                         </div>
                     <?php
                     }?>
@@ -72,7 +72,7 @@
                         foreach ($desarrolladores as $equipo) {
                     ?>                  
                         <div class="mb-3 text-center">
-                            <a class="btn btn-outline-success" href="https://ab-sistemas.com/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
+                            <a class="btn btn-outline-success" href="http://localhost/AB-technology2.0/Views/equipoprueba.php?id=<?php echo $equipo['id']; ?>"><?php echo strtoupper($equipo['nombre']); ?></a>
                         </div>
                     <?php
                     }?>

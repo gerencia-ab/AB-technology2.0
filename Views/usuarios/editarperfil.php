@@ -53,10 +53,10 @@
 
                     
                     <div style="display: inline-grid; grid-template-columns: 0.5fr 7fr; column-gap: 10px; width:100%;">
-                    <span class="material-icons" style="font-size: 34px;">
-                    email
-                    </span>
-                    <div class="mb-3">
+                        <span class="material-icons" style="font-size: 34px;">
+                        email
+                        </span>
+                        <div class="mb-3">
                             <input class="form-control" type="email" name="correo" id="correo" placeholder="Correo" value="<?php echo $persona->email ?>"/>
                         </div>
                     </div>

@@ -8,7 +8,7 @@
                 </div>
                 <form>
                     <div class="form-row pt-5 pb-2 pl-1 pr-1">
-                        <div class="swiper">
+                        <div class="swiper" id="swiperContacto">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div clas="m-2" style="width: 84%; margin: auto;">

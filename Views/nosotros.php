@@ -27,7 +27,7 @@
                 ejecución optima de los recursos disponibles en el desarrollo de software 
                 de alta calidad, con soluciones basadas en tecnologías de la información.
                 </p>
-                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_jcyhxkau.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop autoplay></lottie-player>
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_jcyhxkau.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop autoplay alt="Misión AB Technology"></lottie-player>
             </div>
 
             <div class="col xs sm md lg quienes-somos">
@@ -38,7 +38,7 @@
                 productivos a nuestros clientes con soluciones especificas y de alta calidad, 
                 que nos permitan impulsar la industria de nuestro país.
                 </p>
-                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_kmabq1m3.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop autoplay></lottie-player>
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_kmabq1m3.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop autoplay alt="Visión AB Technology"></lottie-player>
             </div>
 
             <div class="col xs sm md lg quienes-somos">
@@ -47,7 +47,7 @@
                 Somos un equipo joven y empático capacitado en el desarrollo de software a 
                 la medida (web, móvil, escritorio), con actitud de servicio y compromiso.
                 </p>
-                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ovf6grov.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px; bottom: 0;"  loop autoplay></lottie-player>
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_ovf6grov.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px; bottom: 0;"  loop autoplay alt="AB Technology"></lottie-player>
             </div>
 
         </div>

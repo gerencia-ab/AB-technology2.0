@@ -100,7 +100,7 @@ $title = 'Login';
 				</div>
 				
 				<div class="mb-3" style="display: none;">
-					<a href='https://ab-sistemas.com/Views/auth/reset.php'>Recuperar contraseña?</a>
+					<a href='http://localhost/AB-technology2.0/Views/auth/reset.php'>Recuperar contraseña?</a>
 				</div>
 
 				<hr class="mt-5">

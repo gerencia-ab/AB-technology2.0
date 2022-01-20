@@ -30,7 +30,7 @@
                     
                 </div>
                 <div class="col">
-                    <img class="logo" src="https://ab-sistemas.com/recursos/imagenes/logo.webp" alt="Logo AB Technology Group"> 
+                    <img class="logo" src="http://localhost/AB-technology2.0/recursos/imagenes/logo.webp" alt="Logo AB Technology Group"> 
                 </div>
                 <div class="col">
                   <div class="mt-5">

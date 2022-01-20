@@ -8,23 +8,23 @@
                 <div class="text-center text-white">
                     <h3>Bivalco</h3>
                 </div>
-                <div class="swiper SwiperPortafolio mt-4">
+                <div class="swiper SwiperPortafolio mt-4" id="swiperPortafolio">
                     <div class="swiper-wrapper swiperSize" style="height: 400px;">                        
-                        <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/bivalco1.webp"></div>
-                        <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/bivalco2.webp"></div> -->
-                        <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/bivalco3.webp"></div> -->
-                        <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/bivalco4.webp"></div>
-                        <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/bivalco5.webp"></div> -->
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/bivalco1.webp" alt="Bivalco"></div>
+                        <!-- <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/bivalco2.webp"></div> -->
+                        <!-- <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/bivalco3.webp"></div> -->
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/bivalco4.webp" alt="Bivalco"></div>
+                        <!-- <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/bivalco5.webp"></div> -->
                         <div class="swiper-slide slides fondoLogos">
                             <div class="row">
                                 <div class="col-5" style="margin: auto; text-align: center;">
-                                    <img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/logo-php.webp" style="width: 50%">
+                                    <img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-php.webp" style="width: 50%" alt="Logo PHP">
                                 </div>
                                 <div class="col-5" style="margin: auto; text-align: center;">
-                                    <img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/logo-js.webp" style="width: 35%">
+                                    <img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-js.webp" style="width: 35%" alt="Logo JavaScript">
                                 </div>
                                 <div class="col-4 mt-2" style="margin: auto; text-align: center;">
-                                    <img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/logo-jQuery.webp" style="width: 180%;">
+                                    <img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-jQuery.webp" style="width: 180%;" alt="Logo JQuery">
                                 </div>
                                 
                                 <div class="swiper-slide slides fondoLogos">
@@ -40,20 +40,20 @@
                 <div class="text-center text-white">
                     <h3>Palangre</h3>
                 </div>
-                <div class="swiper SwiperPortafolio mt-4" style="width: 292px; height: 600px;">
+                <div class="swiper SwiperPortafolio mt-4" style="width: 292px; height: 600px;" id="swiperPortafolio2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre1.webp" style="width: 292px; height: 600px;"></div>
-                        <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre2.webp" style="width: 292px; height: 600px;"></div>
-                        <!-- <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre3.webp" style="width: 292px; height: 600px;"></div>
-                        <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre4.webp" style="width: 292px; height: 600px;"></div>
-                        <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre5.webp" style="width: 292px; height: 600px;"></div> -->
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/palangre1.webp" style="width: 292px; height: 600px;" alt="Palangre App"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/palangre2.webp" style="width: 292px; height: 600px;" alt="Palangre App"></div>
+                        <!-- <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/palangre3.webp" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/palangre4.webp" style="width: 292px; height: 600px;"></div>
+                        <div class="swiper-slide slides"><img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/palangre5.webp" style="width: 292px; height: 600px;"></div> -->
                         <div class="swiper-slide slides fondoLogos" style="height: 600px;">
                             <div class="row">
                                 <div class="col-12" style="margin: auto; text-align: center;">
-                                    <img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/logo-java.webp" style="width: 40%">
+                                    <img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-java.webp" style="width: 40%" alt="Logo Java">
                                 </div>
                                 <div class="col-12 mt-5" style="margin: auto; text-align: center;">
-                                    <img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/logo-kotlin.webp" style="width: 80%">
+                                    <img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-kotlin.webp" style="width: 80%" alt="Logo Kotlin">
                                 </div>
                                 <div class="col-12" style="margin: auto; text-align: center;">
                                     <a class="btn btn-outline-primary" href="https://www.bivalco.com/" target="_blank" style="text-decoration: none; margin: auto; margin-top:50px;">Descargar APP</a>
@@ -71,23 +71,24 @@
                 <div class="text-center text-white">
                     <h3>C&R INMOBILIARIA</h3>
                 </div>
-                <div class="swiper mt-4">
+                
+                <div class="swiper mt-4" id="swiperPortafolio3">
                     <div class="swiper-wrapper swiperSize" style="height: 400px;">
-                        <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr1.webp"></div>
-                        <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr2.webp"></div>
-                        <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr3.webp"></div>
-                        <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr4.webp"></div>
-                        <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr5.webp"></div> -->
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/cyr1.webp" alt="C&R INMOBILIARIA"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/cyr2.webp" alt="C&R INMOBILIARIA"></div>
+                        <!-- <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/cyr3.webp"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/cyr4.webp"></div>
+                        <div class="swiper-slide slides"><img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/cyr5.webp"></div> -->
                         <div class="swiper-slide slides fondoLogos">
                             <div class="row">
                                 <div class="col-5" style="margin: auto; text-align: center;">
-                                    <img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/logo-php.webp" style="width: 50%">
+                                    <img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-php.webp" style="width: 50%" alt="Logo PHP">
                                 </div>
                                 <div class="col-5" style="margin: auto; text-align: center;">
-                                    <img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/logo-bootstrap.svg" style="width: 40%">
+                                    <img class="rounded" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-bootstrap.svg" style="width: 40%" alt="Logo Bootstrap">
                                 </div>
                                 <div class="col-4 mt-2" style="margin: auto; text-align: center">
-                                    <img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/logo-js.webp" style="width: 50%">
+                                    <img class="rounded-3" src="http://localhost/AB-technology2.0/recursos/imagenes/logo-js.webp" style="width: 50%" alt="Logo JavaScript">
                                 </div>
                                 
                                 <div class="col-12" style="margin: auto; text-align: center;">
@@ -97,6 +98,7 @@
                         </div>                       
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
