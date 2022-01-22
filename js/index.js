@@ -82,9 +82,13 @@ $(document).ready(function(){
     });
 
     const swiperRequerimientos = new Swiper(document.getElementById('formularioRequerimientos'), {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
       pagination: {
           el: '.swiper-pagination',
-          type: 'bullets',
+          type: 'progressbar',
       },
       navigation: {
           nextEl: '.swiper-button-next',

@@ -12,17 +12,20 @@ body {
   100% {
     background-position: 0% 50%; } }
 .form-container {
-  background-color: rgba(255, 255, 255, 0.247);
-  border-radius: 20px;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.08);
   display: flex;
   width: 85%;
   max-width: 1100px;
   min-width: 280px;
-  margin: auto;
-  padding: clamp(25px, 5%, 60px); }
+  margin: auto; }
+
+.form-slide {
+  background-color: rgba(255, 255, 255, 0.247);
+  border-radius: 20px;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  width: 100%;
+  padding: clamp(25px, 5%, 45px);
+  margin-right: 20px; }
 
 .title {
   font-family: "Montserrat", sans-serif;
@@ -48,17 +51,43 @@ body {
   color: white;
   margin: clamp(25px, 10%, 50px); }
 
+.text-label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: white; }
+
 .text-field {
   border: none;
   background-color: rgba(255, 255, 255, 0.3) !important;
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
   box-shadow: -4px 3px 8px rgba(0, 0, 0, 0.08);
-  color: white; }
+  color: white !important; }
+
+hr {
+  border: 2px solid white !important;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px;
+  margin-bottom: 20px; }
+
+.textarea {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  box-shadow: -4px 3px 8px rgba(0, 0, 0, 0.08);
+  color: white !important;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 5px; }
 
 .text-field-icons {
   font-size: 34px;
-  color: rgba(255, 255, 255, 0.5); }
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: -4px 3px 5px rgba(0, 0, 0, 0.089); }
 
 .button {
   padding: 10px;
@@ -78,6 +107,61 @@ body {
   -webkit-backdrop-filter: blur(50px);
   box-shadow: -8px 6px 16px rgba(0, 0, 0, 0.08); }
 
+.checkbox {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  min-width: 70px;
+  height: 30px;
+  margin: 5px;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(50px);
+  border-radius: 15px;
+  box-shadow: -8px 6px 16px rgba(0, 0, 0, 0.08); }
+
+input[type=checkbox] {
+  visibility: hidden; }
+
+.checkbox label {
+  display: block;
+  width: 34px;
+  height: 20px;
+  border-radius: 17px;
+  background-color: white !important;
+  backdrop-filter: blur(50px);
+  box-shadow: -8px 6px 16px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  text-indent: 35px;
+  transition: text-indent 0s; }
+
+.checkbox input[type=checkbox]:checked + label {
+  left: auto;
+  right: 5px; }
+
+.checkbox:after {
+  content: "No";
+  font: 12px/30px "Montserrat", sans-serif;
+  color: #f0155e8f;
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+  font-weight: bold; }
+
+.checkbox:before {
+  content: "Si";
+  font: 12px/30px "Montserrat", sans-serif;
+  position: absolute;
+  left: 10px;
+  color: #1d8a4ebb;
+  z-index: 0;
+  font-weight: bold; }
+
 .parent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,14 +177,50 @@ body {
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.08);
   display: flex;
   width: 95%;
-  margin: auto; }
+  margin: auto;
+  padding: clamp(5px, 5%, 35px); }
 
-.swiper-pagination-bullet {
-  opacity: 1;
-  border: white solid 1px;
-  background-color: transparent; }
+.swiper-progress-bar {
+  width: 600px;
+  height: 4px;
+  position: relative;
+  margin: 20px auto;
+  background: #eeeeee; }
+  .swiper-progress-bar .progress {
+    height: inherit;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: #007aff;
+    z-index: 1; }
+  .swiper-progress-bar .progress-sections {
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    z-index: 2;
+    display: flex;
+    flex-direction: row; }
+    .swiper-progress-bar .progress-sections span {
+      flex: 1;
+      height: inherit;
+      border-right: 2px solid #eee; }
+      .swiper-progress-bar .progress-sections span:last-child {
+        border-right-width: 0; }
 
-.swiper-pagination-bullet-active {
-  background-color: white; }
+@media (max-width: 870px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: clamp(5px, 15px, 30px);
+    grid-row-gap: clamp(5px, 15px, 30px); } }
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 1em; }
+
+  .title {
+    font-size: 1.8em; } }
 
 /*# sourceMappingURL=requerimientos.css.map */
