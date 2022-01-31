@@ -6,7 +6,7 @@
                     <h2 class="mb-3" style="margin: auto;">Contáctanos</h2>
                     <h5>Ingresa la siguiente información y nuestro equipo te escribirá en breve</h5>
                 </div>
-                <form>
+                <div>
                     <div class="form-row pt-5 pb-2 pl-1 pr-1">
                         <div class="swiper" id="swiperContacto">
                             <div class="swiper-wrapper">
@@ -44,7 +44,7 @@
                                             <textarea class="form-control" id="textMensaje" name="textMensaje" rows="3"></textarea>                                   
                                         </div>
                                         <div class="mt-3 mb-5 text-end">
-                                            <button class="btn btn-outline-primary">Enviar Mensaje</button>
+                                            <button class="btn btn-outline-primary" id="enviarContacto" onclick="contactar()">Enviar Mensaje</button>
                                         </div>
                                     </div>
                                 </div>
@@ -54,8 +54,9 @@
                             <div class="swiper-button-next"></div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<script src="http://localhost/AB-technology2.0/js/mail.js"></script>

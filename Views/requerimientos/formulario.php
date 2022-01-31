@@ -14,7 +14,7 @@
     <div style="height: 100px;"></div>
 
     <section class="p-2" id="requerimientos">
-        <form>
+        <div>
             <div class="form-container">
 
                 <div class="swiper" id="formularioRequerimientos">
@@ -163,7 +163,7 @@
                                     <p class="text-label">Describe tu meta:</p>
                                 </div>
                                 <div class="text-center">
-                                    <textarea class="textarea" name="textarea" rows="10" cols="50"></textarea>
+                                    <textarea class="textarea" name="textarea" id="meta" rows="10" cols="50"></textarea>
                                 </div>
                                 
                             </div>
@@ -176,7 +176,7 @@
                                 <h3 class="title">¡Gracias por responder!</h3>
                                 <p class="text">Nos pondremos en contacto contigo lo más pronto posible</p>
                                 <div class="text-center">
-                                    <button class="button mb-4">
+                                    <button class="button mb-4" onclick="enviarRequerimientos()">
                                         Enviar Formulario
                                     </button>
                                 </div>
@@ -188,12 +188,14 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </section>
-    
+
+    <script src="http://localhost/AB-technology2.0/js/mail.js"></script>
     <?php
             //include_once __DIR__.'/php/footer.php';    
             include __DIR__.'./../../php/scripts/scriptsJS.php'
         ?>  
+        
 </body>
 </html>

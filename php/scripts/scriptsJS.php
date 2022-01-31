@@ -6,3 +6,4 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
 
 <script src="http://localhost/AB-technology2.0/js/index.js"></script>
+
