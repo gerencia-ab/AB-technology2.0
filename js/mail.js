@@ -19,7 +19,13 @@ function contactar() {
         processData: false,
         type: 'POST',
         success: (response) => {
-            console.log(response)
+            //console.log(response)
+            document.getElementById('inputNombre').value = ""
+            document.getElementById('inputTelefono').value = ""
+            document.getElementById('inputEmail').value = ""
+            document.getElementById('textMensaje').value = ""
+            toastr.success(response)
+            
         }
     });
 }
@@ -53,7 +59,19 @@ function enviarRequerimientos() {
         processData: false,
         type: 'POST',
         success: (response) => {
-            console.log(response)
+            //console.log(response)
+            document.getElementById('nombre').value = ""
+            document.getElementById('email').value = ""
+            document.getElementById('celular').value = ""
+            document.getElementById('cbPaginaWeb').checked = false
+            document.getElementById('cbApp').checked = false
+            document.getElementById('cbAdministracion').checked = false
+            document.getElementById('cbMantenimiento').checked = false
+            document.getElementById('cbTiendaOnline').checked = false
+            document.getElementById('cbAplicacionMedida').checked = false
+            document.getElementById('nombreEmprendimiento').value = ""
+            document.getElementById('meta').value = ""
+            toastr.success(response)
         }
     });
     

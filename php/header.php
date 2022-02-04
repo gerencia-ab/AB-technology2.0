@@ -25,7 +25,9 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="http://localhost/AB-technology2.0/Views/nosotros.php">Quienes somos</a></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology2.0/Views/encuentranos/">Encuentranos</a></li>
-            <li><a class="dropdown-item" href="http://localhost/AB-technology2.0/Views/nuestroequipo.php">Nuestro Equipo</a></li>
+            <!--<li><a class="dropdown-item" href="http://localhost/AB-technology2.0/Views/nuestroequipo.php">Nuestro Equipo</a></li>-->
+            <li><a class="dropdown-item" href="http://localhost/AB-technology2.0/Views/requerimientos/formulario.php">Cotiza tu proyecto</a></li>
+            <li><a class="dropdown-item" href="http://localhost/AB-technology2.0/Views/politica-de-privacidad/">Políticas de privacidad</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="http://localhost/AB-technology2.0/#contacto">Contacto</a></li>
           </ul>
