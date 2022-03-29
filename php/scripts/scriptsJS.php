@@ -1,3 +1,4 @@
+<script src="https://www.google.com/recaptcha/api.js?render=6LcrVXIeAAAAAB4gEoMcEaREznXYoGIV5N8RhbsB"></script>
 <script src="http://localhost/AB-technology2.0/recursos/frameworks/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 <script src="http://localhost/AB-technology2.0/recursos/librerias/jquery-3.6.0.min.js"></script>
 <script src="http://localhost/AB-technology2.0/recursos/librerias/toastr/build/toastr.min.js"></script>

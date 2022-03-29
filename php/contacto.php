@@ -7,7 +7,7 @@
                     <h5>Ingresa la siguiente información y nuestro equipo te escribirá en breve</h5>
                 </div>
                 <div>
-                    <div class="form-row pt-5 pb-2 pl-1 pr-1">
+                    <div class="form-row pt-5 pb-2 pl-1 pr-1" id="formularioContacto">
                         <div class="swiper" id="swiperContacto">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
