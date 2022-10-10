@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <?php
-        include_once '../../php/scripts/scriptsCSS.php';
-    ?>
+include_once '../../php/scripts/scriptsCSS.php';
+?>
     <link rel="stylesheet" href="../../css/personalizado/requerimientos.css">
 </head>
 <body>
-        
+
     <?php
-        include_once '../../php/header.php';
-    ?>
+include_once '../../php/header.php';
+?>
     <div style="height: 180px;"></div>
 
     <section class="p-2" id="requerimientos">
@@ -20,7 +20,16 @@
         <div class="container text-white">
             <div class="row">
                 <div class="text-center">
-                    <h2>POLÍTICAS DE TRATAMIENTO DE DATOS PERSONALES</h2>
+                    <h2>POLÍTICA DE PRIVACIDAD</h2>
+                </div>
+                <div class="mt-4">
+                    <h3>TLN APP</h3>
+                    <h3>Información que recopilamos automáticamente</h3>
+                    <p style="text-align: justify;">Información sobre la ubicación. Recopilamos datos de ubicación de los Usuarios para habilitar los viajes, para brindar asistencia al usuario, con fines de seguridad y detección de fraudes, y para cumplir con los requisitos legales. Recopilamos información de ubicación (incluidas las coordenadas GPS y los datos WiFi) en función de la configuración de su aplicación, los permisos del dispositivo y si está utilizando la aplicación como conductor
+                    </p>
+                    <p style="text-align: justify;">Recopilamos la ubicación precisa de su dispositivo cuando la aplicación se ejecuta en primer plano y cuando la aplicación se ejecuta en segundo plano desde el momento en que se acepta un transporte hasta que culmine  en el modo de transportador. También podemos recopilar la ubicación precisa durante un tiempo ilimitado después de que salga del modo de transporte para detectar e investigar incidentes de ruta.</p>
+                </div>
+                <div class="text-center">
                     <h3>Generalidades</h3>
                 </div>
                 <div class="mt-4">
@@ -258,9 +267,9 @@
 
     <script src="http://localhost/AB-technology2.0/js/mail.js"></script>
     <?php
-        //include_once __DIR__.'/php/footer.php';    
-        include __DIR__.'./../../php/scripts/scriptsJS.php'
-    ?>  
-        
+//include_once __DIR__.'/php/footer.php';
+include __DIR__ . './../../php/scripts/scriptsJS.php'
+?>
+
 </body>
 </html>
