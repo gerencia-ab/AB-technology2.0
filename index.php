@@ -15,9 +15,7 @@
         <video id="background-video" autoplay loop muted poster="recursos/imagenes/imgFondo1.webp" alt="Servicios AB Technology">
             <source src="recursos/videos/video.mp4" type="video/mp4">
             
-        </video>
-
-        
+        </video>        
 
         <!-- <h1 class="cover-titulo"> Somos una empresa que planifica, construye y gestiona soluciones de software</h1> -->
 
@@ -28,7 +26,6 @@
                 <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
             </svg>
         </div>
-
         
     </div>           
         <?php
@@ -42,10 +39,15 @@
         
         <?php
             include_once __DIR__.'/php/servicios.php';
-        ?>
-        <?php
             include_once __DIR__.'/php/contacto.php';
         ?>
+        <!-- Código whatsapp -->
+        <a  href="https://api.whatsapp.com/send?phone=573158227811&text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20productos%20que%20ofrecen." target="_blank">
+            <div id="spanWhatsapp">
+                <span id="iconWhatsapp" class="fab fa-whatsapp"> 
+                </span>    
+            </div>
+        </a>
         <?php
             include_once __DIR__.'/php/footer.php';    
             include __DIR__.'/php/scripts/scriptsJS.php'
