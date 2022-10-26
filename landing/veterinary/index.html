@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/estilos.css">
+    <link rel="shortcut icon" type="image/jpg"
+        href="https://ab-sistemas.com/veterinary/resources/img/logoPrincipal.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="resources/sweetalert2/dist/sweetalert2.min.css">
+    <script src='https://www.google.com/recaptcha/api.js?render=6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U'>
+    </script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U', { action: 'formulario' })
+                .then(function (token) {
+                    var recaptchaResponse = document.getElementById('recaptchaResponse');
+                    recaptchaResponse.value = token;
+                });
+        });
+    </script>
+    <title>VeterinaryApp</title>
+</head>
+
+<body>
+    <!-- código whatsapp -->
+    <a href="https://api.whatsapp.com/send?phone=573158227811&text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20productos%20que%20ofrecen."
+        target="_blank" title="Escríbenos vía WhatsApp &#128515;">
+        <div id="spanWhatsapp">
+            <span id="iconWhatsapp" class="fab fa-whatsapp">
+            </span>
+        </div>
+    </a>
+    <div class="modal" id="modal">
+        <div>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdYmkqFVKaRQ52NUD2_iDOM3KOooinGNki4dqFaLlDAF078Kg/viewform?embedded=true"
+                width="640" height="1583" style="margin: auto; width: 100%;" frameborder="0" marginheight="0"
+                marginwidth="0">Cargando…</iframe>
+            <a class="btn-primario" id="btnCerrar" style="cursor: pointer;">
+                <box-icon color="#fff" style="margin-right: 10px" name='close'></box-icon>CERRAR
+            </a>
+        </div>
+    </div>
+    <img class="imgFondo" src="resources/img/fondo_perro.webp">
+    <div class="mobile">
+        <ul>
+            <li><a href="https://ab-sistemas.com/Views/nosotros.php">Nosotros</a></li>
+            <li><a href="https://ab-sistemas.com/#contacto">Contacto</a></li>
+        </ul>
+    </div>
+    <header>
+
+        <nav>
+            <a class="animate__animated animate__fadeInUp" href="https://ab-sistemas.com/" target="_blank"
+                style="cursor: pointer; margin-right: 10px;">
+                <img src="resources/img/logo_AB.webp" style="width: 32px; margin-top: 8px;">
+            </a>
+            <h1 class="animate__animated animate__bounceInLeft">VeterinaryApp</h1>
+            <ul>
+                <li><a href="https://ab-sistemas.com/Views/nosotros.php">Nosotros</a></li>
+                <li><a href="https://ab-sistemas.com/#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="preview-container">
+            <div>
+                <img class="animate__animated animate__fadeInUp" src="resources/img/laptop.png" alt="">
+                <div class="animate__animated animate__fadeInDown"></div>
+                <img class="animate__animated animate__fadeInDown" src="resources/img/smartphone.png" alt="">
+            </div>
+            <div>
+                <h1 class="title animate__animated animate__zoomIn">Aplicación web y móvil para la gestión de
+                    veterinarias</h1>
+                <p class="animate__animated animate__fadeInUp">Suscríbete para tener acceso anticipado a la aplicación
+                </p>
+                <div class="animate__animated animate__fadeInUp">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input type="text" name="telefono" id="telefono" placeholder="Télefono"
+                        onkeypress="return soloNumeros(event)">
+                    <input type="email" name="correo" id="correo" placeholder="Correo">
+                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                    <a class="btn-primario animate__animated animate__fadeInUp"
+                        style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion()">
+                        <box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>Enviar
+                    </a>
+                    <!-- <a class="btn-primario animate__animated animate__fadeInUp" id="btnRegistrar" style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion()">
+                        <box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>Enviar
+                    </a> -->
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <div class="section-container">
+            <section class="flex-columns">
+                <h1>¿Qué es VeterinaryApp?</h1>
+                <div>
+                    <div>
+                        <p>VeterinaryApp es un sistema de gestión, inventario y administración para veterinarias que
+                            cuenta con diferentes módulos para ayudarte a dar el salto digital que tanto has bucado y
+                            hacerle frente al mercado con productos de vanguardia.</p>
+                    </div>
+                    <div>
+                        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_il43ezyd.json"
+                            background="transparent" speed="1" style="width: 70%;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1>Características Destacadas</h1>
+                <div class="tags">
+                    <ul>
+                        <li>
+                            <div><i class='bx bxs-devices'></i></div>
+                            <div>Accede desde distintos dispositivos</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bxs-extension'></i></div>
+                            <div>Fácil de usar</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bxs-square-rounded'></i></div>
+                            <div>App para la visualización de datos</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bxl-whatsapp'></i></div>
+                            <div>Agendamiento de citas por WhatsApp</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="flex-columns">
+                <h1>Modulos</h1>
+                <h2>Gestión</h2>
+                <div class="tags">
+                    <ul>
+                        <li>
+                            <div><i class='bx bx-category'></i></div>
+                            <div>Categorias</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-store'></i></div>
+                            <div>Proveedores</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-user-pin'></i></div>
+                            <div>Clientes</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bxs-cat'></i></div>
+                            <div>Mascotas</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-plus-medical'></i></div>
+                            <div>Consultas</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-basket'></i></div>
+                            <div>Productos</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-star'></i></div>
+                            <div>Servicios</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-cart-alt'></i></div>
+                            <div>Compras</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-shopping-bag'></i></div>
+                            <div>Ventas</div>
+                        </li>
+                    </ul>
+                </div>
+                <h2>Otros Módulos</h2>
+                <div class="tags">
+                    <ul>
+                        <li>
+                            <div><i class='bx bx-notepad'></i></div>
+                            <div>Historia Clínica</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-package'></i></div>
+                            <div>Reportes de inventario</div>
+                        </li>
+                        <li>
+                            <div><i class='bx bx-stats'></i></div>
+                            <div>Reportes de ingresos y egresos</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="flex-columns">
+                <h2>Sistema de Notificaciones</h2>
+                <div>
+                    <div>
+                        <img src="resources/img/notificaciones.png" alt="">
+                    </div>
+                    <div>
+                        <p>Interfaz de notificaciones donde podrás visualizar de manera rápida y resumida, información
+                            relevante de todos los módulos.</p>
+                    </div>
+                </div>
+
+            </section>
+            <section class="flex-columns">
+                <h2>Sistema de Agendamiento de citas por WhatsApp</h2>
+                <div>
+                    <div>
+                        <p>Sistema de agendamiento interactivo y fácil de usar que te ayuda a gestionar y programar las
+                            citas veterinarias y enviar notificación por correo y por WhatsApp</p>
+                    </div>
+                    <div>
+                        <img src="resources/img/agendamiento.png" alt="">
+                    </div>
+                </div>
+
+            </section>
+
+            <hr style="border: 1px solid rgb(212, 212, 212); width: 100%; margin: 2rem 0;">
+
+            <div
+                style="position: relative; display: flex;flex-direction: column; justify-content: center; align-items: center;">
+
+                <h2>Regístrate Ahora</h2>
+
+                <div>
+
+                    <a class="btn-primario animate__animated animate__fadeInUp" id="btnRegistrar"
+                        style="cursor: pointer;">
+                        <box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>REGÍSTRATE
+                    </a>
+                    <a class="btn-primario animate__animated animate__fadeInUp" href="https://ab-sistemas.com/#contacto"
+                        style="cursor: pointer;">
+                        <box-icon name='comment' color="#fff" style="margin-right: 10px"></box-icon>CONTACTO
+                    </a>
+                </div>
+                <lottie-player src="resources/lottie/cat.json" class="anim-registrate" background="transparent"
+                    speed="1" loop autoplay></lottie-player>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <div class="copyright text-center my-auto fs-6">
+                <span style="font-size: 16px;">
+                    Copyright &copy; AB Technology Group 2022
+                    <a class=""
+                        href="https://api.whatsapp.com/send?phone=573158227811&text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20productos%20que%20ofrecen."
+                        target="_blank">
+                        <box-icon color="#2C948C" type='logo' name='whatsapp'></box-icon>
+                    </a>
+                </span><br>
+            </div>
+        </div>
+    </footer>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5c9e7ce21de11b6e3b05e9d6/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script>
+        document.getElementById("btnRegistrar").addEventListener("click", () => {
+            document.getElementById("modal").classList.add("open")
+        })
+
+        document.getElementById("btnCerrar").addEventListener("click", () => {
+            document.getElementById("modal").classList.remove("open")
+        })
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-411293816"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-411293816');
+    </script>
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="resources/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="resources/js/index.js"></script>
+
+
+</body>
+
+</html>
