@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>VeterinaryApp</title>
+</head>
+
+<body>
+    <!-- código whatsapp -->
+    <a  href="https://wa.link/ltbhu6" target="_blank">
+        <div id="spanWhatsapp">
+            <span id="iconWhatsapp" class="fab fa-whatsapp"> 
+            </span>    
+        </div>
+    </a>
+    <div class="modal" id="modal">
+        <div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdYmkqFVKaRQ52NUD2_iDOM3KOooinGNki4dqFaLlDAF078Kg/viewform?embedded=true" width="640" height="1583" style="margin: auto; width: 100%;" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+            <a class="btn-primario" id="btnCerrar" style="cursor: pointer;"><box-icon color="#fff" style="margin-right: 10px" name='close'></box-icon>CERRAR</a>
+        </div>
+    </div>
+    <img class="imgFondo" src="./img/fondo_perro.webp">
+    <header>
+        <nav>
+            <a class="animate__animated animate__fadeInUp" href="https://ab-sistemas.com/" target="_blank" style="cursor: pointer; margin-right: 10px;">
+                <img src="./img/logo_AB.webp" style="width: 32px; margin-top: 8px;">
+            </a>
+            <h1 class="animate__animated animate__bounceInLeft">VeterinaryApp</h1>
+        </nav>
+
+        <div class="preview-container">
+            <div>
+                <img class="animate__animated animate__fadeInUp" src="./img/laptop.webp" alt="">
+                <div class="animate__animated animate__fadeInDown"></div>
+                <img class="animate__animated animate__fadeInDown" src="./img/smartphone.webp" alt="">
+            </div>
+            <div>
+                <h1 class="title animate__animated animate__zoomIn">Aplicación web y móvil para la gestión de veterinarias</h1>
+                <p class="animate__animated animate__fadeInUp">Suscríbete para tener acceso anticipado a la aplicación</p>
+                <a class="btn-primario animate__animated animate__fadeInUp" id="btnRegistrar" style="cursor: pointer;"><box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>REGÍSTRATE</a>
+            </div>
+        </div>
+
+    </header>
+      <!-- Footer -->
+      <footer>
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto fs-6">
+            <span style="font-size: 16px;">
+              Copyright &copy; AB Technology Group 2022
+              <a class="" href="https://api.whatsapp.com/send?phone=573158227811&text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20productos%20que%20ofrecen." target="_blank">
+                  <box-icon color="#2C948C" type='logo' name='whatsapp'></box-icon>
+              </a>
+            </span><br>        
+          </div>
+        </div>
+      </footer>
+    
+
+    <script>
+        document.getElementById("btnRegistrar").addEventListener("click", ()=> {
+            document.getElementById("modal").classList.add("open")
+        })
+
+        document.getElementById("btnCerrar").addEventListener("click", ()=> {
+            document.getElementById("modal").classList.remove("open")
+        })
+    </script>
+    
+
+     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+</body>
+
+</html>

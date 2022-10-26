@@ -1,6 +1,6 @@
 $(document).ready(function(){
     /* Swiper para la visualización del portafolio */
-    var swiperPortafoli1 = new Swiper(document.getElementById('swiperPortafolio'), {
+    var swiperPortafolio1 = new Swiper(document.getElementById('swiperPortafolio'), {
         grabCursor: true,
         loop: true,
         effect: "creative",
@@ -37,6 +37,42 @@ $(document).ready(function(){
         },
     });
     var swiperPortafolio3 = new Swiper(document.getElementById('swiperPortafolio3'), {
+        grabCursor: true,
+        loop: true,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        },
+    });
+    var swiperPortafolio4 = new Swiper(document.getElementById('swiperPortafolio4'), {
+        grabCursor: true,
+        loop: true,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        },
+    });
+    var swiperPortafolio5 = new Swiper(document.getElementById('swiperPortafolio5'), {
         grabCursor: true,
         loop: true,
         effect: "creative",

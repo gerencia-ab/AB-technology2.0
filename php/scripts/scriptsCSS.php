@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Somos AB Technology Group, una empresa que gestiona, planifica y construye soluciones de software.">
-<link rel="shortcut icon" href="http://localhost/AB-technology2.0/recursos/imagenes/logoFavicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="http://localhost/AB-technology2.0/recursos/imagenes/logo.webp" type="image/x-icon">
 <link rel="stylesheet" href="http://localhost/AB-technology2.0/recursos/frameworks/bootstrap-5.0.2-dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://localhost/AB-technology2.0/recursos/librerias/toastr/build/toastr.min.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
