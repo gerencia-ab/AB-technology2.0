@@ -5,25 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/estilos.css">
-    <link rel="shortcut icon" type="image/jpg"
-        href="https://ab-sistemas.com/veterinary/resources/img/logoPrincipal.png" />
+    <link rel="stylesheet" href="../../../recursos/landing_pages/css/veterinary.css">
+    <link rel="shortcut icon" type="image/jpg" href="https://ab-sistemas.com/veterinary/../../../recursos/landing_pages/img/logoPrincipal.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="resources/sweetalert2/dist/sweetalert2.min.css">
-    <script src='https://www.google.com/recaptcha/api.js?render=6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U'>
+    <link rel="stylesheet" href="../../../recursos/landing_pages/sweetalert2/dist/sweetalert2.min.css">
+    <script src='https://www.google.com/recaptcha/api.js?render=6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U'> 
     </script>
     <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U', { action: 'formulario' })
-                .then(function (token) {
-                    var recaptchaResponse = document.getElementById('recaptchaResponse');
-                    recaptchaResponse.value = token;
-                });
-        });
+        grecaptcha.ready(function() {
+        grecaptcha.execute('6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U', {action: 'formulario'})
+        .then(function(token) {
+        var recaptchaResponse = document.getElementById('recaptchaResponse');
+        recaptchaResponse.value = token;
+        });});
     </script>
     <title>VeterinaryApp</title>
 </head>
@@ -48,7 +46,7 @@
             </a>
         </div>
     </div>
-    <img class="imgFondo" src="resources/img/fondo_perro.webp">
+    <img class="imgFondo" src="../../../recursos/landing_pages/img/fondo_perro.webp">
     <div class="mobile">
         <ul>
             <li><a href="https://ab-sistemas.com/Views/nosotros.php">Nosotros</a></li>
@@ -60,7 +58,7 @@
         <nav>
             <a class="animate__animated animate__fadeInUp" href="https://ab-sistemas.com/" target="_blank"
                 style="cursor: pointer; margin-right: 10px;">
-                <img src="resources/img/logo_AB.webp" style="width: 32px; margin-top: 8px;">
+                <img src="../../../recursos/landing_pages/img/logo_AB.webp" style="width: 32px; margin-top: 8px;">
             </a>
             <h1 class="animate__animated animate__bounceInLeft">VeterinaryApp</h1>
             <ul>
@@ -71,9 +69,9 @@
 
         <div class="preview-container">
             <div>
-                <img class="animate__animated animate__fadeInUp" src="resources/img/laptop.png" alt="">
+                <img class="animate__animated animate__fadeInUp" src="../../../recursos/landing_pages/img/laptop.png" alt="">
                 <div class="animate__animated animate__fadeInDown"></div>
-                <img class="animate__animated animate__fadeInDown" src="resources/img/smartphone.png" alt="">
+                <img class="animate__animated animate__fadeInDown" src="../../../recursos/landing_pages/img/smartphone.png" alt="">
             </div>
             <div>
                 <h1 class="title animate__animated animate__zoomIn">Aplicación web y móvil para la gestión de
@@ -82,12 +80,10 @@
                 </p>
                 <div class="animate__animated animate__fadeInUp">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    <input type="text" name="telefono" id="telefono" placeholder="Télefono"
-                        onkeypress="return soloNumeros(event)">
+                    <input type="text" name="telefono" id="telefono" placeholder="Télefono" onkeypress="return soloNumeros(event)">
                     <input type="email" name="correo" id="correo" placeholder="Correo">
                     <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-                    <a class="btn-primario animate__animated animate__fadeInUp"
-                        style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion()">
+                    <a class="btn-primario animate__animated animate__fadeInUp" style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion(1)">
                         <box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>Enviar
                     </a>
                     <!-- <a class="btn-primario animate__animated animate__fadeInUp" id="btnRegistrar" style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion()">
@@ -207,7 +203,7 @@
                 <h2>Sistema de Notificaciones</h2>
                 <div>
                     <div>
-                        <img src="resources/img/notificaciones.png" alt="">
+                        <img src="../../../recursos/landing_pages/img/notificaciones.png" alt="">
                     </div>
                     <div>
                         <p>Interfaz de notificaciones donde podrás visualizar de manera rápida y resumida, información
@@ -224,7 +220,7 @@
                             citas veterinarias y enviar notificación por correo y por WhatsApp</p>
                     </div>
                     <div>
-                        <img src="resources/img/agendamiento.png" alt="">
+                        <img src="../../../recursos/landing_pages/img/agendamiento.png" alt="">
                     </div>
                 </div>
 
@@ -248,8 +244,8 @@
                         <box-icon name='comment' color="#fff" style="margin-right: 10px"></box-icon>CONTACTO
                     </a>
                 </div>
-                <lottie-player src="resources/lottie/cat.json" class="anim-registrate" background="transparent"
-                    speed="1" loop autoplay></lottie-player>
+                <lottie-player src="../../../recursos/landing_pages/lottie/cat.json" class="anim-registrate" background="transparent" speed="1" loop
+                    autoplay></lottie-player>
             </div>
 
 
@@ -269,11 +265,12 @@
                         target="_blank">
                         <box-icon color="#2C948C" type='logo' name='whatsapp'></box-icon>
                     </a>
+                    
                 </span><br>
             </div>
         </div>
     </footer>
-    
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
@@ -310,10 +307,9 @@
 
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="resources/sweetalert2/dist/sweetalert2.min.js"></script>
-    <script src="resources/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../../../recursos/landing_pages/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="../../../recursos/landing_pages/js/index.js"></script>
 
 
 </body>
