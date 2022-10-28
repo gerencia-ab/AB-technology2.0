@@ -46,6 +46,23 @@ body
   filter: brightness(90%)
 
 
+.slider
+  
+  display: flex
+  flex-direction: row
+  width: 100%
+  overflow: auto
+  scroll-snap-type: x mandatory
+  a
+    margin-top: 2rem
+    width: 100%
+    scroll-snap-align: center
+
+.slider::-webkit-scrollbar 
+    display: none
+
+  
+
 .accordion-button::after
   display: none
   

@@ -131,10 +131,12 @@ $(document).ready(function(){
           prevEl: '.swiper-button-prev',
       },
   });
+
+  slider()
+  
+
+
 });
-
-
-
 
 
 
@@ -146,3 +148,14 @@ var verCredencial = () => {
     password.setAttribute("type","password")
   }
 }
+
+function slider(){
+  let slider = document.getElementById("homeSlider")
+  let scroll = 200
+  setInterval(() => {
+    scroll*=-1
+    slider.scrollBy(scroll,0)
+  }, 5000);
+}
+
+
