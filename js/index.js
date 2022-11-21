@@ -90,6 +90,22 @@ $(document).ready(function(){
           },
         },
     });
+    var swiperInicio = new Swiper(document.getElementById('swiperInicio'), {
+        direction: 'horizontal',
+        autoplay: {
+            delay: 6000,
+            disableOnInteraction: false
+        },
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: ".swiper-pagination",
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    });
 
     
     /* Swiper para el formulario de contacto */
@@ -131,13 +147,11 @@ $(document).ready(function(){
           prevEl: '.swiper-button-prev',
       },
   });
-
-  slider()
   
+    slider()
 
-
+  
 });
-
 
 
 var verCredencial = () => {
@@ -157,5 +171,3 @@ function slider(){
     slider.scrollBy(scroll,0)
   }, 5000);
 }
-
-

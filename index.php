@@ -10,11 +10,24 @@
             include_once __DIR__.'/php/header.php';
         ?>
         
-        <div class="slider" id="homeSlider">
+        <!--<div class="slider" id="homeSlider">
             <a href="https://ab-sistemas.com/veterinary/"><img src="./recursos/imagenes/veterinaryBanner.png" alt=""></a>
             <a href="https://ab-sistemas.com/envios/"><img src="./recursos/imagenes/sceBanner.png" alt=""></a>
-        </div>
+        </div>-->
 
+        <div class="swiper swiperInicio" id="swiperInicio">
+            <div class="swiper-wrapper" style="margin-top: 6vh;">
+                <div class="swiper-slide slides">
+                    <a href="https://ab-sistemas.com/veterinary/"><img src="./recursos/imagenes/veterinaryBanner.webp" alt="Landing page - Veterinary"></a>
+                </div>
+                <div class="swiper-slide slides">
+                    <a href="https://ab-sistemas.com/envios/"><img src="./recursos/imagenes/sceBanner.webp" alt="Landing page - Sistema control de envíos"></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
               
         <?php
             include_once __DIR__.'/php/portafolio.php';
