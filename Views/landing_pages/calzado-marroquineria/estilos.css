@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins:wght@400;500;700;800&display=swap");
+
+* {
+  font-family: "Alkalami", serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f1e5e1;
+}
+
+.mobile{
+    z-index: 100;
+    display: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    background-color: #187FD9;
+}
+
+.mobile ul {
+    width: 100%;
+    list-style: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile ul li{
+    margin: 0 1.5rem;
+}
+
+.mobile ul li a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    width:100%;
+    z-index: 100;
+}
+
+nav ul li a{
+    margin:1rem;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+}
+
+header{
+    background: url('../img/cover.jpg');
+    min-height: 100vh;
+}
+
+.blur{
+    backdrop-filter: blur(5px) brightness(40%);
+}
+
+.hero{
+    font-size: clamp(3rem, 5vw, 15rem);
+    text-align: center;
+    color: #FFF;
+}
+
+.button{
+    background-color: #187FD9;
+    color: #FFF;
+    text-decoration: none;
+    display: flex;
+    width: fit-content;
+    padding: 1rem 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    font-weight: bold;
+    margin: 1.5rem;
+}
+
+.column-2{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-2 > div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 18rem;
+}
+
+.column-3{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-3 > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 15rem;
+    margin: 1rem;
+
+}
+
+.column-3 img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.container{
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.title{
+    text-align: center;
+    font-size: clamp(2rem, 2vw, 5rem);
+    margin: 1.5rem;
+    color: #187FD9;
+}
+
+p{
+    text-align: center;
+    margin: 1.8rem 0;
+    font-size: 1.2rem;
+}
+
+.tag{
+    padding: 1.5rem;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px #187FD9 solid;
+    border-radius: 1rem;
+    color: #187FD9;
+    margin: 1rem;
+}
+
+.tag i{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.img {
+    width: 90%;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+footer{
+    align-self:flex-end ;
+    color: #187FD9;
+    width: 100%; 
+    align-items: center; 
+    height: 120px; 
+    display: flex; 
+    justify-content: center; 
+    background-color: rgb(255, 255, 255); 
+}
+
+input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin: 4px;
+}
+
+@media (max-width:700px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+}

@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Servitecas</title>
+    <link rel="stylesheet" href="../../../recursos/landing_pages/css/serviteca.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../recursos/landing_pages/sweetalert2/dist/sweetalert2.min.css">
+    <script src='https://www.google.com/recaptcha/api.js?render=6LdYQawiAAAAAAsCVLFKaZkwL02CViOWYXfgAv7U'> 
+    </script>
+  </head>
+  <body>
+    <header>
+      
+      <div class="mobile">
+        <ul>
+            <li><a href="https://ab-sistemas.com/Views/nosotros.php">Nosotros</a></li>
+            <li><a href="https://ab-sistemas.com/#contacto">Contacto</a></li>
+        </ul>
+    </div>
+      <div class="column-2 blur" style="min-height: 100vh">
+        <nav>
+          <a
+            class="animate__animated animate__fadeInUp"
+            href="https://ab-sistemas.com/"
+            target="_blank"
+            style="cursor: pointer; margin-right: 10px"
+          >
+            <img
+              src="../../../recursos/landing_pages/img/logo_AB.webp"
+              style="width: 32px; margin-top: 8px"
+            />
+          </a>
+          <ul>
+            <li>
+              <a href="https://ab-sistemas.com/Views/nosotros.php">Nosotros</a>
+            </li>
+            <li><a href="https://ab-sistemas.com/#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <img src="../../../recursos/landing_pages/img/pc.png" style="width: 90%;" alt="">
+        </div>
+        <div>
+              <h1 class="hero">SISTEMA DE ADMINISTRACIÓN DE SERVITECAS</h1>
+              <a href="#queEs" class="button">DESCUBRIR</a>
+            <div class="animate__animated animate__fadeInUp">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="telefono" id="telefono" placeholder="Télefono" onkeypress="return soloNumeros(event)">
+                <input type="email" name="correo" id="correo" placeholder="Correo">
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                <a class="button animate__animated animate__fadeInUp" style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion(2)">
+                    <box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>Enviar
+                </a>
+                <!-- <a class="btn-primario animate__animated animate__fadeInUp" id="btnRegistrar" style="cursor: pointer; margin: 20px auto;" onclick="enviarSuscripcion()">
+                    <box-icon color="#fff" style="margin-right: 10px" name='star'></box-icon>Enviar
+                </a> -->
+            </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="container">
+      <section>
+        <h2 class="title" id="queEs">¿QUÉ ES?</h2>
+        <p>
+          El Sistema de Administración de Servitecas es un software en la nube que le permite gestionar los procesos, actividades e inventario de su serviteca de manera intuitiva y fácil.
+        </p>
+
+        <lottie-player
+              src="../../../recursos/landing_pages/lottie/car.json"
+              background="transparent"
+              speed="1"
+              style="width: 60%"
+              loop
+              autoplay
+            ></lottie-player>
+        
+      </section>
+
+      <section>
+        <h2 class="title">FUNCIONALIDADES</h2>
+        <div class="column-2" style="margin: 2rem 0">
+          <div>
+            <div class="tag">
+              <i class='bx bx-news'></i>PANEL DE AVISOS
+            </div>
+            <div class="tag">
+              <i class='bx bxs-user-detail'></i>GESTIÓN DE CLIENTES
+            </div>
+            <div class="tag"><i class='bx bx-money-withdraw' ></i>CONTROL DE INGRESOS Y EGRESOS</div>
+          </div>
+          <div>
+            <div class="tag">
+              <i class='bx bxs-car' ></i>GESTIÓN DE ACTIVIDADES Y VEHÍCULOS
+            </div>
+            <div class="tag"><i class='bx bx-unite' ></i>GESTIÓN DE PRODUCTOS Y SERVICIOS</div>
+            <div class="tag">
+              <i class='bx bx-copy-alt'></i>
+              GESTIÓN DE FACTURAS
+            </div>
+          </div>
+        </div>
+
+        
+      </section>
+
+      <section>
+        <h2 class="title" id="queEs">CARACTERÍSTICAS DESTACADAS</h2>
+        <p>
+          Obtén un mejor flujo de trabajo con todas nuestras herramientas listas para brindarte la mejor ayuda y automatización.
+        </p>
+        <div class="column-3">
+          <div>
+            <p style="font-weight: bold; color: #004aac">
+              Orden de Trabajo
+            </p>
+            <lottie-player
+              src="https://assets2.lottiefiles.com/private_files/lf30_rnizksef.json"
+              background="transparent"
+              speed="1"
+              style="width: 80%; height: 260px"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+          <div>
+            <p style="font-weight: bold; color: #004aac">
+              Facturación Electrónica
+            </p>
+            <lottie-player
+              src="https://assets1.lottiefiles.com/packages/lf20_7k0AqPJp2u.json"
+              background="transparent"
+              speed="1"
+              style="width: 80%"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+          <div>
+            <p style="font-weight: bold; color: #004aac">Vende Productos</p>
+            <lottie-player
+              src="https://assets4.lottiefiles.com/packages/lf20_3ysy72ke.json"
+              background="transparent"
+              speed="1"
+              style="width: 80%"
+              loop
+              autoplay
+            ></lottie-player>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="title">CAPTURAS DE PANTALLA</h2>
+        <div class="column-2">
+          <div><img src="../../../recursos/landing_pages/img/1.jpg" alt="" class="img"></div>
+          <div><img src="../../../recursos/landing_pages/img/2.png" alt="" class="img"></div>
+        </div>
+        <img src="../../../recursos/landing_pages/img/3.png" alt="" class="img">
+        
+
+      </section>
+
+
+    </div>
+    <footer>
+      <div>
+        <div class="copyright text-center my-auto fs-6">
+          <span style="font-size: 16px">
+            Copyright &copy; AB Technology Group 2022
+            <a
+              class=""
+              href="https://api.whatsapp.com/send?phone=573158227811&text=Hola,%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20productos%20que%20ofrecen."
+              target="_blank"
+            >
+              <box-icon color="#2C948C" type="logo" name="whatsapp"></box-icon>
+            </a> </span
+          ><br />
+        </div>
+      </div>
+    </footer>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/5c9e7ce21de11b6e3b05e9d6/default";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../../../recursos/landing_pages/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="../../../recursos/landing_pages/js/index.js"></script>
+  </body>
+</html>
