@@ -34,7 +34,7 @@
                 <h2 class="blog-titulo" style="margin-bottom: 25px">Visión</h2>
                 <p style="text-align: justify;">
                 Nuestro enfoque es consolidarnos como una empresa de software reconocida 
-                a nivel latino americano, destacados por ofrecer productos eficaces y 
+                a nivel latinoamericano, destacados por ofrecer productos eficaces y 
                 productivos a nuestros clientes con soluciones especificas y de alta calidad, 
                 que nos permitan impulsar la industria de nuestro país.
                 </p>

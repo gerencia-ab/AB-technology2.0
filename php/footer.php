@@ -36,7 +36,7 @@
                   <div class="mt-5">
                     <a href="https://www.facebook.com/Sistemas-AB-299096900718144/" target="_blank" style="color: #1977F3;"><span class="m-2"><i class="fab fa-facebook fa-2x"></i></span></a>
                     <a href="http://bit.ly/3anoqf2" target="_blank" style="color: #25D366;"><span class="m-2"><i class="fab fa-whatsapp fa-2x"></i></span></a>
-                    <a href="https://instagram.com/sistemas.ab?utm_medium=copy_link" target="_blank" style="color: #DB4184;"><span class="m-2"><i class="fab fa-instagram fa-2x"></i></span></a>
+                    <a href="https://www.instagram.com/ab.groupc/" target="_blank" style="color: #DB4184;"><span class="m-2"><i class="fab fa-instagram fa-2x"></i></span></a>
                     <a href="https://www.linkedin.com/company/53098917/admin/" target="_blank" style="color: 0073B1;"><span class="m-2"><i class="fab fa-linkedin fa-2x"></i></span></a>
                     <a href="" target="_blank" style="color: #00F7EF;"><span class="m-2"><i class="fab fa-tiktok fa-2x"></i></span></a>
                   </div>
