@@ -6,9 +6,6 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 mx-auto">
-                    <!-- <div class="text-center text-white">
-                        <h3>Bivalco</h3>
-                    </div> -->
                     <div class="swiper SwiperPortafolio mt-4" id="swiperPortafolio">
                         <div class="swiper-wrapper swiperSize">
                             <div class="swiper-slide slides"><a href="https://ab-sistemas.com/veterinary/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/VeterinaryApp AB.webp" alt="VeterinaryApp AB"></a></div>
@@ -45,8 +42,8 @@
                     </div> -->
                     <div class="swiper SwiperPortafolio mt-4" id="swiperPortafolio2">
                         <div class="swiper-wrapper">
-                        <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/SISTEMA DE ADMINISTRACIÓN DE SERVITECAS AB.webp" alt="SISTEMA DE ADMINISTRACIÓN DE SERVITECAS AB"></div>
-                        <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/serviteca2.webp" alt="SISTEMA DE ADMINISTRACIÓN DE SERVITECAS AB"></div>
+                        <div class="swiper-slide slides"><a href="https://ab-sistemas.com/serviteca/" target="_blank"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/SISTEMA DE ADMINISTRACIÓN DE SERVITECAS AB.webp" alt="SISTEMA DE ADMINISTRACIÓN DE SERVITECAS AB"></a></div>
+                        <div class="swiper-slide slides"><a href="https://ab-sistemas.com/serviteca/" target="_blank"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/serviteca2.webp" alt="SISTEMA DE ADMINISTRACIÓN DE SERVITECAS AB"></a></div>
                             <!-- <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre1.webp" style="width: 292px; height: 600px;" alt="Palangre App"></div>
                             <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre2.webp" style="width: 292px; height: 600px;" alt="Palangre App"></div> -->
                             <!-- <div class="swiper-slide slides"><img class="rounded-3" src="https://ab-sistemas.com/recursos/imagenes/palangre3.webp" style="width: 292px; height: 600px;"></div>
@@ -75,8 +72,8 @@
                     </div> -->
                     <div class="swiper mt-4" id="swiperPortafolio3">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SISTEMA DE CONTROL DE ENVÍOS AB.webp" alt="SISTEMA DE CONTROL DE ENVÍOS AB"></div>
-                            <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SistemaControlEnvios2.webp" alt="SISTEMA DE CONTROL DE ENVÍOS AB"></div>
+                            <div class="swiper-slide slides"><a href="https://ab-sistemas.com/envios/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SISTEMA DE CONTROL DE ENVÍOS AB.webp" alt="SISTEMA DE CONTROL DE ENVÍOS AB"></a></div>
+                            <div class="swiper-slide slides"><a href="https://ab-sistemas.com/envios/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SistemaControlEnvios2.webp" alt="SISTEMA DE CONTROL DE ENVÍOS AB"></a></div>
                             <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr1.webp" alt="C&R INMOBILIARIA"></div>
                             <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr2.webp" alt="C&R INMOBILIARIA"></div> -->
                             <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr3.webp"></div>
@@ -107,8 +104,8 @@
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 mx-auto">
                     <div class="swiper mt-4" id="swiperPortafolio4">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SIP Calzado y Marroquinería AB.webp" alt="SIP Calzado y Marroquinería AB"></div>
-                            <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/sipCalzado2.webp" alt="SIP Calzado y Marroquinería AB"></div>
+                            <div class="swiper-slide slides"><a href="https://ab-sistemas.com/calzado-marroquineria/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SIP Calzado y Marroquinería AB.webp" alt="SIP Calzado y Marroquinería AB"></a></div>
+                            <div class="swiper-slide slides"><a href="https://ab-sistemas.com/calzado-marroquineria/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/sipCalzado2.webp" alt="SIP Calzado y Marroquinería AB"></a></div>
                             <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr1.webp" alt="C&R INMOBILIARIA"></div>
                             <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr2.webp" alt="C&R INMOBILIARIA"></div> -->
                             <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr3.webp"></div>
@@ -139,8 +136,8 @@
                 <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3 mx-auto">
                     <div class="swiper mt-4" id="swiperPortafolio5">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SIP DROGUERÍA AB.webp" alt="SIP DROGUERÍA AB"></div>
-                            <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/sipDrogueria2.webp" alt="SIP DROGUERÍA AB"></div>
+                            <div class="swiper-slide slides"><a href="https://ab-sistemas.com/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/SIP DROGUERÍA AB.webp" alt="SIP DROGUERÍA AB"></a></div>
+                            <div class="swiper-slide slides"><a href="https://ab-sistemas.com/" target="_blank"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/sipDrogueria2.webp" alt="SIP DROGUERÍA AB"></a></div>
                             <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr1.webp" alt="C&R INMOBILIARIA"></div>
                             <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr2.webp" alt="C&R INMOBILIARIA"></div> -->
                             <!-- <div class="swiper-slide slides"><img class="rounded" src="https://ab-sistemas.com/recursos/imagenes/cyr3.webp"></div>

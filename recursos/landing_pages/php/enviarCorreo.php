@@ -22,50 +22,56 @@ class metodos
         if($recaptcha->score >= 0.7){        
             try {
                 $mail = new PHPMailer(true);
-    
-                if($ind == 1){
-                    $mensajeCompleto = "
-                        <div style='background-color: #F0FDFA; padding: 0px 15px;'>
-                            <div style='height: 100%; width: 100%;'>
-                                <div'>
-                                    <img src='https://clientes.ab-sistemas.com/veterinaryapp/Resource/imagenes/encabezado_correo.jpg' alt='Encabezado del correo' style='object-fit: cover; height: 160px; width: 100%; border-bottom: solid 2px #0D9488;'>
-                                </div>
-                                <div style='text-align: center;'>
-                                    <h1 style=font-weight:bold; color: #0D9488; font-size: 3rem;'>
-                                    ".utf8_decode('INFORMACIÓN REGISTRADA DEL SUSCRIPTOR')."
-                                    </h1>
-                                </div>
-                                <div style='padding: 20px; margin-top: 10px;'>
-                                    <p style='color: #0D9488; font-size: 1rem;'><strong>Nombre: ".utf8_decode($nombre)."</strong> </p>
-                                    <p style='color: #0D9488; font-size: 1rem;'><strong>".utf8_decode('Teléfono').": ".utf8_decode($telefono)."</strong> </p>
-                                    <p style='color: #0D9488; font-size: 1rem;'><strong>Correo: ".utf8_decode($correo)."</strong> </p>
-                                </div>
-                            </div>
-                        </div>
-                    ";
-                }else if($ind == 2){
-                    $mensajeCompleto = "
-                        <div style='background-color: #A0C3FF; padding: 0px 15px;'>
-                            <div style='height: 100%; width: 100%;'>
-                                <div'>
-                                    <img src='https://images.unsplash.com/photo-1592805144716-feeccccef5ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80' alt='Encabezado del correo' style='object-fit: cover; height: 160px; width: 100%; border-bottom: solid 2px #0D9488;'>
-                                </div>
-                                <div style='text-align: center;'>
-                                    <h1 style=font-weight:bold; color: #00000 !important; font-size: 3rem;'>
-                                    ".utf8_decode('INFORMACIÓN REGISTRADA DEL SUSCRIPTOR')."
-                                    </h1>
-                                </div>
-                                <div style='padding: 20px; margin-top: 10px;'>
-                                    <p style='color: #000000; font-size: 1rem;'><strong>Nombre: ".utf8_decode($nombre)."</strong> </p>
-                                    <p style='color: #000000; font-size: 1rem;'><strong>".utf8_decode('Teléfono').": ".utf8_decode($telefono)."</strong> </p>
-                                    <p style='color: #000000; font-size: 1rem;'><strong style='text-decoration: none;'>Correo: ".utf8_decode($correo)."</strong> </p>
-                                </div>
-                            </div>
-                        </div>
-                    ";
-                }else{
                     
+                if($ind == 1){
+                    $userName = 'veterinary@ab-sistemas.com';
+                    $passwrod = '@97$SO6Es*D!';
+                    $from = 'veterinary@ab-sistemas.com';
+                    $subject = 'Nuevo suscriptor en veterinaryApp';
+                    $title = 'INFORMACIÓN DE NUEVO SUSCRIPTOR EN VETERINARY APP';
+                }else if($ind == 2){
+                    $userName = 'envios@ab-sistemas.com';
+                    $passwrod = '&^AC@22&461^';
+                    $from = 'envios@ab-sistemas.com';
+                    $subject = utf8_decode('Nuevo suscriptor en SISTEMA DE CONTROL DE ENVÍOS');
+                    $title = 'INFORMACIÓN DE NUEVO SUSCRIPTOR EN CONTROL DE ENVÍOS';
+                }else if($ind == 3){
+                    $userName = 'serviteca@ab-sistemas.com';
+                    $passwrod = 'Lu1V60Ur0&^9';
+                    $from = 'serviteca@ab-sistemas.com';
+                    $subject = utf8_decode('Nuevo suscriptor en serviteca');
+                    $title = 'INFORMACIÓN DE NUEVO SUSCRIPTOR EN SERVITECA';
+                }else if($ind == 4){
+                    $userName = 'calzado@ab-sistemas.com';
+                    $passwrod = 'We0!%DQI0J2Z';
+                    $from = 'calzado@ab-sistemas.com';
+                    $subject = utf8_decode('Nuevo suscriptor en calzado y marroquinería');
+                    $title = 'INFORMACIÓN DE NUEVO SUSCRIPTOR EN SIP CALZADO - MARROQUINERÍA';
+                }else if($ind == 5){
+                    $userName = 'sip@ab-sistemas.com';
+                    $passwrod = '5*84GIp%Pl%m';
+                    $from = 'sip@ab-sistemas.com';
+                    $subject = utf8_decode('Nuevo suscriptor en sip droguería');
+                    $title = 'INFORMACIÓN DE NUEVO SUSCRIPTOR EN SIP DROGUERÍA';
                 }
+    
+                $mensajeCompleto = "
+                    <div style='background-color: #F0FDFA; padding: 0px 15px;'>
+                        <div style='height: 100%; width: 100%;'>
+                            <div style='text-align: center; padding-top: 12px;'>
+                                <h1 style=font-weight:bold; color: #0D9488; font-size: 3rem;'>
+                                ".utf8_decode($title)."
+                                </h1>
+                            </div>
+                            <div style='padding: 20px; margin-top: 10px;'>
+                                <p style='color: #0D9488; font-size: 1rem;'><strong>Nombre: ".utf8_decode($nombre)."</strong> </p>
+                                <p style='color: #0D9488; font-size: 1rem;'><strong>".utf8_decode('Teléfono').": ".utf8_decode($telefono)."</strong> </p>
+                                <p style='color: #0D9488; font-size: 1rem;'><strong>Correo: ".utf8_decode($correo)."</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                ";
+                
                 try {
                     $mail->SMTPOptions = array(
                         'ssl' => array(
@@ -79,24 +85,7 @@ class metodos
                     $mail->isSMTP(); // Activar envio SMTP
                     $mail->Host = 'send.one.com'; // Servidor SMTP
                     $mail->SMTPAuth = true;
-                    // Identificacion SMTP
                     
-                    if($ind == 1){
-                        $userName = 'veterinary@ab-sistemas.com';
-                        $passwrod = '@97$SO6Es*D!';
-                        $from = 'veterinary@ab-sistemas.com';
-                        $subject = 'Nuevo suscriptor en veterinaryApp';
-                    }else if($ind == 2){
-                        $userName = 'envios@ab-sistemas.com';
-                        $passwrod = '&^AC@22&461^';
-                        $from = 'envios@ab-sistemas.com';
-                        $subject = utf8_decode('Nuevo suscriptor en SISTEMA DE CONTROL DE ENVÍOS');
-                    }else{
-                        $userName = 'envios@ab-sistemas.com';
-                        $passwrod = '&^AC@22&461^';
-                        $from = 'envios@ab-sistemas.com';
-                        $subject = 'Nuevo suscriptor en SISTEMA DE CONTROL DE ENVÍOS';
-                    }
                     $mail->Username = $userName; // Usuario SMTP
                     $mail->Password = $passwrod;
                     $mail->SMTPSecure = "tls";

@@ -36,7 +36,6 @@ var enviarSuscripcion = (ind) => {
                     "recaptchaResponse": recaptchaResponse
                 },
                 success: function (response) {
-                    console.log(response)
                     let res = JSON.parse(response)
                     if (res.respuesta) {
                         document.getElementById("nombre").value = ''
@@ -60,6 +59,33 @@ var enviarSuscripcion = (ind) => {
                                 imageWidth: 400,
                                 imageHeight: 260,
                                 imageAlt: 'Gracias por suscribirte en nuestro SISTEMA DE CONTROL DE ENVÍOS',
+                            })
+                        }else if(ind == 3){
+                            Swal.fire({
+                                title: 'Suscripción exitosa!',
+                                text: 'Tus datos han sido enviados',
+                                imageUrl: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1238&q=80',
+                                imageWidth: 400,
+                                imageHeight: 260,
+                                imageAlt: 'Gracias por suscribirte al sistema de serviteca',
+                            })
+                        }else if(ind == 4){
+                            Swal.fire({
+                                title: 'Suscripción exitosa!',
+                                text: 'Tus datos han sido enviados',
+                                imageUrl: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                                imageWidth: 400,
+                                imageHeight: 260,
+                                imageAlt: 'Gracias por suscribirte al sistema de SIP calzado',
+                            })
+                        }else if(ind == 5){
+                            Swal.fire({
+                                title: 'Suscripción exitosa!',
+                                text: 'Tus datos han sido enviados',
+                                imageUrl: 'https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+                                imageWidth: 400,
+                                imageHeight: 260,
+                                imageAlt: 'Gracias por suscribirte al sistema de SIP droguería',
                             })
                         }else{
                             console.log('indice diferente: '+ind)
