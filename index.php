@@ -23,6 +23,12 @@
                 <div class="swiper-slide slides">
                     <a href="https://ab-sistemas.com/envios/"><img src="./recursos/imagenes/sceBanner.webp" alt="Landing page - Sistema control de envíos"></a>
                 </div>
+                <div class="swiper-slide slides">
+                    <a href="https://ab-sistemas.com/serviteca/"><img src="./recursos/imagenes/servitecaBanner.webp" alt="Landing page - serviteca"></a>
+                </div>
+                <div class="swiper-slide slides">
+                    <a href="https://ab-sistemas.com/calzado-marroquineria/"><img src="./recursos/imagenes/calzadoBanner.webp" alt="Landing page - calzado"></a>
+                </div>
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
