@@ -11,12 +11,21 @@ html{
     scroll-behavior: smooth;
 }
 
+.img{
+    width: 100%;
+    border-radius: 1rem;
+}
+
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f7f1e5e1;
+    background-color: #c7eaff;
+}
+
+p{
+    color: #021f5a;
 }
 
 .mobile{
@@ -24,7 +33,7 @@ body{
     display: none;
     padding: 1rem 2rem;
     margin: 0;
-    background-color: #187FD9;
+    background-color: #021f5a;
 }
 
 .mobile ul {
@@ -40,7 +49,7 @@ body{
 }
 
 .mobile ul li a{
-    color: #FFF;
+    color: #c7eaff;;
     text-decoration: none;
 }
 
@@ -65,12 +74,12 @@ nav ul {
 nav ul li a{
     margin:1rem;
     text-decoration: none;
-    color: #FFF;
+    color: #c7eaff;;
     font-weight: bold;
 }
 
 header{
-    background: url('../img/cover.jpg');
+    background: url('../../../recursos/landing_pages/img/cover_serviteca.jpg');
     min-height: 100vh;
 }
 
@@ -81,12 +90,12 @@ header{
 .hero{
     font-size: clamp(3rem, 5vw, 15rem);
     text-align: center;
-    color: #FFF;
+    color: #c7eaff;;
 }
 
 .button{
-    background-color: #187FD9;
-    color: #FFF;
+    background-color: #021f5a;
+    color: #c7eaff;;
     text-decoration: none;
     display: flex;
     width: fit-content;
@@ -115,6 +124,7 @@ header{
     justify-content: center;
     align-items: center;
     flex: 1 1 18rem;
+    margin: 2rem;
 }
 
 .column-3{
@@ -167,7 +177,7 @@ section{
     text-align: center;
     font-size: clamp(2rem, 2vw, 5rem);
     margin: 1.5rem;
-    color: #187FD9;
+    color: #021f5a;
 }
 
 p{
@@ -184,9 +194,9 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px #187FD9 solid;
+    border: 2px #021f5a solid;
     border-radius: 1rem;
-    color: #187FD9;
+    color: #021f5a;
     margin: 1rem;
 }
 
@@ -195,21 +205,15 @@ p{
     margin-bottom: 1rem;
 }
 
-.img {
-    width: 90%;
-    border-radius: 1rem;
-    margin: 1rem;
-}
-
 footer{
     align-self:flex-end ;
-    color: #187FD9;
+    color: #021f5a;
     width: 100%; 
     align-items: center; 
     height: 120px; 
     display: flex; 
     justify-content: center; 
-    background-color: rgb(255, 255, 255); 
+    background-color: rgb(238, 238, 238); 
 }
 
 input{
@@ -234,3 +238,4 @@ input{
         display: flex;
     }
 }
+
