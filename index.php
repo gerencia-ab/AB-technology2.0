@@ -18,16 +18,19 @@
         <div class="swiper swiperInicio" id="swiperInicio">
             <div class="swiper-wrapper" style="margin-top: 6vh;">
                 <div class="swiper-slide slides">
-                    <a href="https://ab-sistemas.com/veterinary/"><img src="./recursos/imagenes/veterinaryBanner.webp" alt="Landing page - Veterinary"></a>
+                    <a href="https://ab-sistemas.com/veterinary/" target="_blank"><img src="./recursos/imagenes/veterinaryBanner.webp" alt="Landing page - Veterinary"></a>
                 </div>
                 <div class="swiper-slide slides">
-                    <a href="https://ab-sistemas.com/envios/"><img src="./recursos/imagenes/sceBanner.webp" alt="Landing page - Sistema control de envíos"></a>
+                    <a href="https://ab-sistemas.com/envios/" target="_blank"><img src="./recursos/imagenes/sceBanner.webp" alt="Landing page - Sistema control de envíos"></a>
                 </div>
                 <div class="swiper-slide slides">
-                    <a href="https://ab-sistemas.com/serviteca/"><img src="./recursos/imagenes/servitecaBanner.webp" alt="Landing page - serviteca"></a>
+                    <a href="https://ab-sistemas.com/serviteca/" target="_blank"><img src="./recursos/imagenes/servitecaBanner.webp" alt="Landing page - serviteca"></a>
                 </div>
                 <div class="swiper-slide slides">
-                    <a href="https://ab-sistemas.com/calzado-marroquineria/"><img src="./recursos/imagenes/calzadoBanner.webp" alt="Landing page - calzado"></a>
+                    <a href="https://ab-sistemas.com/calzado-marroquineria/" target="_blank"><img src="./recursos/imagenes/calzadoBanner.webp" alt="Landing page - calzado"></a>
+                </div>
+                <div class="swiper-slide slides">
+                    <a href="https://ab-sistemas.com/sip/" target="_blank"><img src="./recursos/imagenes/sipBanner.webp" alt="Landing page - sip"></a>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
